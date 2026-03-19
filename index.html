@@ -1678,7 +1678,8 @@ function setDispMode(mode){
   if(cb)cb.style.opacity=isChladni?'1':'0';
   if(bt)bt.style.opacity=isChladni?'1':'0';
   if(bw)bw.style.opacity=isChladni?'1':'0';
-  if(osc)osc.style.display=isChladni?'none':'block';
+  if(osc){osc.style.display=isChladni?'none':'block';osc.style.position='absolute';osc.style.top='0';osc.style.left='0';osc.style.zIndex=isChladni?'':'10';}
+  var po=document.getElementById('_persOv');if(po)po.style.display=isChladni&&V.pers>0?'':'none';
   if(!isChladni){
     boot();
     requestAnimationFrame(function(){resizeOsc();requestAnimationFrame(function(){drawOscGrid();drawOsc();});});
