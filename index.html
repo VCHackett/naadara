@@ -870,7 +870,229 @@ body.disc-open{overflow:hidden;}
       <span class="mod-name">Instructions</span><span class="mod-status">v1.0</span>
       <button class="mod-arrow" id="instrArr" style="pointer-events:none;">&#9660;</button>
     </div>
-    <div <div id="instrBody" style="display:none;border-top:1px solid var(--bd);"><div style="max-height:480px;overflow-y:auto;padding:16px;scrollbar-width:thin;scrollbar-color:var(--bd2) transparent;font-size:11px;color:var(--tx3);line-height:1.75;"><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Getting Started</div><p style="margin:0 0 10px;">Click <strong style="color:var(--tx2);">Play</strong> in the top bar to start. A 7.83 Hz Schumann resonance track loads by default. Add tracks in Oscillators, set a frequency or click any Library entry, and the Chladni field responds in real time. Headphones recommended for binaural and HRTF effects.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Audio File</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">432 Tune</strong> Offline pitch-shift 440→432 Hz. Click again to restore.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">A+V</strong> Live combined audio + video recording to WebM. <strong style="color:var(--tx2);">Audio</strong> Live mix to WebM/Opus. <strong style="color:var(--tx2);">Video</strong> Live Chladni field to WebM at 60fps. ⚠ Recording not supported on iOS Safari.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Bypass FX</strong> Routes audio file directly to output, skipping the master effects chain.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Formats</strong> MP3 · WAV · OGG · FLAC · AAC. Drag-and-drop or click to load.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Visualizer</strong> Renders loaded audio to HD/FHD WebM video synced with the chosen display mode and current palette. ⚠ Not supported on iOS Safari.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">WAV</strong> Offline mix render to WAV using OfflineAudioContext. Works on all platforms including iOS.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Display Interface Bar</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Input Field</strong> Routes live microphone audio directly into the Chladni spring field.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Master FX</strong> Toggles the global effects chain on/off across the full mix.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Play / Pause</strong> Starts or stops all active oscillator tracks. The dot pulses when live.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Visuals</strong> Shows or hides the Chladni display entirely.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Volume</strong> Master output level for all oscillator tracks.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Display Modes</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Chladni</strong> Real-time spring-mesh resonance simulation (Ernst Chladni, 1787). Visual Controls apply to this mode only.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Grid</strong> and <strong style="color:var(--tx2);">Labels</strong> are toggle buttons in the display bar — not keyboard shortcuts.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Lissajous</strong> Phase plot of L vs R channel. When active a <strong style="color:var(--tx2);">Shape Presets</strong> bar appears — click a preset to auto-configure two tracks at the correct ratio (Circle 1:1, Figure 8 1:2, Trefoil 2:3, etc.).</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Spectrum</strong> Real-time FFT, mirrored at centre — bass in the middle, treble at edges.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Waveform</strong> Zero-crossing locked oscilloscope. Shows a flat line when silent.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Frequency Library — 23 Categories</div><p style="margin:0 0 4px;">Alchemical · Bioacoustic · Brainwave &amp; Entrainment · Buddhist · Chakras · Chinese Elements · Cymatics Nodes · DNA · Gregorian · Healing · Kabbalah · Musical Harmonics · Norse · Periodic Table · Planets &amp; Zodiac · Pythagorean · Rife · Sacred Geometry · Schumann · Shamanic · Solfeggio · Sufi · Vedic.</p><p style="margin:0 0 10px;">Click any entry to apply to the active track (creates one if none exist). <strong style="color:var(--tx2);">Periodic Table</strong> uses f(Z)=16 Hz×2<sup>(Z−1)/12</sup>. Aether (Æ) at 7.83 Hz.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Input Field — Mic to Chladni</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Chain</strong> HPF (removes low rumble) → Drive (saturation) → LPF → Reverb wet/dry.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Noise Gate</strong> Threshold, Attack, Hold, Release, Sensitivity — prevents background noise from activating the field.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Install as App — iOS &amp; Android</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Android (Chrome)</strong> Tap ⋮ menu → Add to Home screen → Add. Installs as a full Progressive Web App with true fullscreen and recording support.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">iPhone / iPad (Safari only)</strong> Tap the Share button (↑) → Add to Home Screen → Add. Opens without the browser bar — closest to a native app on iOS. Note: fullscreen and recording features remain restricted by Apple policy.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">iOS Limitations (Apple Browser Policy)</div><p style="margin:0 0 4px;">The following features are <strong style="color:#ffb347;">not available on iPhone or iPad</strong> due to Apple browser restrictions — not bugs:</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Blocked on iOS:</strong> Fullscreen mode · ⏺ Audio recording · ⏺ Video recording · ⏺ A+V recording · ⬇ Visualizer Export</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Works on iOS:</strong> All oscillators · Chladni field · Binaural · HRTF spatial audio · Input Field mic · Output Calibration · ⬇ WAV Export · 432 Tune · Frequency Library · Saved Sessions · Themes.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Keyboard Shortcuts</div><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Space</strong> Play/Pause all oscillator tracks (only when no text input is focused).</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Master FX</div><p style="margin:0 0 10px;">Applied across the full mix. <strong style="color:var(--tx2);">Compress</strong> · <strong style="color:var(--tx2);">Delay Mix</strong> · <strong style="color:var(--tx2);">Delay Time</strong> · <strong style="color:var(--tx2);">LP Cutoff</strong> · <strong style="color:var(--tx2);">Reverb Mix</strong> · <strong style="color:var(--tx2);">Reverb Tail</strong>. Toggle on/off without resetting knob values.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Oscillators</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">+ Add Track</strong> Add up to 13 oscillator tracks.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Binaural</strong> Sends a slightly different frequency to each ear. <strong style="color:var(--tx2);">Offset Hz</strong> sets the beat frequency. <strong style="color:var(--tx2);">Sweep</strong> slowly oscillates the offset over 2–120 s. Requires headphones.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Hz</strong> Type or use the slider. Range 0–20,000 Hz.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Stereo Split ⇄</strong> Duplicates the track with mirrored pan for instant stereo widening.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Thumbnail</strong> Live mini Chladni field per track. ● toggles visibility, ⛶ fullscreens the thumbnail.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Toggle ◼/▶</strong> Enable or disable a track without removing it.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Volume</strong> Per-track output level.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Waveforms</strong> Bell · Fork · Organ · Sawtooth · Sine · Square · Triangle.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Output Calibration [Experimental]</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Auto-tune</strong> Continuously corrects the oscillator (or synth detune if Synth is active) toward the detected output.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Delta display</strong> Shows the difference in cents between detected output and oscillator target.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Noise Gate</strong> Hold · Smoothing · Threshold — prevent false readings from background noise.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Saved Sessions</div><p style="margin:0 0 10px;">Name a session and click <strong style="color:var(--tx2);">Save</strong> to store all tracks, frequencies, waveforms, volumes, pan, FX, synth, dynamics, and visual settings to localStorage. Click a name to restore. × to delete.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Spatial Audio — HRTF 3D</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Center</strong> Resets all axes to origin.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Elevation</strong> Slider moves the sound source vertically (Y axis).</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Pad</strong> Drag the dot: X=left/right, Z=front/back. Uses Web Audio HRTF PannerNode — full 3D positioning with headphones.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Synth Engine (per track — click Synth)</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Detune</strong> ±100¢ fine-tune. Updates the Chladni thumbnail and display Hz in real time.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Envelope (ADSR)</strong> Attack · Decay · Sustain · Release.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Filter</strong> Cutoff frequency · Resonance (Q) · Type: Lowpass · Bandpass · Highpass · Notch.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">LFO</strong> 0.01–20 Hz modulating Amplitude, Filter cutoff, or Pitch. Depth sets modulation amount.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Portamento</strong> Glide time between frequency changes. 0 = instant jump.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Theme</div><p style="margin:0 0 10px;">Bamboo · Cave (default) · Dusk · Forest · Glacier · Meadow · Ocean · River · Sand · Stone. Preference saved to localStorage and restored on next visit.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Track FX (click FX on any track)</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Compress</strong> Ratio 1:1–12:1.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Delay Mix</strong> and <strong style="color:var(--tx2);">Delay Time</strong> 50–800 ms.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Dynamics</strong> None · Pulse · Swell · Tremolo. Rate and Depth controls.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">LP Cutoff</strong> 100 Hz–20 kHz.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Reverb Mix</strong> and <strong style="color:var(--tx2);">Reverb Tail</strong> 1–8 s.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Visual Controls (Chladni mode only)</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Bloom</strong> Glow around nodal lines. <strong style="color:var(--tx2);">Bloom Radius</strong> controls the spread.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Breathe Speed &amp; Depth</strong> Pulsing brightness animation — Speed sets rate, Depth sets intensity.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Brightness</strong> Overall field luminance multiplier.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Frequency Tint</strong> Shifts the palette hue toward the colour of the dominant frequency.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Nodal Width</strong> Widens or narrows the bright nodal lines.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Palette</strong> 10 built-in palettes · Rainbow (hue cycles continuously) · Custom colour picker.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Persistence</strong> Trail length. 0 = no trail.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Quality</strong> Draft (1-tap, fastest) · Standard (5-tap) · High (9-tap GPU sampling).</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Sensitivity</strong> How strongly the spring field responds to audio energy.</p><div style="font-size:9px;color:var(--tx4);border-top:1px solid var(--bd);padding-top:8px;text-align:center;">Naadara v1.0 — Educational, artistic, and research use only.</div></div></div>
+    <div <div <div id="instrBody" style="display:none;border-top:1px solid var(--bd);">
+<div style="max-height:520px;overflow-y:auto;padding:0;scrollbar-width:thin;scrollbar-color:var(--bd2) transparent;">
+
+  <!-- Intro banner -->
+  <div style="padding:14px 18px 12px;background:linear-gradient(135deg,rgba(196,208,255,.05),rgba(136,150,204,.03));border-bottom:1px solid var(--bd);">
+    <div style="font-size:12px;font-weight:600;color:var(--tx2);margin-bottom:4px;">Welcome to Naadara</div>
+    <div style="font-size:11px;color:var(--tx3);line-height:1.7;">Click <span style="color:#c4d0ff;font-weight:600;">Play</span> to start the audio engine. A 7.83 Hz Schumann resonance track loads by default. Add tracks in Oscillators, pick any frequency from the Library, and watch the Chladni field respond in real time. Headphones strongly recommended for binaural beats and HRTF spatial audio.</div>
+  </div>
+
+  <!-- Two-column quick reference -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--bd);">
+
+    <!-- Col 1 -->
+    <div style="padding:12px 16px;border-right:1px solid var(--bd);">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Display Modes</div>
+      <div style="font-size:11px;color:var(--tx3);line-height:2;">
+        <span style="color:var(--tx2);font-weight:600;">Chladni</span> Spring-mesh resonance field<br>
+        <span style="color:var(--tx2);font-weight:600;">Lissajous</span> L vs R phase plot<br>
+        <span style="color:var(--tx2);font-weight:600;">Spectrum</span> Real-time FFT analyser<br>
+        <span style="color:var(--tx2);font-weight:600;">Waveform</span> Zero-crossing oscilloscope<br>
+        <span style="color:rgba(196,208,255,.35);font-size:10px;">Grid &amp; Labels are buttons, not shortcuts</span>
+      </div>
+    </div>
+
+    <!-- Col 2 -->
+    <div style="padding:12px 16px;">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Top Bar</div>
+      <div style="font-size:11px;color:var(--tx3);line-height:2;">
+        <span style="color:var(--tx2);font-weight:600;">Play / Pause</span> All oscillator tracks<br>
+        <span style="color:var(--tx2);font-weight:600;">Input Field</span> Mic → Chladni field<br>
+        <span style="color:var(--tx2);font-weight:600;">Master FX</span> Global effects chain<br>
+        <span style="color:var(--tx2);font-weight:600;">Visuals</span> Show / hide display<br>
+        <span style="color:var(--tx2);font-weight:600;">Volume</span> Master output level
+      </div>
+    </div>
+  </div>
+
+  <!-- Oscillators -->
+  <div style="border-bottom:1px solid var(--bd);">
+    <div style="padding:10px 16px 0;display:flex;align-items:center;gap:8px;">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;">Oscillators</div>
+      <div style="flex:1;height:1px;background:var(--bd);"></div>
+    </div>
+    <div style="padding:8px 16px 12px;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;font-size:11px;color:var(--tx3);line-height:1.7;">
+      <div><span style="color:var(--tx2);font-weight:600;">Hz</span> 0–20,000 Hz via input or slider</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Waveforms</span> Bell · Fork · Organ · Saw · Sine · Square · Triangle</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Binaural</span> L/R offset + Sweep mode (2–120 s)</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Volume</span> Per-track level</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Toggle ◼/▶</span> Enable/disable without removing</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Stereo Split ⇄</span> Mirror pan for widening</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Thumbnail ⛶</span> Live Chladni per track, fullscreenable</div>
+      <div><span style="color:var(--tx2);font-weight:600;">+ Add Track</span> Up to 13 tracks total</div>
+    </div>
+  </div>
+
+  <!-- Synth Engine + Track FX side by side -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--bd);">
+    <div style="padding:10px 16px 12px;border-right:1px solid var(--bd);">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Synth Engine <span style="color:var(--tx4);font-weight:400;text-transform:none;font-size:9px;">(click Synth)</span></div>
+      <div style="font-size:11px;color:var(--tx3);line-height:2.0;">
+        <span style="color:var(--tx2);font-weight:600;">Detune</span> ±100¢ fine-tune<br>
+        <span style="color:var(--tx2);font-weight:600;">Envelope</span> Attack · Decay · Sustain · Release<br>
+        <span style="color:var(--tx2);font-weight:600;">Filter</span> LP · HP · BP · Notch + Cutoff + Q<br>
+        <span style="color:var(--tx2);font-weight:600;">LFO</span> 0.01–20 Hz → Amp · Filter · Pitch<br>
+        <span style="color:var(--tx2);font-weight:600;">Portamento</span> Glide between frequency changes
+      </div>
+    </div>
+    <div style="padding:10px 16px 12px;">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Track FX <span style="color:var(--tx4);font-weight:400;text-transform:none;font-size:9px;">(click FX)</span></div>
+      <div style="font-size:11px;color:var(--tx3);line-height:2.0;">
+        <span style="color:var(--tx2);font-weight:600;">Compress</span> Ratio 1:1–12:1<br>
+        <span style="color:var(--tx2);font-weight:600;">Delay</span> Mix + Time (50–800 ms)<br>
+        <span style="color:var(--tx2);font-weight:600;">Dynamics</span> None · Pulse · Swell · Tremolo<br>
+        <span style="color:var(--tx2);font-weight:600;">LP Cutoff</span> 100 Hz–20 kHz<br>
+        <span style="color:var(--tx2);font-weight:600;">Reverb</span> Mix + Tail (1–8 s)
+      </div>
+    </div>
+  </div>
+
+  <!-- Visual Controls -->
+  <div style="border-bottom:1px solid var(--bd);">
+    <div style="padding:10px 16px 0;display:flex;align-items:center;gap:8px;">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;">Visual Controls <span style="color:var(--tx4);font-weight:400;text-transform:none;font-size:9px;">(Chladni mode only)</span></div>
+      <div style="flex:1;height:1px;background:var(--bd);"></div>
+    </div>
+    <div style="padding:8px 16px 12px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px 16px;font-size:11px;color:var(--tx3);line-height:1.6;">
+      <div><span style="color:var(--tx2);font-weight:600;">Bloom</span> Glow + radius</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Breathe</span> Speed &amp; depth pulse</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Brightness</span> Luminance</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Freq Tint</span> Palette hue shift</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Nodal Width</span> Line thickness</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Palette</span> 10 + Rainbow + Custom</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Persistence</span> Trail length</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Quality</span> Draft · Std · High</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Sensitivity</span> Field response</div>
+    </div>
+  </div>
+
+  <!-- Spatial Audio + Master FX side by side -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--bd);">
+    <div style="padding:10px 16px 12px;border-right:1px solid var(--bd);">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Spatial Audio — HRTF 3D</div>
+      <div style="font-size:11px;color:var(--tx3);line-height:2.0;">
+        <span style="color:var(--tx2);font-weight:600;">Pad</span> X = left/right · Z = front/back<br>
+        <span style="color:var(--tx2);font-weight:600;">Elevation</span> Vertical Y axis slider<br>
+        <span style="color:var(--tx2);font-weight:600;">Center</span> Resets all axes to origin<br>
+        <span style="color:rgba(196,208,255,.4);font-size:10px;">Full 3D positioning requires headphones</span>
+      </div>
+    </div>
+    <div style="padding:10px 16px 12px;">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Master FX <span style="color:var(--tx4);font-weight:400;text-transform:none;font-size:9px;">(top bar toggle)</span></div>
+      <div style="font-size:11px;color:var(--tx3);line-height:2.0;">
+        Compress · Delay Mix &amp; Time<br>
+        LP Cutoff · Reverb Mix &amp; Tail<br>
+        Toggle on/off without losing settings
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio File -->
+  <div style="border-bottom:1px solid var(--bd);">
+    <div style="padding:10px 16px 0;display:flex;align-items:center;gap:8px;">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;">Audio File</div>
+      <div style="flex:1;height:1px;background:var(--bd);"></div>
+    </div>
+    <div style="padding:8px 16px 12px;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;font-size:11px;color:var(--tx3);line-height:1.7;">
+      <div><span style="color:var(--tx2);font-weight:600;">Formats</span> MP3 · WAV · OGG · FLAC · AAC. Drag-and-drop or click.</div>
+      <div><span style="color:var(--tx2);font-weight:600;">432 Tune</span> Offline pitch-shift 440→432 Hz</div>
+      <div><span style="color:var(--tx2);font-weight:600;">⬇ WAV</span> Offline mix render — works on all platforms</div>
+      <div><span style="color:var(--tx2);font-weight:600;">⬇ Visualizer</span> Audio → HD/FHD WebM video</div>
+      <div><span style="color:var(--tx2);font-weight:600;">⏺ Audio · Video · A+V</span> Live recording to WebM</div>
+      <div><span style="color:var(--tx2);font-weight:600;">Bypass FX</span> Route file direct, skip master chain</div>
+    </div>
+  </div>
+
+  <!-- Input Field + Output Calibration -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--bd);">
+    <div style="padding:10px 16px 12px;border-right:1px solid var(--bd);">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Input Field</div>
+      <div style="font-size:11px;color:var(--tx3);line-height:1.85;">
+        Live mic → Chladni field.<br>
+        Chain: HPF → Drive → LPF → Reverb<br>
+        Noise gate: Threshold · Attack<br>
+        Hold · Release · Sensitivity
+      </div>
+    </div>
+    <div style="padding:10px 16px 12px;">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Output Calibration <span style="color:var(--tx4);font-weight:400;text-transform:none;font-size:9px;">[Experimental]</span></div>
+      <div style="font-size:11px;color:var(--tx3);line-height:1.85;">
+        Mic pitch detection vs oscillator.<br>
+        Delta display in cents.<br>
+        <span style="color:var(--tx2);font-weight:600;">Auto-tune</span> corrects toward detected output.<br>
+        Noise gate: Hold · Smoothing · Threshold
+      </div>
+    </div>
+  </div>
+
+  <!-- Frequency Library -->
+  <div style="border-bottom:1px solid var(--bd);">
+    <div style="padding:10px 16px 0;display:flex;align-items:center;gap:8px;">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;">Frequency Library — 23 Categories</div>
+      <div style="flex:1;height:1px;background:var(--bd);"></div>
+    </div>
+    <div style="padding:8px 16px 12px;font-size:11px;color:var(--tx3);line-height:1.8;">
+      Alchemical · Bioacoustic · Brainwave &amp; Entrainment · Buddhist · Chakras · Chinese Elements · Cymatics Nodes · DNA · Gregorian · Healing · Kabbalah · Musical Harmonics · Norse · Periodic Table · Planets &amp; Zodiac · Pythagorean · Rife · Sacred Geometry · Schumann · Shamanic · Solfeggio · Sufi · Vedic
+      <div style="margin-top:6px;font-size:10px;color:var(--tx4);">Click any entry to apply to the active track. Periodic Table: f(Z) = 16 Hz × 2<sup>(Z−1)/12</sup> — H=16 Hz → Og=13,777 Hz. Aether (Æ) at 7.83 Hz.</div>
+    </div>
+  </div>
+
+  <!-- Saved Sessions + Theme + Keyboard -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-bottom:1px solid var(--bd);">
+    <div style="padding:10px 16px 12px;border-right:1px solid var(--bd);">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Saved Sessions</div>
+      <div style="font-size:11px;color:var(--tx3);line-height:1.8;">Name a session and click <span style="color:var(--tx2);font-weight:600;">Save</span> to store the full setup to localStorage. Click a name to restore. × to delete.</div>
+    </div>
+    <div style="padding:10px 16px 12px;border-right:1px solid var(--bd);">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Theme</div>
+      <div style="font-size:11px;color:var(--tx3);line-height:1.8;">Bamboo · Cave · Dusk · Forest · Glacier · Meadow · Ocean · River · Sand · Stone<div style="font-size:10px;color:var(--tx4);margin-top:3px;">Saved to localStorage</div></div>
+    </div>
+    <div style="padding:10px 16px 12px;">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Keyboard</div>
+      <div style="font-size:11px;color:var(--tx3);line-height:1.8;"><span style="color:var(--tx2);font-weight:600;">Space</span> Play / Pause<div style="font-size:10px;color:var(--tx4);margin-top:3px;">Only when no text input is focused</div></div>
+    </div>
+  </div>
+
+  <!-- Install as App -->
+  <div style="border-bottom:1px solid var(--bd);">
+    <div style="padding:10px 16px 0;display:flex;align-items:center;gap:8px;">
+      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;">Install as App</div>
+      <div style="flex:1;height:1px;background:var(--bd);"></div>
+    </div>
+    <div style="padding:8px 16px 12px;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;font-size:11px;color:var(--tx3);line-height:1.75;">
+      <div>
+        <div style="color:var(--tx2);font-weight:600;margin-bottom:3px;">iPhone / iPad <span style="color:var(--tx4);font-weight:400;">(Safari only)</span></div>
+        Tap <strong style="color:var(--tx2);">Share ↑</strong> → <strong style="color:var(--tx2);">Add to Home Screen</strong> → Add. Opens without the browser bar.
+      </div>
+      <div>
+        <div style="color:var(--tx2);font-weight:600;margin-bottom:3px;">Android <span style="color:var(--tx4);font-weight:400;">(Chrome)</span></div>
+        Tap <strong style="color:var(--tx2);">⋮ menu</strong> → <strong style="color:var(--tx2);">Add to Home screen</strong> → Add. Installs as a full PWA with true fullscreen support.
+      </div>
+    </div>
+  </div>
+
+  <!-- iOS Limitations -->
+  <div style="padding:10px 16px 12px;background:rgba(255,160,50,.04);border-bottom:1px solid rgba(255,160,50,.15);">
+    <div style="font-size:9px;font-weight:700;color:#ffb060;text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">⚠ iOS Limitations — Apple Browser Policy</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;font-size:11px;">
+      <div>
+        <div style="color:rgba(255,160,80,.8);font-weight:600;font-size:10px;margin-bottom:4px;">Not available on iPhone / iPad</div>
+        <div style="color:var(--tx3);line-height:1.9;">Fullscreen mode<br>⏺ Audio · Video · A+V recording<br>⬇ Visualizer Export</div>
+      </div>
+      <div>
+        <div style="color:rgba(100,220,140,.8);font-weight:600;font-size:10px;margin-bottom:4px;">Works on iOS</div>
+        <div style="color:var(--tx3);line-height:1.9;">All oscillators · Chladni field<br>Binaural · HRTF · Mic features<br>⬇ WAV Export · 432 Tune · Library</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div style="padding:10px 16px;text-align:center;font-size:9px;color:var(--tx4);">Naadara v1.0 — Educational, artistic, and research use only.</div>
+
+</div>
+</div></div>
 
   <!-- Os: Oscillators -->
   <div class="mod osc-mod" style="border-left:none;border-top:1px solid var(--bd)">
