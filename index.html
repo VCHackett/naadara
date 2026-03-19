@@ -1,9 +1,11 @@
-<!DOCTYPE html><html><head><meta charset="utf-8">
+<!DOCTYPE html>
+<!-- saved from url=(0049)file:///C:/Users/VChac/Downloads/naadara_v98.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="canonical" href="https://naadara.org/">
 <meta property="og:url" content="https://naadara.org/">
 <meta name="twitter:url" content="https://naadara.org/">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="./index_files/css2" rel="stylesheet">
 <style>
 :root{--bg:#07080d;--s1:#0d0f18;--s2:#131728;--s3:#1a1f35;--bd:rgba(255,255,255,.065);--bd2:rgba(255,255,255,.12);--tx:#dce5ff;--tx2:#7a88b0;--tx3:#44506e;--tx4:#272f4a;--acc:#c4d0ff;--acc2:#8896cc;--grn:#34c759;--red:#ff453a;--blu:#5ab4ff;--r:14px;--r2:8px;--r3:5px;--sh:0 1px 3px rgba(0,0,0,.55),0 8px 28px rgba(0,0,0,.4);--f:'Inter',system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
@@ -258,7 +260,7 @@ select.wsel{font-size:12px;font-weight:500;background:var(--s2);border-color:var
 .savebtn:hover{color:var(--tx)}
 .status{font-size:10px;color:var(--tx4);text-align:center;margin-top:8px}
 
-.osc-wrap:fullscreen,.osc-wrap:-webkit-full-screen{height:100vh!important;width:100vw!important;background:#020408}
+.osc-wrap:fullscreen,.osc-wrap:-webkit-full-screen{height:100vh!important;width:100vw!important;position:fixed!important;top:0!important;left:0!important;background:#020408}
 .osc-wrap:fullscreen canvas,.osc-wrap:-webkit-full-screen canvas{width:100%!important;height:100%!important}
 .cymbox-ctrl{position:absolute;top:3px;left:3px;z-index:15;display:flex;gap:3px;opacity:0;transition:opacity .15s}
 .cymbox:hover .cymbox-ctrl{opacity:1}
@@ -560,49 +562,47 @@ body.disc-open{overflow:hidden;}
   <!-- Cymatic sun — centred at 40,15 -->
   <g transform="translate(40,15)" fill="none" stroke="rgba(200,215,255,0.75)" stroke-linecap="round">
     <!-- Rays -->
-    <line x1="0" y1="-14" x2="0"    y2="-19" stroke-width="1.1"/>
-    <line x1="-9.9" y1="-9.9" x2="-13.5" y2="-13.5" stroke-width="0.9"/>
-    <line x1="9.9"  y1="-9.9" x2="13.5"  y2="-13.5" stroke-width="0.9"/>
-    <line x1="-14"  y1="0"    x2="-19"   y2="0"      stroke-width="0.9" opacity=".55"/>
-    <line x1="14"   y1="0"    x2="19"    y2="0"      stroke-width="0.9" opacity=".55"/>
-    <line x1="-9.9" y1="9.9"  x2="-13.5" y2="13.5"  stroke-width="0.7" opacity=".35"/>
-    <line x1="9.9"  y1="9.9"  x2="13.5"  y2="13.5"  stroke-width="0.7" opacity=".35"/>
-    <line x1="0"    y1="14"   x2="0"     y2="19"     stroke-width="0.9" opacity=".3"/>
+    <line x1="0" y1="-14" x2="0" y2="-19" stroke-width="1.1"></line>
+    <line x1="-9.9" y1="-9.9" x2="-13.5" y2="-13.5" stroke-width="0.9"></line>
+    <line x1="9.9" y1="-9.9" x2="13.5" y2="-13.5" stroke-width="0.9"></line>
+    <line x1="-14" y1="0" x2="-19" y2="0" stroke-width="0.9" opacity=".55"></line>
+    <line x1="14" y1="0" x2="19" y2="0" stroke-width="0.9" opacity=".55"></line>
+    <line x1="-9.9" y1="9.9" x2="-13.5" y2="13.5" stroke-width="0.7" opacity=".35"></line>
+    <line x1="9.9" y1="9.9" x2="13.5" y2="13.5" stroke-width="0.7" opacity=".35"></line>
+    <line x1="0" y1="14" x2="0" y2="19" stroke-width="0.9" opacity=".3"></line>
     <!-- Cymatic rings -->
-    <circle cx="0" cy="0" r="13"  stroke-width="1.0"/>
-    <circle cx="0" cy="0" r="8.5" stroke-width="0.85" opacity=".8"/>
-    <circle cx="0" cy="0" r="4.5" stroke-width="0.75" opacity=".7"/>
+    <circle cx="0" cy="0" r="13" stroke-width="1.0"></circle>
+    <circle cx="0" cy="0" r="8.5" stroke-width="0.85" opacity=".8"></circle>
+    <circle cx="0" cy="0" r="4.5" stroke-width="0.75" opacity=".7"></circle>
     <!-- Nodal lines inside rings -->
-    <line x1="0" y1="-13" x2="0" y2="13"  stroke-width="0.6" opacity=".5"/>
-    <line x1="-13" y1="0" x2="13" y2="0"  stroke-width="0.6" opacity=".5"/>
-    <line x1="-9.2" y1="-9.2" x2="9.2" y2="9.2"  stroke-width="0.38" opacity=".28"/>
-    <line x1="9.2"  y1="-9.2" x2="-9.2" y2="9.2" stroke-width="0.38" opacity=".28"/>
+    <line x1="0" y1="-13" x2="0" y2="13" stroke-width="0.6" opacity=".5"></line>
+    <line x1="-13" y1="0" x2="13" y2="0" stroke-width="0.6" opacity=".5"></line>
+    <line x1="-9.2" y1="-9.2" x2="9.2" y2="9.2" stroke-width="0.38" opacity=".28"></line>
+    <line x1="9.2" y1="-9.2" x2="-9.2" y2="9.2" stroke-width="0.38" opacity=".28"></line>
     <!-- Centre dot -->
-    <circle cx="0" cy="0" r="1.8" fill="rgba(220,230,255,0.9)" stroke="none"/>
+    <circle cx="0" cy="0" r="1.8" fill="rgba(220,230,255,0.9)" stroke="none"></circle>
   </g>
 
   <!-- Pyramid — apex at 40,28, base y=72 -->
-  <polygon points="40,28 67,72 13,72"
-    fill="none" stroke="rgba(180,200,255,0.7)" stroke-width="1.4" stroke-linejoin="miter"/>
+  <polygon points="40,28 67,72 13,72" fill="none" stroke="rgba(180,200,255,0.7)" stroke-width="1.4" stroke-linejoin="miter"></polygon>
 
   <!-- Inner pyramid -->
-  <polygon points="40,36 52,65 28,65"
-    fill="none" stroke="rgba(180,200,255,0.38)" stroke-width="0.65" stroke-linejoin="round"/>
+  <polygon points="40,36 52,65 28,65" fill="none" stroke="rgba(180,200,255,0.38)" stroke-width="0.65" stroke-linejoin="round"></polygon>
 
   <!-- Stone course lines -->
-  <line x1="23" y1="58" x2="57" y2="58" stroke="rgba(180,200,255,0.22)" stroke-width="0.55"/>
-  <line x1="28" y1="49" x2="52" y2="49" stroke="rgba(180,200,255,0.18)" stroke-width="0.5"/>
-  <line x1="32" y1="41" x2="48" y2="41" stroke="rgba(180,200,255,0.15)" stroke-width="0.45"/>
+  <line x1="23" y1="58" x2="57" y2="58" stroke="rgba(180,200,255,0.22)" stroke-width="0.55"></line>
+  <line x1="28" y1="49" x2="52" y2="49" stroke="rgba(180,200,255,0.18)" stroke-width="0.5"></line>
+  <line x1="32" y1="41" x2="48" y2="41" stroke="rgba(180,200,255,0.15)" stroke-width="0.45"></line>
 
   <!-- Central shaft -->
-  <line x1="40" y1="28" x2="40" y2="72" stroke="rgba(180,200,255,0.18)" stroke-width="0.5"/>
+  <line x1="40" y1="28" x2="40" y2="72" stroke="rgba(180,200,255,0.18)" stroke-width="0.5"></line>
 
   <!-- All-seeing eye inside inner pyramid -->
   <g transform="translate(40,53)" fill="none" stroke="rgba(200,215,255,0.65)">
-    <path d="M-6,0 C-3,-3.5 3,-3.5 6,0 C3,3.5 -3,3.5 -6,0 Z" stroke-width="0.75"/>
-    <circle cx="0" cy="0" r="2.4" stroke-width="0.65" opacity=".8"/>
-    <circle cx="0" cy="0" r="1.1" stroke-width="0.5"  opacity=".65"/>
-    <circle cx="0" cy="0" r="0.55" fill="rgba(210,225,255,0.85)" stroke="none"/>
+    <path d="M-6,0 C-3,-3.5 3,-3.5 6,0 C3,3.5 -3,3.5 -6,0 Z" stroke-width="0.75"></path>
+    <circle cx="0" cy="0" r="2.4" stroke-width="0.65" opacity=".8"></circle>
+    <circle cx="0" cy="0" r="1.1" stroke-width="0.5" opacity=".65"></circle>
+    <circle cx="0" cy="0" r="0.55" fill="rgba(210,225,255,0.85)" stroke="none"></circle>
   </g>
 </svg>
       <div style="text-align:center">
@@ -610,8 +610,8 @@ body.disc-open{overflow:hidden;}
         <div class="brand-etymology">naa·da·ra — from <em>naad</em> (Sanskrit: primordial cosmic sound, the first vibration of creation) + <em>ara</em> (Latin: sacred space, altar)</div>
         <div class="brand-desc">The world's first open cymatics laboratory — visualising the primordial sound. Chladni resonance fields, binaural &amp; frequency entrainment, and real-time signal analysis.</div>
         <div class="brand-free">Completely free, for everyone.</div>
-        <div style="margin-top:6px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;"><a href="https://github.com/VCHackett/naadara" target="_blank" rel="noopener" class="os-badge"><svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>Open Source</a><a href="https://github.com/VCHackett/naadara/blob/main/LICENSE" target="_blank" rel="noopener" class="os-tag">MIT Licence</a></div>
-        <a class="donate-btn" href="https://www.paypal.com/donate/?business=KVCA2EH3UJ3YU&no_recurring=0&currency_code=USD" target="_blank" rel="noopener" data-tip="My kids have been asking about Disneyland. ♡">♡ Donate ♡</a>
+        <div style="margin-top:6px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;"><a href="https://github.com/VCHackett/naadara" target="_blank" rel="noopener" class="os-badge"><svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path></svg>Open Source</a><a href="https://github.com/VCHackett/naadara/blob/main/LICENSE" target="_blank" rel="noopener" class="os-tag">MIT Licence</a></div>
+        <a class="donate-btn" href="https://www.paypal.com/donate/?business=KVCA2EH3UJ3YU&amp;no_recurring=0&amp;currency_code=USD" target="_blank" rel="noopener" data-tip="My kids have been asking about Disneyland. ♡">♡ Donate ♡</a>
       </div>
     </div>
   </div>
@@ -624,12 +624,12 @@ body.disc-open{overflow:hidden;}
     <div class="mod-hdr">
       <span class="mod-name" data-tip="Load audio files for the Chladni field to react to.">Audio File</span>
       <span class="mod-status" id="afModStatus">No file loaded</span>
-      <button class="mod-pwr" id="afModPwr" onclick="toggleModPower('af')" data-tip="Enable or disable the Audio File module.">⏻</button>
-      <button class="mod-arrow" id="afModArr" onclick="toggleModContent('af')" data-tip="Expand or collapse.">▼</button>
+      <button class="mod-pwr" id="afModPwr" onclick="toggleModPower(&#39;af&#39;)" data-tip="Enable or disable the Audio File module.">⏻</button>
+      <button class="mod-arrow" id="afModArr" onclick="toggleModContent(&#39;af&#39;)" data-tip="Expand or collapse.">▼</button>
     </div>
     <div class="mod-body" id="afModBody">
   <div class="src-panel" id="panel-file">
-    <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInp').click()">
+    <div class="drop-zone" id="dropZone" onclick="document.getElementById(&#39;fileInp&#39;).click()">
       Drop WAV · MP3 · OGG here, or click to browse
       <input type="file" id="fileInp" accept=".wav,.mp3,.ogg,.flac" style="display:none">
     </div>
@@ -641,12 +641,12 @@ body.disc-open{overflow:hidden;}
         <button class="tp-btn play" id="afPlayBtn" onclick="toggleAF()" data-tip="Play or pause the loaded audio file.">▶</button>
         <button class="tp-btn on" id="afLoopBtn" onclick="toggleLoop()" data-tip="Toggle continuous loop playback.">⟳</button>
         <div class="vol-mini"><label>Vol</label><input type="range" id="fileVol" min="0" max="100" value="80"><span class="vol-mini-val" id="fileVolV">80%</span></div>
-        <button class="exp-btn" id="tuneDownBtn" onclick="tuneDown8()" disabled data-tip="Pitch-shift the loaded file down 8 Hz (440→432 Hz tuning).">♭ 432 Tune</button>
-        <button class="exp-btn" id="exportBtn" onclick="exportMix()" disabled data-tip="Offline render to WAV file.">⬇ WAV</button>
-        <button class="exp-btn" id="recAudioBtn" onclick="startRec('audio')" data-tip="Record live audio mix in real time.">⏺ Audio</button>
-        <button class="exp-btn" id="recVideoBtn" onclick="startRec('video')" data-tip="Record Chladni field video only — no audio.">⏺ Video</button>
-        <button class="exp-btn" id="recAvBtn" onclick="startRec('av')" data-tip="Record audio and video together.">⏺ A+V</button>
-        <button class="exp-btn" id="vizExportBtn" onclick="openVizExport()" disabled data-tip="Render an MP3 or audio file to video.">⬇ Visualizer</button>
+        <button class="exp-btn" id="tuneDownBtn" onclick="tuneDown8()" disabled="" data-tip="Pitch-shift the loaded file down 8 Hz (440→432 Hz tuning).">♭ 432 Tune</button>
+        <button class="exp-btn" id="exportBtn" onclick="exportMix()" disabled="" data-tip="Offline render to WAV file.">⬇ WAV</button>
+        <button class="exp-btn" id="recAudioBtn" onclick="startRec(&#39;audio&#39;)" data-tip="Record live audio mix in real time.">⏺ Audio</button>
+        <button class="exp-btn" id="recVideoBtn" onclick="startRec(&#39;video&#39;)" data-tip="Record Chladni field video only — no audio.">⏺ Video</button>
+        <button class="exp-btn" id="recAvBtn" onclick="startRec(&#39;av&#39;)" data-tip="Record audio and video together.">⏺ A+V</button>
+        <button class="exp-btn" id="vizExportBtn" onclick="openVizExport()" disabled="" data-tip="Render an MP3 or audio file to video.">⬇ Visualizer</button>
       </div>
       <div class="bypass-row">
         <label><input type="checkbox" id="afBypassChk" onchange="afBypassFX=this.checked;reconnectAF()"> Bypass master FX for this file</label>
@@ -667,8 +667,10 @@ body.disc-open{overflow:hidden;}
     </div>
     <div id="mcModBody" class="mcb open">
       <div class="mc">
-        <button class="mc-pwr" id="masterBtn" data-tip="Start or stop all active oscillator tracks.&#10;Keyboard shortcut: Spacebar."><span class="mc-pwr-dot"></span>Play</button>
-        <button class="pill" id="fsBtn" onclick="toggleFullscreen()" data-tip="Expand the Chladni field to full screen.&#10;Press Escape to return.">Fullscreen</button>
+        <button class="mc-pwr" id="masterBtn" data-tip="Start or stop all active oscillator tracks.
+Keyboard shortcut: Spacebar."><span class="mc-pwr-dot"></span>Play</button>
+        <button class="pill" id="fsBtn" onclick="toggleFullscreen()" data-tip="Expand the Chladni field to full screen.
+Press Escape to return.">Fullscreen</button>
         <button class="pill" id="inputFieldBtn" onclick="toggleInputField()" data-tip="Input Field — routes microphone audio directly into the Chladni field."><span class="pill-dot" id="inputFieldDot"></span>Input Field</button>
         <button class="pill" id="mfxBtn" data-tip="Toggle the master effects chain on/off."><span class="pill-dot"></span>Master FX</button>
         <button class="pill" id="visBtn" onclick="toggleVis()" data-tip="Show or hide the Chladni field display."><span class="pill-dot" id="visDot"></span>Visuals</button>
@@ -709,16 +711,14 @@ body.disc-open{overflow:hidden;}
   background:var(--s2);border:1px solid var(--bd2);border-radius:12px;
   padding:12px;width:220px;box-shadow:0 8px 32px rgba(0,0,0,.7);">
   <!-- SV square -->
-  <div style="position:relative;width:196px;height:130px;border-radius:6px;overflow:hidden;margin-bottom:10px;cursor:crosshair;"
-    id="ppSV" onmousedown="ppSVDown(event)">
+  <div style="position:relative;width:196px;height:130px;border-radius:6px;overflow:hidden;margin-bottom:10px;cursor:crosshair;" id="ppSV" onmousedown="ppSVDown(event)">
     <canvas id="ppSVCanvas" width="196" height="130" style="display:block;"></canvas>
     <div id="ppSVThumb" style="position:absolute;width:10px;height:10px;border-radius:50%;
       border:2px solid #fff;box-shadow:0 0 4px rgba(0,0,0,.6);pointer-events:none;
       transform:translate(-50%,-50%);top:20%;left:80%;"></div>
   </div>
   <!-- Hue strip -->
-  <div style="position:relative;width:196px;height:14px;border-radius:99px;overflow:hidden;margin-bottom:10px;cursor:pointer;"
-    id="ppHue" onmousedown="ppHueDown(event)">
+  <div style="position:relative;width:196px;height:14px;border-radius:99px;overflow:hidden;margin-bottom:10px;cursor:pointer;" id="ppHue" onmousedown="ppHueDown(event)">
     <canvas id="ppHueCanvas" width="196" height="14" style="display:block;"></canvas>
     <div id="ppHueThumb" style="position:absolute;width:14px;height:14px;border-radius:50%;
       border:2px solid #fff;box-shadow:0 0 4px rgba(0,0,0,.6);pointer-events:none;
@@ -736,26 +736,42 @@ body.disc-open{overflow:hidden;}
 
         </div>
         <button class="pal-btn" id="palRainbow" data-tip="Rainbow — the field cycles through the full colour spectrum."><div class="pal-swatch" style="background:conic-gradient(#ff0040,#ff8000,#ffff00,#00ff80,#0080ff,#ff0040)"></div><span>Rainbow</span></button>
-        <div class="qual-wrap" data-tip="Chladni display rendering quality."><button class="qual-btn" id="qualDraft" onclick="setQuality('draft')" data-tip="1 sample · raw spring output · fastest.">Draft</button><button class="qual-btn on" id="qualStd" onclick="setQuality('std')" data-tip="5-tap cross blur · smooth nodal lines.">Std</button><button class="qual-btn" id="qualHigh" onclick="setQuality('high')" data-tip="9-tap Gaussian blur · silky smooth edges.">High</button></div>
+        <div class="qual-wrap" data-tip="Chladni display rendering quality."><button class="qual-btn" id="qualDraft" onclick="setQuality(&#39;draft&#39;)" data-tip="1 sample · raw spring output · fastest.">Draft</button><button class="qual-btn on" id="qualStd" onclick="setQuality(&#39;std&#39;)" data-tip="5-tap cross blur · smooth nodal lines.">Std</button><button class="qual-btn" id="qualHigh" onclick="setQuality(&#39;high&#39;)" data-tip="9-tap Gaussian blur · silky smooth edges.">High</button></div>
         <div class="sw-wrap" id="bloomWrap" data-tip="Bloom adds a soft luminous glow around bright nodal lines."><div class="sw on" id="bloomSw"></div>Bloom</div>
       </div>
       <div class="vc-grid">
-        <div class="vc-k"><span class="vc-kl">Bloom Radius</span><input type="range" id="vc_r" title="Bloom glow radius multiplier.&#10;0.2 = tight crisp halo around nodal lines.&#10;2.5 = wide atmospheric diffusion across the field." min="0.2" max="2.5" step="0.05" value="1.2"><span class="vc-kv" id="vcv_r">1.2</span></div>
-        <div class="vc-k"><span class="vc-kl">Breathe Depth</span><input type="range" id="vc_bd" title="Depth of the breathing pulse on the glow layer.&#10;0% = static glow. 45% = full rhythmic inhale/exhale effect.&#10;Works with Breathe Speed to set the full breath cycle." min="0" max="0.45" step="0.01" value="0.22"><span class="vc-kv" id="vcv_bd">22%</span></div>
-        <div class="vc-k"><span class="vc-kl">Breathe Speed</span><input type="range" id="vc_bs" title="Speed of the breathing pulse cycle.&#10;0.1 = one breath every ~30s. 4 = rapid 4Hz pulsing.&#10;Pairs with Breathe Depth — depth controls how much it moves." min="0.1" max="4" step="0.05" value="0.6"><span class="vc-kv" id="vcv_bs">0.6</span></div>
-        <div class="vc-k"><span class="vc-kl">Brightness</span><input type="range" id="vc_b" title="Overall brightness multiplier for the field.&#10;0.3 = dark ambient. 1.0 = neutral. 2.2 = overexposed glow.&#10;Affects both nodal lines and the surrounding glow." min="0.3" max="2.2" step="0.05" value="1.05"><span class="vc-kv" id="vcv_b">1.1</span></div>
-        <div class="vc-k"><span class="vc-kl">Frequency Tint</span><input type="range" id="vc_t" title="Blend between palette colour and frequency-mapped colour.&#10;0% = pure palette. 100% = bass=red → treble=violet mapping.&#10;Partial values mix both for complex tonal colouration." min="0" max="1" step="0.01" value="0.35"><span class="vc-kv" id="vcv_t">35%</span></div>
-        <div class="vc-k"><span class="vc-kl">Nodal Width</span><input type="range" id="vc_n" title="Nodal line width multiplier.&#10;0.3 = razor-thin geometric lines.&#10;3.0 = wide glowing bands with soft falloff." min="0.3" max="3" step="0.05" value="1.1"><span class="vc-kv" id="vcv_n">1.1</span></div>
-        <div class="vc-k"><span class="vc-kl">Persistence</span><input type="range" id="vc_p" title="Frame persistence — how long previous frames linger.&#10;0 = off, instant clear. 0.94 = very long comet trails.&#10;Most visible when patterns are actively shifting." min="0" max="0.94" step="0.01" value="0"><span class="vc-kv" id="vcv_p">Off</span></div>
-        <div class="vc-k"><span class="vc-kl">Sensitivity</span><input type="range" id="vc_s" title="Audio sensitivity for the Chladni field.&#10;Raise if the field seems slow to react to audio.&#10;Lower if the pattern looks chaotic or unstable." min="0.3" max="3" step="0.05" value="1.0"><span class="vc-kv" id="vcv_s">1.0×</span></div>
+        <div class="vc-k"><span class="vc-kl">Bloom Radius</span><input type="range" id="vc_r" title="Bloom glow radius multiplier.
+0.2 = tight crisp halo around nodal lines.
+2.5 = wide atmospheric diffusion across the field." min="0.2" max="2.5" step="0.05" value="1.2"><span class="vc-kv" id="vcv_r">1.2</span></div>
+        <div class="vc-k"><span class="vc-kl">Breathe Depth</span><input type="range" id="vc_bd" title="Depth of the breathing pulse on the glow layer.
+0% = static glow. 45% = full rhythmic inhale/exhale effect.
+Works with Breathe Speed to set the full breath cycle." min="0" max="0.45" step="0.01" value="0.22"><span class="vc-kv" id="vcv_bd">22%</span></div>
+        <div class="vc-k"><span class="vc-kl">Breathe Speed</span><input type="range" id="vc_bs" title="Speed of the breathing pulse cycle.
+0.1 = one breath every ~30s. 4 = rapid 4Hz pulsing.
+Pairs with Breathe Depth — depth controls how much it moves." min="0.1" max="4" step="0.05" value="0.6"><span class="vc-kv" id="vcv_bs">0.6</span></div>
+        <div class="vc-k"><span class="vc-kl">Brightness</span><input type="range" id="vc_b" title="Overall brightness multiplier for the field.
+0.3 = dark ambient. 1.0 = neutral. 2.2 = overexposed glow.
+Affects both nodal lines and the surrounding glow." min="0.3" max="2.2" step="0.05" value="1.05"><span class="vc-kv" id="vcv_b">1.1</span></div>
+        <div class="vc-k"><span class="vc-kl">Frequency Tint</span><input type="range" id="vc_t" title="Blend between palette colour and frequency-mapped colour.
+0% = pure palette. 100% = bass=red → treble=violet mapping.
+Partial values mix both for complex tonal colouration." min="0" max="1" step="0.01" value="0.35"><span class="vc-kv" id="vcv_t">35%</span></div>
+        <div class="vc-k"><span class="vc-kl">Nodal Width</span><input type="range" id="vc_n" title="Nodal line width multiplier.
+0.3 = razor-thin geometric lines.
+3.0 = wide glowing bands with soft falloff." min="0.3" max="3" step="0.05" value="1.1"><span class="vc-kv" id="vcv_n">1.1</span></div>
+        <div class="vc-k"><span class="vc-kl">Persistence</span><input type="range" id="vc_p" title="Frame persistence — how long previous frames linger.
+0 = off, instant clear. 0.94 = very long comet trails.
+Most visible when patterns are actively shifting." min="0" max="0.94" step="0.01" value="0"><span class="vc-kv" id="vcv_p">Off</span></div>
+        <div class="vc-k"><span class="vc-kl">Sensitivity</span><input type="range" id="vc_s" title="Audio sensitivity for the Chladni field.
+Raise if the field seems slow to react to audio.
+Lower if the pattern looks chaotic or unstable." min="0.3" max="3" step="0.05" value="1.0"><span class="vc-kv" id="vcv_s">1.0×</span></div>
       </div>
       </div>
       <!-- Unified display bar — all modes + toggles in one centred row -->
       <div class="disp-bar" id="dispBar">
-        <button class="disp-mode on" id="dmChladni" onclick="setDispMode('chladni')" data-tip="Chladni field mode — spring-physics standing wave simulation.">Chladni</button>
-        <button class="disp-mode" id="dmLissajous" onclick="setDispMode('lissajous')" data-tip="Lissajous figure — plots left channel vs right channel amplitude.">Lissajous</button>
-        <button class="disp-mode" id="dmSpectrum" onclick="setDispMode('spectrum')" data-tip="Frequency spectrum analyser.">Spectrum</button>
-        <button class="disp-mode" id="dmWave" onclick="setDispMode('wave')" data-tip="Oscilloscope waveform — raw audio amplitude over time.">Waveform</button>
+        <button class="disp-mode on" id="dmChladni" onclick="setDispMode(&#39;chladni&#39;)" data-tip="Chladni field mode — spring-physics standing wave simulation.">Chladni</button>
+        <button class="disp-mode" id="dmLissajous" onclick="setDispMode(&#39;lissajous&#39;)" data-tip="Lissajous figure — plots left channel vs right channel amplitude.">Lissajous</button>
+        <button class="disp-mode" id="dmSpectrum" onclick="setDispMode(&#39;spectrum&#39;)" data-tip="Frequency spectrum analyser.">Spectrum</button>
+        <button class="disp-mode" id="dmWave" onclick="setDispMode(&#39;wave&#39;)" data-tip="Oscilloscope waveform — raw audio amplitude over time.">Waveform</button>
         <div class="disp-bar-sep"></div>
         <button class="disp-opt" id="dispGrid" onclick="toggleDispGrid()" data-tip="Show or hide reference grid lines">Grid</button>
         <button class="disp-opt" id="dispLabels" onclick="toggleDispLabels()" data-tip="Show or hide the corner text overlays on the Chladni field.">Labels</button>
@@ -765,36 +781,75 @@ body.disc-open{overflow:hidden;}
       <p class="analyser-note" style="padding:5px 14px 7px;margin:0;text-align:center;">Lissajous, Spectrum, and Waveform modes replace the Chladni field. Visual controls apply to Chladni mode only.</p>
       <!-- Stats + spectrum + FX all belong to Display Interface -->
       <div class="stats">
-        <div class="stat" data-tip-down="Number of oscillator tracks currently active and playing.&#10;Toggle individual tracks on/off with the ◼ button on each card."><div class="sl">Active</div><div class="sv" id="mAct">0</div><div class="ss" id="mActSub">of 0 tracks</div></div>
-        <div class="stat" data-tip-down="Status of the loaded audio file.&#10;The Chladni field reads the raw audio pre-FX&#10;for accurate frequency-to-pattern mapping."><div class="sl">Audio File</div><div class="sv sm" id="mAFStat" style="margin-top:6px">—</div><div class="ss" id="mAFSub">not loaded</div></div>
-        <div class="stat" data-tip-down="Current Chladni standing wave mode indices (m, n).&#10;Each frequency maps to a unique m×n nodal pattern.&#10;Higher indices produce more complex, finer geometries."><div class="sl">Field Mode</div><div class="sv sm" id="mMode">—</div><div class="ss">Chladni nodes</div></div>
-        <div class="stat" data-tip-down="Volume-weighted average frequency of all active tracks.&#10;Louder tracks skew this value higher.&#10;Used to determine the dominant Chladni pattern."><div class="sl">Frequency</div><div class="sv" id="mFreq">—</div><div class="ss">Hz weighted avg</div></div>
+        <div class="stat" data-tip-down="Number of oscillator tracks currently active and playing.
+Toggle individual tracks on/off with the ◼ button on each card."><div class="sl">Active</div><div class="sv" id="mAct">0</div><div class="ss" id="mActSub">of 0 tracks</div></div>
+        <div class="stat" data-tip-down="Status of the loaded audio file.
+The Chladni field reads the raw audio pre-FX
+for accurate frequency-to-pattern mapping."><div class="sl">Audio File</div><div class="sv sm" id="mAFStat" style="margin-top:6px">—</div><div class="ss" id="mAFSub">not loaded</div></div>
+        <div class="stat" data-tip-down="Current Chladni standing wave mode indices (m, n).
+Each frequency maps to a unique m×n nodal pattern.
+Higher indices produce more complex, finer geometries."><div class="sl">Field Mode</div><div class="sv sm" id="mMode">—</div><div class="ss">Chladni nodes</div></div>
+        <div class="stat" data-tip-down="Volume-weighted average frequency of all active tracks.
+Louder tracks skew this value higher.
+Used to determine the dominant Chladni pattern."><div class="sl">Frequency</div><div class="sv" id="mFreq">—</div><div class="ss">Hz weighted avg</div></div>
       </div>
-      <div class="fbar-sec" data-tip-down="Logarithmic frequency map of all active oscillator tracks.&#10;Bar height = signal level. Vertical line = LP filter cutoff.&#10;Wider bars = lower frequency resolution at that range."><div class="sec-lbl">Frequency Spectrum</div><canvas id="masterFbar" height="54" class="fbar"></canvas></div>
+      <div class="fbar-sec" data-tip-down="Logarithmic frequency map of all active oscillator tracks.
+Bar height = signal level. Vertical line = LP filter cutoff.
+Wider bars = lower frequency resolution at that range."><div class="sec-lbl">Frequency Spectrum</div><canvas id="masterFbar" height="54" class="fbar"></canvas></div>
       <div class="fx-sec">
         <div class="fx-top"><span class="fx-ttl" data-tip="Master effects chain — applied after all oscillators are mixed.">Master FX</span><div class="fx-tags" id="mfxTags"></div></div>
         <div class="fx-knobs" id="mfxKnobs" style="opacity:.28">
-          <div class="knob"><span class="knob-lbl">Compress</span><input type="range" id="mfx_cmp" title="Dynamic range compression ratio.&#10;2:1 = gentle cohesion. 8:1+ = heavy brick-wall limiting.&#10;Threshold is fixed at -24dBFS." min="1" max="12" value="2" step="0.5"><span class="knob-val" id="mfxv_cmp">2:1</span></div>
-          <div class="knob"><span class="knob-lbl">Delay Mix</span><input type="range" id="mfx_dly" title="Delay (echo) wet/dry mix.&#10;0% = no delay. 100% = full echo.&#10;Feedback is fixed at 32% for natural decay." min="0" max="100" value="20"><span class="knob-val" id="mfxv_dly">20%</span></div>
-          <div class="knob"><span class="knob-lbl">Delay Time</span><input type="range" id="mfx_dmt" title="Delay time in milliseconds.&#10;50ms = tight slap. 280ms ≈ quarter-note at 107 BPM.&#10;Sync to tempo: delay ms = 60000 ÷ BPM." min="50" max="800" value="280" step="10"><span class="knob-val" id="mfxv_dmt">280 ms</span></div>
-          <div class="knob"><span class="knob-lbl">LP Cutoff</span><input type="range" id="mfx_lp" title="Low-pass filter cutoff frequency.&#10;Frequencies above this point roll off smoothly.&#10;Useful for warming the sound or removing harshness." min="300" max="20000" value="12000" step="100"><span class="knob-val" id="mfxv_lp">12kHz</span></div>
-          <div class="knob"><span class="knob-lbl">Reverb Tail</span><input type="range" id="mfx_rvs" title="Reverb decay time (RT60) in seconds.&#10;1–2s = small room. 4–6s = cathedral. 8s = infinite wash.&#10;Very long tails can create resonant feedback with delay." min="1" max="8" value="3" step="0.5"><span class="knob-val" id="mfxv_rvs">3s</span></div>
-          <div class="knob"><span class="knob-lbl">Reverb</span><input type="range" id="mfx_rvb" title="Reverb wet/dry mix.&#10;0% = dry. 100% = fully wet hall ambience.&#10;Uses a convolution impulse — CPU cost scales with tail length." min="0" max="100" value="40"><span class="knob-val" id="mfxv_rvb">40%</span></div>
+          <div class="knob"><span class="knob-lbl">Compress</span><input type="range" id="mfx_cmp" title="Dynamic range compression ratio.
+2:1 = gentle cohesion. 8:1+ = heavy brick-wall limiting.
+Threshold is fixed at -24dBFS." min="1" max="12" value="2" step="0.5"><span class="knob-val" id="mfxv_cmp">2:1</span></div>
+          <div class="knob"><span class="knob-lbl">Delay Mix</span><input type="range" id="mfx_dly" title="Delay (echo) wet/dry mix.
+0% = no delay. 100% = full echo.
+Feedback is fixed at 32% for natural decay." min="0" max="100" value="20"><span class="knob-val" id="mfxv_dly">20%</span></div>
+          <div class="knob"><span class="knob-lbl">Delay Time</span><input type="range" id="mfx_dmt" title="Delay time in milliseconds.
+50ms = tight slap. 280ms ≈ quarter-note at 107 BPM.
+Sync to tempo: delay ms = 60000 ÷ BPM." min="50" max="800" value="280" step="10"><span class="knob-val" id="mfxv_dmt">280 ms</span></div>
+          <div class="knob"><span class="knob-lbl">LP Cutoff</span><input type="range" id="mfx_lp" title="Low-pass filter cutoff frequency.
+Frequencies above this point roll off smoothly.
+Useful for warming the sound or removing harshness." min="300" max="20000" value="12000" step="100"><span class="knob-val" id="mfxv_lp">12kHz</span></div>
+          <div class="knob"><span class="knob-lbl">Reverb Tail</span><input type="range" id="mfx_rvs" title="Reverb decay time (RT60) in seconds.
+1–2s = small room. 4–6s = cathedral. 8s = infinite wash.
+Very long tails can create resonant feedback with delay." min="1" max="8" value="3" step="0.5"><span class="knob-val" id="mfxv_rvs">3s</span></div>
+          <div class="knob"><span class="knob-lbl">Reverb</span><input type="range" id="mfx_rvb" title="Reverb wet/dry mix.
+0% = dry. 100% = fully wet hall ambience.
+Uses a convolution impulse — CPU cost scales with tail length." min="0" max="100" value="40"><span class="knob-val" id="mfxv_rvb">40%</span></div>
         </div>
       </div>
       <!-- Input Field parameters — shown when Input Field is active -->
       <div class="fx-sec" id="ifSec" style="opacity:0.3;transition:opacity .2s;">
         <div class="fx-top"><span class="fx-ttl" data-tip="Input Field parameters.">Input Field</span></div>
         <div class="fx-knobs" style="display:flex;justify-content:center;gap:0;flex-wrap:wrap;">
-          <div class="knob"><span class="knob-lbl">Attack</span><input type="range" id="if_atk" title="Noise gate attack speed.&#10;How quickly the gate opens when sound is detected.&#10;Lower = snappier response." min="0.05" max="0.9" step="0.01" value="0.25"><span class="knob-val" id="ifv_atk">0.25</span></div>
-          <div class="knob"><span class="knob-lbl">Drive</span><input type="range" id="if_drv" title="Input gain / drive before the field.&#10;Boost quiet signals or instruments.&#10;High values saturate the field for a rougher character." min="0.5" max="8" step="0.1" value="1"><span class="knob-val" id="ifv_drv">1.0×</span></div>
-          <div class="knob"><span class="knob-lbl">Hold</span><input type="range" id="if_hld" title="Gate hold time in frames after signal drops.&#10;Higher = gate stays open longer between sounds.&#10;Prevents flickering on natural pauses." min="0" max="60" step="1" value="18"><span class="knob-val" id="ifv_hld">18fr</span></div>
-          <div class="knob"><span class="knob-lbl">HP Filter</span><input type="range" id="if_hpf" title="High-pass filter cutoff.&#10;Cuts low-frequency rumble and bass.&#10;Useful for voice — set 80–120 Hz to remove room boom." min="20" max="800" step="10" value="80"><span class="knob-val" id="ifv_hpf">80Hz</span></div>
-          <div class="knob"><span class="knob-lbl">LP Cutoff</span><input type="range" id="if_lpf" title="Low-pass filter cutoff.&#10;Cuts high-frequency hiss and air.&#10;Lower values create a warmer, darker field response." min="500" max="20000" step="100" value="8000"><span class="knob-val" id="ifv_lpf">8kHz</span></div>
-          <div class="knob"><span class="knob-lbl">Release</span><input type="range" id="if_rel" title="Noise gate release speed.&#10;How slowly the gate closes after sound stops.&#10;Lower = longer natural decay." min="0.01" max="0.4" step="0.01" value="0.04"><span class="knob-val" id="ifv_rel">0.04</span></div>
-          <div class="knob"><span class="knob-lbl">Reverb</span><input type="range" id="if_rvb" title="Reverb mix on the Input Field signal.&#10;Adds space and sustain to voice or instruments.&#10;Does not affect the main output — field only." min="0" max="1" step="0.05" value="0"><span class="knob-val" id="ifv_rvb">Off</span></div>
-          <div class="knob"><span class="knob-lbl">Sensitivity</span><input type="range" id="if_sen" title="Input Field field response multiplier.&#10;Higher = louder sounds produce stronger field patterns.&#10;Lower = more subtle response." min="1" max="16" step="0.5" value="8"><span class="knob-val" id="ifv_sen">8×</span></div>
-          <div class="knob"><span class="knob-lbl">Threshold</span><input type="range" id="if_thr" title="Noise gate threshold — minimum RMS to open gate.&#10;Raise if background noise triggers the field.&#10;Lower if your signal is quiet." min="0.02" max="0.5" step="0.01" value="0.12"><span class="knob-val" id="ifv_thr">12%</span></div>
+          <div class="knob"><span class="knob-lbl">Attack</span><input type="range" id="if_atk" title="Noise gate attack speed.
+How quickly the gate opens when sound is detected.
+Lower = snappier response." min="0.05" max="0.9" step="0.01" value="0.25"><span class="knob-val" id="ifv_atk">0.25</span></div>
+          <div class="knob"><span class="knob-lbl">Drive</span><input type="range" id="if_drv" title="Input gain / drive before the field.
+Boost quiet signals or instruments.
+High values saturate the field for a rougher character." min="0.5" max="8" step="0.1" value="1"><span class="knob-val" id="ifv_drv">1.0×</span></div>
+          <div class="knob"><span class="knob-lbl">Hold</span><input type="range" id="if_hld" title="Gate hold time in frames after signal drops.
+Higher = gate stays open longer between sounds.
+Prevents flickering on natural pauses." min="0" max="60" step="1" value="18"><span class="knob-val" id="ifv_hld">18fr</span></div>
+          <div class="knob"><span class="knob-lbl">HP Filter</span><input type="range" id="if_hpf" title="High-pass filter cutoff.
+Cuts low-frequency rumble and bass.
+Useful for voice — set 80–120 Hz to remove room boom." min="20" max="800" step="10" value="80"><span class="knob-val" id="ifv_hpf">80Hz</span></div>
+          <div class="knob"><span class="knob-lbl">LP Cutoff</span><input type="range" id="if_lpf" title="Low-pass filter cutoff.
+Cuts high-frequency hiss and air.
+Lower values create a warmer, darker field response." min="500" max="20000" step="100" value="8000"><span class="knob-val" id="ifv_lpf">8kHz</span></div>
+          <div class="knob"><span class="knob-lbl">Release</span><input type="range" id="if_rel" title="Noise gate release speed.
+How slowly the gate closes after sound stops.
+Lower = longer natural decay." min="0.01" max="0.4" step="0.01" value="0.04"><span class="knob-val" id="ifv_rel">0.04</span></div>
+          <div class="knob"><span class="knob-lbl">Reverb</span><input type="range" id="if_rvb" title="Reverb mix on the Input Field signal.
+Adds space and sustain to voice or instruments.
+Does not affect the main output — field only." min="0" max="1" step="0.05" value="0"><span class="knob-val" id="ifv_rvb">Off</span></div>
+          <div class="knob"><span class="knob-lbl">Sensitivity</span><input type="range" id="if_sen" title="Input Field field response multiplier.
+Higher = louder sounds produce stronger field patterns.
+Lower = more subtle response." min="1" max="16" step="0.5" value="8"><span class="knob-val" id="ifv_sen">8×</span></div>
+          <div class="knob"><span class="knob-lbl">Threshold</span><input type="range" id="if_thr" title="Noise gate threshold — minimum RMS to open gate.
+Raise if background noise triggers the field.
+Lower if your signal is quiet." min="0.02" max="0.5" step="0.01" value="0.12"><span class="knob-val" id="ifv_thr">12%</span></div>
         </div>
       </div>
     </div>
@@ -841,9 +896,9 @@ body.disc-open{overflow:hidden;}
 
   <!-- I: Instructions -->
   <div class="mod" style="border-top:1px solid var(--bd)">
-    <div class="mod-hdr" onclick="(function(){var b=document.getElementById('instrBody');var a=document.getElementById('instrArr');b.style.display=b.style.display==='block'?'none':'block';a.style.transform=b.style.display==='block'?'rotate(180deg)':'';})();" style="cursor:pointer;user-select:none;border-left:3px solid #34c759;">
+    <div class="mod-hdr" onclick="(function(){var b=document.getElementById(&#39;instrBody&#39;);var a=document.getElementById(&#39;instrArr&#39;);b.style.display=b.style.display===&#39;block&#39;?&#39;none&#39;:&#39;block&#39;;a.style.transform=b.style.display===&#39;block&#39;?&#39;rotate(180deg)&#39;:&#39;&#39;;})();" style="cursor:pointer;user-select:none;border-left:3px solid #34c759;">
       <span class="mod-name">Instructions</span><span class="mod-status">v1.0</span>
-      <button class="mod-arrow" id="instrArr" style="pointer-events:none;">&#9660;</button>
+      <button class="mod-arrow" id="instrArr" style="pointer-events:none;">▼</button>
     </div>
     <div id="instrBody" style="display:none;border-top:1px solid var(--bd);"><div style="max-height:480px;overflow-y:auto;padding:16px;scrollbar-width:thin;scrollbar-color:var(--bd2) transparent;font-size:11px;color:var(--tx3);line-height:1.75;"><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Getting Started</div><p style="margin:0 0 10px;">Click <strong style="color:var(--tx2);">Play</strong> to start the engine. A 7.83 Hz Schumann track loads by default. Add tracks in Oscillators, pick any frequency from the Library, watch the Chladni field respond. Headphones required for binaural and HRTF effects.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Display Interface Bar</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Play/Pause</strong> Starts/stops all oscillator tracks. <strong style="color:var(--tx2);">Fullscreen</strong> Expands the Chladni field — Escape to exit. <strong style="color:var(--tx2);">Input Field</strong> Routes live mic into the field. <strong style="color:var(--tx2);">Master FX</strong> Global effects chain. <strong style="color:var(--tx2);">Visuals</strong> Show/hide the display. <strong style="color:var(--tx2);">Volume</strong> Master output level.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Display Modes</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Chladni</strong> Real-time spring-mesh resonance (Ernst Chladni, 1787). Visual Controls apply here only.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Lissajous</strong> L vs R channel phase plot. <strong style="color:var(--tx2);">Shape Presets</strong> bar appears when active — click a preset to auto-configure two tracks at a frequency ratio (Circle 1:1, Figure 8 1:2, Trefoil 2:3, etc.).</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Spectrum</strong> Real-time FFT, mirrored at centre — bass in the middle, treble at edges.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Waveform</strong> Zero-crossing locked oscilloscope. Flat line when silent.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Grid</strong> and <strong style="color:var(--tx2);">Labels</strong> are buttons in the display bar — not keyboard shortcuts.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Visual Controls (Chladni only)</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Palette</strong> 10 built-in + Rainbow + Custom colour picker.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Quality</strong> Draft (1-tap) · Standard (5-tap) · High (9-tap GPU shader sampling).</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Bloom</strong> Glow around nodal lines + Bloom Radius. <strong style="color:var(--tx2);">Breathe</strong> Speed &amp; Depth — pulsing brightness animation.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Brightness</strong> <strong style="color:var(--tx2);">Nodal Width</strong> <strong style="color:var(--tx2);">Frequency Tint</strong> <strong style="color:var(--tx2);">Persistence</strong> Trail length (0=off). <strong style="color:var(--tx2);">Sensitivity</strong> How strongly the field responds to audio.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Oscillators</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Hz</strong> Type or use the slider. Range 0–20,000 Hz.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Waveforms</strong> Sine · Triangle · Square · Sawtooth · Bell · Fork · Organ.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Binaural</strong> Splits to L/R with configurable Hz offset for brainwave entrainment. <strong style="color:var(--tx2);">Sweep</strong> oscillates the offset over 2–120 s.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Volume</strong> Per-track level. <strong style="color:var(--tx2);">Toggle ◼/▶</strong> Enable/disable without removing. <strong style="color:var(--tx2);">Stereo Split ⇄</strong> Mirrors pan.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Thumbnail</strong> Live mini Chladni per track. ● show/hide, ⛶ fullscreen. Up to 13 tracks total.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Synth Engine (per track — click Synth button)</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Detune</strong> ±100¢ fine tune. <strong style="color:var(--tx2);">Envelope</strong> ADSR. <strong style="color:var(--tx2);">Filter</strong> LP/HP/BP/Notch with Cutoff and Resonance.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">LFO</strong> 0.01–20 Hz modulating Amplitude, Filter, or Pitch. <strong style="color:var(--tx2);">Portamento</strong> Glide time between frequency changes. All update live.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Track FX (click FX button on track)</div><p style="margin:0 0 10px;">Compress · Delay Time &amp; Mix · LP Cutoff · Reverb Tail &amp; Mix. <strong style="color:var(--tx2);">Dynamics</strong> None/Pulse/Swell/Tremolo with Rate and Depth.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Spatial Audio — HRTF 3D</div><p style="margin:0 0 10px;">Drag pad: X=left/right, Z=front/back. <strong style="color:var(--tx2);">Elev</strong> slider = vertical Y axis. Web Audio HRTF PannerNode — full 3D with headphones. <strong style="color:var(--tx2);">Center</strong> resets to origin.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Master FX</div><p style="margin:0 0 10px;">Global chain across the full mix: Compress · Delay Time &amp; Mix · LP Cutoff · Reverb Tail &amp; Mix. Toggle on/off without resetting knob values.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Audio File</div><p style="margin:0 0 4px;">MP3, WAV, OGG, FLAC, AAC. Drag-and-drop or click to load.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">♭ 432 Tune</strong> Offline pitch shift 440→432 Hz. Click again to restore.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">⬇ WAV</strong> Offline render of mix to WAV. <strong style="color:var(--tx2);">⏺ Audio</strong> Live WebM/Opus. <strong style="color:var(--tx2);">⏺ Video</strong> Live 60fps WebM. <strong style="color:var(--tx2);">⏺ A+V</strong> Combined 8 Mbps WebM.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">⬇ Visualizer</strong> Renders the loaded audio file to HD or FHD WebM video with chosen display mode and current palette synced to audio.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Input Field — Mic to Chladni</div><p style="margin:0 0 10px;">Routes live mic into the Chladni field. Chain: HPF → Drive → LPF → Reverb. Noise gate (Threshold, Attack, Hold, Release, Sensitivity) blocks background noise.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Frequency Library — 23 Categories</div><p style="margin:0 0 4px;">Alchemical · Bioacoustic · Brainwave &amp; Entrainment · Buddhist · Chakras · Chinese Elements · Cymatics Nodes · DNA · Gregorian · Healing · Kabbalah · Musical Harmonics · Norse · Periodic Table · Planets &amp; Zodiac · Pythagorean · Rife · Sacred Geometry · Schumann · Shamanic · Solfeggio · Sufi · Vedic.</p><p style="margin:0 0 10px;">Click any entry to apply to the active track (creates one if needed). <strong style="color:var(--tx2);">Periodic Table</strong> uses f(Z)=16 Hz×2<sup>(Z−1)/12</sup>. Aether (Æ) at 7.83 Hz.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Output Calibration [Experimental]</div><p style="margin:0 0 10px;">Mic pitch detection vs active oscillator. Delta display in cents. <strong style="color:var(--tx2);">Auto-tune</strong> corrects oscillator or synth detune toward detected output. Noise gate: Hold, Smoothing, Threshold.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Saved Sessions</div><p style="margin:0 0 10px;">Name a session and click <strong style="color:var(--tx2);">Save</strong> to store all tracks, FX, synth, and visual settings to localStorage. Click a name to restore, × to delete.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Theme</div><p style="margin:0 0 10px;">10 UI themes: Bamboo · Cave (default) · Dusk · Forest · Glacier · Meadow · Ocean · River · Sand · Stone. Saved to localStorage.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Keyboard Shortcuts</div><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Space</strong> Play/Pause oscillators (only when no text input is focused).</p><div style="font-size:9px;color:var(--tx4);border-top:1px solid var(--bd);padding-top:8px;text-align:center;">Naadara v1.0 — Educational, artistic, and research use only.</div></div></div>
 
@@ -852,8 +907,8 @@ body.disc-open{overflow:hidden;}
     <div class="mod-hdr">
       <span class="mod-name" data-tip="Each track generates one pure tone via WebAudio.">Oscillators</span>
       <span class="mod-status" id="oscModStatus">2 tracks</span>
-      <button class="mod-pwr on" id="oscModPwr" onclick="toggleModPower('osc')" data-tip="Enable or disable all oscillator tracks simultaneously.">⏻</button>
-      <button class="mod-arrow open" id="oscModArr" onclick="toggleModContent('osc')" data-tip="Expand or collapse.">▼</button>
+      <button class="mod-pwr on" id="oscModPwr" onclick="toggleModPower(&#39;osc&#39;)" data-tip="Enable or disable all oscillator tracks simultaneously.">⏻</button>
+      <button class="mod-arrow open" id="oscModArr" onclick="toggleModContent(&#39;osc&#39;)" data-tip="Expand or collapse.">▼</button>
     </div>
     <div class="osc-mod-body open" id="oscModBody">
       <div id="oscPanel">
@@ -874,8 +929,8 @@ body.disc-open{overflow:hidden;}
     <div class="mod-hdr">
       <span class="mod-name">Output Calibration</span>
       <span class="mod-status" id="micModStatus">Off</span>
-      <button class="mod-pwr" id="micModPwr" onclick="toggleModPower('mic')" data-tip="Enable or disable the microphone input for Output Calibration.">⏻</button>
-      <button class="mod-arrow" id="micModArr" onclick="toggleModContent('mic')" data-tip="Expand or collapse.">▼</button>
+      <button class="mod-pwr" id="micModPwr" onclick="toggleModPower(&#39;mic&#39;)" data-tip="Enable or disable the microphone input for Output Calibration.">⏻</button>
+      <button class="mod-arrow" id="micModArr" onclick="toggleModContent(&#39;mic&#39;)" data-tip="Expand or collapse.">▼</button>
     </div>
     <div class="mod-body" id="micModBody">
       <div class="calib-wrap">
@@ -910,9 +965,15 @@ body.disc-open{overflow:hidden;}
       <div class="fx-sec" style="border-top:1px solid var(--bd)">
         <div class="fx-top"><span class="fx-ttl" data-tip="Noise gate for Output Calibration.">Noise Gate</span></div>
         <div class="fx-knobs" style="display:flex;justify-content:center;gap:0;">
-          <div class="knob"><span class="knob-lbl">Hold</span><input type="range" id="cal_hld" title="Gate hold time.&#10;Frames gate stays open after signal drops.&#10;Prevents flickering between readings." min="0" max="60" step="1" value="12"><span class="knob-val" id="calv_hld">12fr</span></div>
-          <div class="knob"><span class="knob-lbl">Smoothing</span><input type="range" id="cal_smt" title="Frequency detection smoothing.&#10;Higher = more stable but slower to track pitch changes.&#10;Lower = faster but more jittery." min="0.1" max="0.95" step="0.01" value="0.65"><span class="knob-val" id="calv_smt">0.65</span></div>
-          <div class="knob"><span class="knob-lbl">Threshold</span><input type="range" id="cal_thr" title="Noise gate threshold.&#10;Minimum signal level to trigger detection.&#10;Raise if background noise causes false readings." min="0.01" max="0.4" step="0.01" value="0.08"><span class="knob-val" id="calv_thr">8%</span></div>
+          <div class="knob"><span class="knob-lbl">Hold</span><input type="range" id="cal_hld" title="Gate hold time.
+Frames gate stays open after signal drops.
+Prevents flickering between readings." min="0" max="60" step="1" value="12"><span class="knob-val" id="calv_hld">12fr</span></div>
+          <div class="knob"><span class="knob-lbl">Smoothing</span><input type="range" id="cal_smt" title="Frequency detection smoothing.
+Higher = more stable but slower to track pitch changes.
+Lower = faster but more jittery." min="0.1" max="0.95" step="0.01" value="0.65"><span class="knob-val" id="calv_smt">0.65</span></div>
+          <div class="knob"><span class="knob-lbl">Threshold</span><input type="range" id="cal_thr" title="Noise gate threshold.
+Minimum signal level to trigger detection.
+Raise if background noise causes false readings." min="0.01" max="0.4" step="0.01" value="0.08"><span class="knob-val" id="calv_thr">8%</span></div>
         </div>
       </div>
     </div>
@@ -921,7 +982,8 @@ body.disc-open{overflow:hidden;}
 
   <!-- S: Saved Sessions -->
   <div class="pre-inner" style="border-top:1px solid var(--bd)">
-    <div class="pre-hdr" onclick="toggleSessions()" style="cursor:pointer" data-tip="Saves your full setup locally.&#10;Click name to restore · × to delete.">
+    <div class="pre-hdr" onclick="toggleSessions()" style="cursor:pointer" data-tip="Saves your full setup locally.
+Click name to restore · × to delete.">
       Saved Sessions
       <span style="flex:1"></span>
       <button class="mod-arrow open" id="sessArr" style="pointer-events:none">▼</button>
@@ -938,35 +1000,35 @@ body.disc-open{overflow:hidden;}
   <!-- V: Visual Controls -->
   <!-- V: Visual Controls — renamed to Themes, shows only theme bar -->
   <div class="vc-sec">
-    <div class="mod-hdr" style="border-left:3px solid #c084fc;" id="vcHdr" onclick="toggleVcBody()" style="cursor:pointer">
+    <div class="mod-hdr" style="border-left:3px solid #c084fc;" id="vcHdr" onclick="toggleVcBody()">
       <span class="mod-name">Theme</span>
       <span class="mod-status" id="vcMeta">Plasma · Bloom on</span>
       <button class="mod-arrow open" id="vcArr" style="pointer-events:none">▼</button>
     </div>
     <div class="vc-body open" id="vcBody">
       <div class="theme-bar">
-            <div class="theme-pill" id="th_bamboo" onclick="setTheme('bamboo')" data-tip="Bamboo · soft jade forest light."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#608840,#a8d880)"></div>Bamboo</div>
-            <div class="theme-pill on" id="th_cave" onclick="setTheme('cave')" data-tip="Cave · deep underground stillness."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#505090,#9898d8)"></div>Cave</div>
-            <div class="theme-pill" id="th_dusk" onclick="setTheme('dusk')" data-tip="Twilight · deep violet sky at dusk."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#9060a8,#d4a0e0)"></div>Dusk</div>
-            <div class="theme-pill" id="th_forest" onclick="setTheme('forest')" data-tip="Forest · ancient woodland greens."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#3a8858,#78c898)"></div>Forest</div>
-            <div class="theme-pill" id="th_glacier" onclick="setTheme('glacier')" data-tip="Glacier · icy mountain stillness."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#6898c8,#b8d8f0)"></div>Glacier</div>
-            <div class="theme-pill" id="th_meadow" onclick="setTheme('meadow')" data-tip="Meadow · open field at dawn."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#408848,#90d878)"></div>Meadow</div>
-            <div class="theme-pill" id="th_ocean" onclick="setTheme('ocean')" data-tip="Ocean · deep water calm."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#2888a0,#50c8c0)"></div>Ocean</div>
-            <div class="theme-pill" id="th_river" onclick="setTheme('river')" data-tip="River · clear flowing water over stone."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#3878b0,#78b8e0)"></div>River</div>
-            <div class="theme-pill" id="th_sand" onclick="setTheme('sand')" data-tip="Sand · warm desert at golden hour."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#a07838,#d8b878)"></div>Sand</div>
-            <div class="theme-pill" id="th_stone" onclick="setTheme('stone')" data-tip="Stone · dark volcanic neutral. Default."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#607080,#a8b8c8)"></div>Stone</div>
+            <div class="theme-pill" id="th_bamboo" onclick="setTheme(&#39;bamboo&#39;)" data-tip="Bamboo · soft jade forest light."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#608840,#a8d880)"></div>Bamboo</div>
+            <div class="theme-pill on" id="th_cave" onclick="setTheme(&#39;cave&#39;)" data-tip="Cave · deep underground stillness."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#505090,#9898d8)"></div>Cave</div>
+            <div class="theme-pill" id="th_dusk" onclick="setTheme(&#39;dusk&#39;)" data-tip="Twilight · deep violet sky at dusk."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#9060a8,#d4a0e0)"></div>Dusk</div>
+            <div class="theme-pill" id="th_forest" onclick="setTheme(&#39;forest&#39;)" data-tip="Forest · ancient woodland greens."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#3a8858,#78c898)"></div>Forest</div>
+            <div class="theme-pill" id="th_glacier" onclick="setTheme(&#39;glacier&#39;)" data-tip="Glacier · icy mountain stillness."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#6898c8,#b8d8f0)"></div>Glacier</div>
+            <div class="theme-pill" id="th_meadow" onclick="setTheme(&#39;meadow&#39;)" data-tip="Meadow · open field at dawn."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#408848,#90d878)"></div>Meadow</div>
+            <div class="theme-pill" id="th_ocean" onclick="setTheme(&#39;ocean&#39;)" data-tip="Ocean · deep water calm."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#2888a0,#50c8c0)"></div>Ocean</div>
+            <div class="theme-pill" id="th_river" onclick="setTheme(&#39;river&#39;)" data-tip="River · clear flowing water over stone."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#3878b0,#78b8e0)"></div>River</div>
+            <div class="theme-pill" id="th_sand" onclick="setTheme(&#39;sand&#39;)" data-tip="Sand · warm desert at golden hour."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#a07838,#d8b878)"></div>Sand</div>
+            <div class="theme-pill" id="th_stone" onclick="setTheme(&#39;stone&#39;)" data-tip="Stone · dark volcanic neutral. Default."><div class="theme-pill-swatch" style="background:linear-gradient(135deg,#607080,#a8b8c8)"></div>Stone</div>
           </div>
     </div>
   </div>
   <!-- U: Update Log -->
   <div class="mod" style="border-top:1px solid var(--bd)">
-    <div class="mod-hdr" onclick="(function(){var b=document.getElementById('updateLogBody');var a=document.getElementById('ulArr');b.style.display=b.style.display==='block'?'none':'block';a.style.transform=b.style.display==='block'?'rotate(180deg)':'';})();" style="cursor:pointer;user-select:none;border-left:3px solid #ffd080;">
+    <div class="mod-hdr" onclick="(function(){var b=document.getElementById(&#39;updateLogBody&#39;);var a=document.getElementById(&#39;ulArr&#39;);b.style.display=b.style.display===&#39;block&#39;?&#39;none&#39;:&#39;block&#39;;a.style.transform=b.style.display===&#39;block&#39;?&#39;rotate(180deg)&#39;:&#39;&#39;;})();" style="cursor:pointer;user-select:none;border-left:3px solid #ffd080;">
       <span class="mod-name">Update Log</span><span class="mod-status">v1.0</span>
-      <button class="mod-arrow" id="ulArr" style="pointer-events:none;">&#9660;</button>
+      <button class="mod-arrow" id="ulArr" style="pointer-events:none;">▼</button>
     </div>
     <div id="updateLogBody" style="display:none;border-top:1px solid var(--bd);">
       <div style="max-height:220px;overflow-y:auto;padding:14px 16px;scrollbar-width:thin;scrollbar-color:var(--bd2) transparent;">
-        <div style="margin-bottom:14px;"><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">v1.0 &mdash; Initial Release</div><div style="font-size:11px;color:var(--tx3);line-height:1.75;">Naadara launches as the world's first open cymatics laboratory. Chladni resonance fields, 23-category frequency library, binaural entrainment, HRTF 3D spatial audio, Synth Engine, Input Field mic routing, Output Calibration, live A/V recording, Visualizer export. Completely free.</div></div>
+        <div style="margin-bottom:14px;"><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">v1.0 — Initial Release</div><div style="font-size:11px;color:var(--tx3);line-height:1.75;">Naadara launches as the world's first open cymatics laboratory. Chladni resonance fields, 23-category frequency library, binaural entrainment, HRTF 3D spatial audio, Synth Engine, Input Field mic routing, Output Calibration, live A/V recording, Visualizer export. Completely free.</div></div>
         <div style="font-size:10px;color:var(--tx4);font-style:italic;padding-top:10px;border-top:1px solid var(--bd);text-align:center;">No further updates at this time.</div>
       </div>
     </div>
@@ -974,49 +1036,49 @@ body.disc-open{overflow:hidden;}
 </div>
 
 <div class="creator-bar">
-  <div class="creator-by">Created by <span class="creator-slash">//</span> <strong>V.C. Hackett</strong> <button onclick="(function(){var b=document.getElementById('aboutBody');var a=document.getElementById('aboutArr');b.style.display=b.style.display==='block'?'none':'block';a.style.transform=b.style.display==='block'?'rotate(180deg)':'';})();" style="background:none;border:none;color:var(--tx4);cursor:pointer;font-size:10px;padding:0 3px;vertical-align:middle;line-height:1;" title="About the creator" id="aboutArr">&#9660;</button></div>
+  <div class="creator-by">Created by <span class="creator-slash">//</span> <strong>V.C. Hackett</strong> <button onclick="(function(){var b=document.getElementById(&#39;aboutBody&#39;);var a=document.getElementById(&#39;aboutArr&#39;);b.style.display=b.style.display===&#39;block&#39;?&#39;none&#39;:&#39;block&#39;;a.style.transform=b.style.display===&#39;block&#39;?&#39;rotate(180deg)&#39;:&#39;&#39;;})();" style="background:none;border:none;color:var(--tx4);cursor:pointer;font-size:10px;padding:0 3px;vertical-align:middle;line-height:1;" title="About the creator" id="aboutArr">▼</button></div>
   <div id="aboutBody" style="display:none;padding:12px 16px 4px;font-size:11px;color:var(--tx3);line-height:1.8;text-align:center;border-top:1px solid var(--bd);margin-top:6px;width:100%;">
-    <p style="margin:0 0 9px;">Hey! I'm <span style="color:#c4d0ff;font-weight:600;">V.C. Hackett</span> &mdash; happily taken, father of two. Nothing about me is traditional &mdash; both my parents were <span style="color:#ffb347;font-weight:600;">in the circus</span>, I have <span style="color:#c4d0ff;font-weight:600;">Tourette's Syndrome</span>, and life has always been loud and colourful in every sense.</p>
+    <p style="margin:0 0 9px;">Hey! I'm <span style="color:#c4d0ff;font-weight:600;">V.C. Hackett</span> — happily taken, father of two. Nothing about me is traditional — both my parents were <span style="color:#ffb347;font-weight:600;">in the circus</span>, I have <span style="color:#c4d0ff;font-weight:600;">Tourette's Syndrome</span>, and life has always been loud and colourful in every sense.</p>
     <p style="margin:0 0 9px;">I spent the better part of a decade at <span style="color:#c4d0ff;font-weight:600;">Amazon</span> helping train AI models. Stepping back and watching how fast the technology moved, I figured it was finally a good time to give an old idea a real shot.</p>
-    <p style="margin:0 0 9px;"><span style="color:#ffb347;font-weight:600;">Frequencies</span> have fascinated me my whole life &mdash; maybe it's the <span style="color:#c4d0ff;font-weight:600;">musician</span> in me, maybe the <span style="color:#c4d0ff;font-weight:600;">conspiracy theorist</span>, maybe the <span style="color:#c4d0ff;font-weight:600;">history nerd</span> &mdash; probably all of it. Discovering <span style="color:#ffb347;font-weight:600;">binaural beats</span> sent me down a rabbit hole I never came back from. The way matter physically responds to <span style="color:#ffb347;font-weight:600;">vibration</span> is one of the most fascinating things I've ever come across.</p>
-    <p style="margin:0 0 9px;">I also have <span style="color:#c4d0ff;font-weight:600;">Synesthesia</span> &mdash; I visualise everything, including music. Songs don't just sound like something to me, they form as <span style="color:#ffb347;font-weight:600;">pictures</span> I then translate back into sound. It's part of why I became a musician and a big part of why I built this. Naadara gives people without Synesthesia a window into what that experience actually feels like &mdash; and I think that's genuinely special.</p>
+    <p style="margin:0 0 9px;"><span style="color:#ffb347;font-weight:600;">Frequencies</span> have fascinated me my whole life — maybe it's the <span style="color:#c4d0ff;font-weight:600;">musician</span> in me, maybe the <span style="color:#c4d0ff;font-weight:600;">conspiracy theorist</span>, maybe the <span style="color:#c4d0ff;font-weight:600;">history nerd</span> — probably all of it. Discovering <span style="color:#ffb347;font-weight:600;">binaural beats</span> sent me down a rabbit hole I never came back from. The way matter physically responds to <span style="color:#ffb347;font-weight:600;">vibration</span> is one of the most fascinating things I've ever come across.</p>
+    <p style="margin:0 0 9px;">I also have <span style="color:#c4d0ff;font-weight:600;">Synesthesia</span> — I visualise everything, including music. Songs don't just sound like something to me, they form as <span style="color:#ffb347;font-weight:600;">pictures</span> I then translate back into sound. It's part of why I became a musician and a big part of why I built this. Naadara gives people without Synesthesia a window into what that experience actually feels like — and I think that's genuinely special.</p>
     <p style="margin:0 0 9px;">I've always had a thing for <span style="color:#ff9eb5;font-weight:600;">dolphins</span> too. Everything about them. I was obsessed with <span style="color:#ff9eb5;font-weight:600;">Ecco the Dolphin</span> growing up and dolphin acoustic research is genuinely wild. A lot of what this tool does ties into that world.</p>
-    <p style="margin:0 0 12px;">I packed in as many features as I could. Think of it as a <span style="color:#c4d0ff;font-weight:600;">starting point</span> &mdash; built with <span style="color:#c4d0ff;font-weight:600;">Claude AI</span> and a lifetime of curiosity. I hope people find cool uses for it and use it to start their own dive into <span style="color:#ffb347;font-weight:600;">frequency science</span>.</p>
-    <p style="margin:0 0 4px;">From the bottom of my heart &mdash; <span style="color:#ff9eb5;font-weight:600;">much love to the world</span>, and to all of humanity.</p>
-    <p style="margin:0 0 10px;font-size:10px;color:rgba(200,215,255,.5);letter-spacing:.3px;">&mdash; V.C. Hackett</p>
-    <p style="margin:0;font-size:18px;cursor:pointer;user-select:none;" onclick="(function(){var ps=document.getElementById('aboutPS');ps.style.display=ps.style.display==='block'?'none':'block';})()" title="...">&#x1F42C;</p>
-    <p id="aboutPS" style="display:none;margin:8px 0 0;font-size:10px;color:rgba(200,215,255,.45);font-style:italic;line-height:1.75;border-top:1px solid rgba(196,208,255,.08);padding-top:8px;">P.S. Hopefully one day we get to explore the <span style="color:rgba(200,215,255,.6);">whole world</span> &mdash; <span style="color:rgba(200,215,255,.6);">(yes, Antarctica too&hellip;)</span> &mdash; and reconnect with the <span style="color:#ff9eb5;">dolphins</span> the way we were always meant to. It's not that we can't live alongside them &mdash; we're just not allowed to.<br><br><em>Free energy nerds &mdash; where you at? &#128064;</em></p>
+    <p style="margin:0 0 12px;">I packed in as many features as I could. Think of it as a <span style="color:#c4d0ff;font-weight:600;">starting point</span> — built with <span style="color:#c4d0ff;font-weight:600;">Claude AI</span> and a lifetime of curiosity. I hope people find cool uses for it and use it to start their own dive into <span style="color:#ffb347;font-weight:600;">frequency science</span>.</p>
+    <p style="margin:0 0 4px;">From the bottom of my heart — <span style="color:#ff9eb5;font-weight:600;">much love to the world</span>, and to all of humanity.</p>
+    <p style="margin:0 0 10px;font-size:10px;color:rgba(200,215,255,.5);letter-spacing:.3px;">— V.C. Hackett</p>
+    <p style="margin:0;font-size:18px;cursor:pointer;user-select:none;" onclick="(function(){var ps=document.getElementById(&#39;aboutPS&#39;);ps.style.display=ps.style.display===&#39;block&#39;?&#39;none&#39;:&#39;block&#39;;})()" title="...">🐬</p>
+    <p id="aboutPS" style="display:none;margin:8px 0 0;font-size:10px;color:rgba(200,215,255,.45);font-style:italic;line-height:1.75;border-top:1px solid rgba(196,208,255,.08);padding-top:8px;">P.S. Hopefully one day we get to explore the <span style="color:rgba(200,215,255,.6);">whole world</span> — <span style="color:rgba(200,215,255,.6);">(yes, Antarctica too…)</span> — and reconnect with the <span style="color:#ff9eb5;">dolphins</span> the way we were always meant to. It's not that we can't live alongside them — we're just not allowed to.<br><br><em>Free energy nerds — where you at? 👀</em></p>
   </div>
   <div class="creator-social-row">
     <!-- Alphabetical: Discord · Facebook · GitHub · Instagram · Twitch · YouTube -->
     <a class="social-btn" href="https://discord.gg/XUAyvZCUdj" target="_blank" rel="noopener" title="Naadara Discord">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M20.3 4.4a19.8 19.8 0 0 0-4.9-1.5.07.07 0 0 0-.08.04c-.21.37-.44.86-.61 1.25a18.3 18.3 0 0 0-5.49 0 12.6 12.6 0 0 0-.62-1.25.08.08 0 0 0-.08-.04A19.7 19.7 0 0 0 3.7 4.4a.07.07 0 0 0-.03.03C.53 9.05-.32 13.58.1 18.06a.08.08 0 0 0 .03.06 19.9 19.9 0 0 0 6 3 .08.08 0 0 0 .08-.03c.46-.63.87-1.3 1.23-2a.08.08 0 0 0-.04-.1 13.1 13.1 0 0 1-1.87-.9.08.08 0 0 1-.01-.13l.37-.29a.07.07 0 0 1 .08-.01c3.93 1.79 8.18 1.79 12.06 0a.07.07 0 0 1 .08.01l.37.29a.08.08 0 0 1-.01.13 12.3 12.3 0 0 1-1.87.89.08.08 0 0 0-.04.11c.36.7.77 1.36 1.22 1.99a.08.08 0 0 0 .08.03 19.8 19.8 0 0 0 6-3 .08.08 0 0 0 .03-.05c.5-5.18-.84-9.67-3.55-13.66a.06.06 0 0 0-.03-.03zM8 15.3c-1.18 0-2.16-1.08-2.16-2.42s.96-2.42 2.16-2.42 2.18 1.1 2.16 2.42S9.2 15.3 8 15.3zm8 0c-1.18 0-2.16-1.08-2.16-2.42s.95-2.42 2.16-2.42 2.17 1.1 2.16 2.42S17.2 15.3 16 15.3z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M20.3 4.4a19.8 19.8 0 0 0-4.9-1.5.07.07 0 0 0-.08.04c-.21.37-.44.86-.61 1.25a18.3 18.3 0 0 0-5.49 0 12.6 12.6 0 0 0-.62-1.25.08.08 0 0 0-.08-.04A19.7 19.7 0 0 0 3.7 4.4a.07.07 0 0 0-.03.03C.53 9.05-.32 13.58.1 18.06a.08.08 0 0 0 .03.06 19.9 19.9 0 0 0 6 3 .08.08 0 0 0 .08-.03c.46-.63.87-1.3 1.23-2a.08.08 0 0 0-.04-.1 13.1 13.1 0 0 1-1.87-.9.08.08 0 0 1-.01-.13l.37-.29a.07.07 0 0 1 .08-.01c3.93 1.79 8.18 1.79 12.06 0a.07.07 0 0 1 .08.01l.37.29a.08.08 0 0 1-.01.13 12.3 12.3 0 0 1-1.87.89.08.08 0 0 0-.04.11c.36.7.77 1.36 1.22 1.99a.08.08 0 0 0 .08.03 19.8 19.8 0 0 0 6-3 .08.08 0 0 0 .03-.05c.5-5.18-.84-9.67-3.55-13.66a.06.06 0 0 0-.03-.03zM8 15.3c-1.18 0-2.16-1.08-2.16-2.42s.96-2.42 2.16-2.42 2.18 1.1 2.16 2.42S9.2 15.3 8 15.3zm8 0c-1.18 0-2.16-1.08-2.16-2.42s.95-2.42 2.16-2.42 2.17 1.1 2.16 2.42S17.2 15.3 16 15.3z"></path></svg>
       <span>Discord</span>
     </a>
     <a class="social-btn" href="https://github.com/VCHackett/naadara" target="_blank" rel="noopener" title="GitHub — open source">
-      <svg viewBox="0 0 24 24" viewBox="0 0 24 24" fill="currentColor" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path></svg>
       <span>GitHub</span>
     </a>
     <a class="social-btn" href="https://www.facebook.com/VCHackett" target="_blank" rel="noopener" title="Facebook @VCHackett">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
       <span>Facebook</span>
     </a>
     <a class="social-btn" href="https://www.instagram.com/VCHackett" target="_blank" rel="noopener" title="Instagram @VCHackett">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
       <span>Instagram</span>
     </a>
     <a class="social-btn" href="https://www.twitch.tv/VCHackett" target="_blank" rel="noopener" title="Twitch @VCHackett">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"></path></svg>
       <span>Twitch</span>
     </a>
     <a class="social-btn" href="https://www.youtube.com/@VCHackett" target="_blank" rel="noopener" title="YouTube @VCHackett">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--bg,#07080a)"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--bg,#07080a)"></polygon></svg>
       <span>YouTube</span>
     </a>
   </div>
 </div>
 
-<p class="status" id="status">Naadara v1.0 · Open Source · MIT Licence · For educational and artistic use only · Not medical advice · Headphones recommended · Feedback: <a href="mailto:Chrispr4lbusiness@gmail.com" style="color:rgba(196,208,255,.55);text-decoration:none;padding:1px 8px;border:1px solid rgba(196,208,255,.2);border-radius:99px;font-size:9px;">Chrispr4lbusiness@gmail.com</a> · <a href="https://www.paypal.com/donate/?business=KVCA2EH3UJ3YU&no_recurring=0&currency_code=USD" target="_blank" rel="noopener" style="color:rgba(255,190,120,.6);text-decoration:none;transition:color .15s;" onmouseover="this.style.color='rgba(255,210,150,.9)'" onmouseout="this.style.color='rgba(255,190,120,.6)'">♡ Donate ♡</a></p>
+<p class="status" id="status">Naadara v1.0 · Open Source · MIT Licence · For educational and artistic use only · Not medical advice · Headphones recommended · Feedback: <a href="mailto:Chrispr4lbusiness@gmail.com" style="color:rgba(196,208,255,.55);text-decoration:none;padding:1px 8px;border:1px solid rgba(196,208,255,.2);border-radius:99px;font-size:9px;">Chrispr4lbusiness@gmail.com</a> · <a href="https://www.paypal.com/donate/?business=KVCA2EH3UJ3YU&amp;no_recurring=0&amp;currency_code=USD" target="_blank" rel="noopener" style="color:rgba(255,190,120,.6);text-decoration:none;transition:color .15s;" onmouseover="this.style.color=&#39;rgba(255,210,150,.9)&#39;" onmouseout="this.style.color=&#39;rgba(255,190,120,.6)&#39;">♡ Donate ♡</a></p>
 <script>
 const MAX_T=13,TW=96,TH=96;
 const SIM_RES=200;
@@ -1665,7 +1727,7 @@ function toggleDispLabels(){
 }
 
 function setOscMode(){['oscW','oscS','oscL'].forEach(id=>{document.getElementById(id).classList.toggle('on',(id==='oscW'&&oscMode==='wave')||(id==='oscS'&&oscMode==='spectrum')||(id==='oscL'&&oscMode==='lissajous'));});}
-function resizeOsc(){var wrap=document.getElementById('oscWrap');if(!wrap||wrap.style.display==='none')return;var outer=document.querySelector('.cym-outer');var W=(outer?outer.clientWidth:wrap.clientWidth)||400;var H=(outer?outer.clientHeight:wrap.clientHeight)||400;wrap.style.width=W+'px';wrap.style.height=H+'px';['oscGr','oscM','oscG'].forEach(function(id){var cv=document.getElementById(id);if(!cv)return;cv.width=W;cv.height=H;cv.style.width=W+'px';cv.style.height=H+'px';});drawOscGrid();}
+function resizeOsc(){var wrap=document.getElementById('oscWrap');if(!wrap||wrap.style.display==='none')return;var isFs=document.fullscreenElement===wrap||document.webkitFullscreenElement===wrap;var W=isFs?window.innerWidth:((document.querySelector('.cym-outer')||wrap).clientWidth)||400;var H=isFs?window.innerHeight:((document.querySelector('.cym-outer')||wrap).clientHeight)||400;wrap.style.width=W+'px';wrap.style.height=H+'px';['oscGr','oscM','oscG'].forEach(function(id){var cv=document.getElementById(id);if(!cv)return;cv.width=W;cv.height=H;cv.style.width=W+'px';cv.style.height=H+'px';});drawOscGrid();}
 window.addEventListener('resize',resizeOsc);
 function drawOscGrid(){const c=document.getElementById('oscGr');if(!c.width)return;const ctx=c.getContext('2d'),W=c.width,H=c.height;ctx.clearRect(0,0,W,H);if(!oscGridOn||oscMode==='lissajous')return;ctx.strokeStyle='rgba(255,255,255,.04)';ctx.lineWidth=1;[.25,.5,.75].forEach(y=>{ctx.beginPath();ctx.moveTo(0,y*H);ctx.lineTo(W,y*H);ctx.stroke();});for(let x=0;x<=W;x+=W/8){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}ctx.fillStyle='rgba(255,255,255,.12)';ctx.font='9px Inter,system-ui';ctx.textAlign='left';ctx.fillText('+1.0',3,10);ctx.fillText(' 0.0',3,H/2+4);ctx.fillText('-1.0',3,H-3);}
 function drawOsc(){
@@ -3239,7 +3301,7 @@ function toggleOscFs(){
   if(!document.fullscreenElement)el.requestFullscreen().catch(e=>console.warn(e));
   else document.exitFullscreen();
 }
-document.addEventListener('fullscreenchange',()=>{
+function _handleFsChange(){
   const isMaster=document.fullscreenElement===document.querySelector('.cym-outer');
   const isOsc=document.fullscreenElement===document.getElementById('oscWrap');
   const fsb=document.getElementById('fsBtn');
@@ -3248,7 +3310,10 @@ document.addEventListener('fullscreenchange',()=>{
   if(cym)cym.style.maxHeight=isMaster?'100vh':'860px';
   const ofb=document.getElementById('oscFsBtn');
   if(ofb)ofb.textContent=isOsc?'✕':'⛶';
-  if(isOsc)setTimeout(resizeOsc,50);
+  if(isOsc){setTimeout(function(){resizeOsc();requestAnimationFrame(function(){resizeOsc();drawOscGrid();drawOsc();});},120);}
+}
+document.addEventListener('fullscreenchange',_handleFsChange);
+document.addEventListener('webkitfullscreenchange',_handleFsChange);
 });
 
 document.addEventListener('keydown',e=>{
@@ -3399,8 +3464,9 @@ document.addEventListener('DOMContentLoaded',function(){
       By clicking <em>I Understand &amp; Agree</em> you acknowledge that you have read this disclaimer in full, that you are using Naadara entirely at your own risk, and that the creator accepts no liability for any damages, losses, injuries, or adverse effects arising from use or misuse of this tool. All frequency names and associations are drawn from cultural, historical, and research traditions and are presented for informational purposes only.
     </div>
     </div>
-    <div style="padding:0 32px 28px;flex-shrink:0;"><button onclick="acceptDisclaimer()" class="disc-btn">I Understand &amp; Agree &mdash; Enter Naadara</button></div>
+    <div style="padding:0 32px 28px;flex-shrink:0;"><button onclick="acceptDisclaimer()" class="disc-btn">I Understand &amp; Agree — Enter Naadara</button></div>
   </div>
 </div>
 
-</body></html>
+
+</div></body></html>
