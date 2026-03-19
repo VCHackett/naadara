@@ -7,7 +7,7 @@
 
 Naadara is a real-time cymatics and frequency laboratory built entirely in the browser. Watch sound become geometry. Explore 23 categories of frequencies from the Solfeggio scale to the full Periodic Table of Elements. Generate binaural beats, design tones with a full synth engine, position audio in 3D space with HRTF, route your microphone into a live resonance field, and record everything.
 
-Built by a musician with Synesthesia — Naadara gives everyone a window into what it feels like to see sound.
+Works on desktop and mobile. Built by a musician with Synesthesia — Naadara gives everyone a window into what it feels like to see sound.
 
 ---
 
@@ -26,6 +26,7 @@ Built by a musician with Synesthesia — Naadara gives everyone a window into wh
 - **10 UI Themes** — Cave · Ocean · Forest · Glacier · Dusk · Sand · River · Meadow · Bamboo · Stone
 - **Saved Sessions** — Full state persistence to localStorage
 - **WebGL Rendering** — GPU-accelerated Chladni field with multi-tap smoothing, bloom, persistence, and palette system
+- **Mobile Support** — Works on desktop and mobile. Install to home screen on iOS or Android for a native app experience
 
 ---
 
@@ -38,6 +39,10 @@ For the best experience:
 - Use **Chrome or Edge** for full WebGL + recording support
 - Allow **microphone access** if using Input Field or Output Calibration
 
+### Install as an App
+**iPhone / iPad** — Open in Safari → Share button → Add to Home Screen  
+**Android** — Open in Chrome → ⋮ menu → Add to Home screen
+
 ---
 
 ## Contributing
@@ -47,6 +52,16 @@ Naadara is open source and welcomes contributions of all kinds — new frequency
 See **[CONTRIBUTING.md](CONTRIBUTING.md)** for the full guide.
 
 Not a developer? Open an [Issue](https://github.com/VCHackett/naadara/issues) or start a [Discussion](https://github.com/VCHackett/naadara/discussions) — frequency knowledge, research links, and ideas are just as valuable as code.
+
+---
+
+## Community
+
+- 🌐 [naadara.org](https://naadara.org)
+- 💬 [Discord](https://discord.gg/XUAyvZCUdj)
+- 🎵 [TikTok @naadara.org](https://www.tiktok.com/@naadara.org)
+- 📖 [Wiki](https://github.com/VCHackett/naadara/wiki)
+- 🐙 [GitHub Discussions](https://github.com/VCHackett/naadara/discussions)
 
 ---
 
@@ -69,13 +84,10 @@ No build process needed. Just open the file:
 ```bash
 git clone https://github.com/VCHackett/naadara.git
 cd naadara
-# Open index.html in your browser
-open index.html        # macOS
-start index.html       # Windows
-xdg-open index.html    # Linux
+open index.html
 ```
 
-Or serve it locally for microphone/recording features (some browsers require HTTPS or localhost):
+Or serve locally for microphone/recording features:
 
 ```bash
 python3 -m http.server 8080
@@ -86,9 +98,7 @@ python3 -m http.server 8080
 
 ## Contributors
 
-<!-- ALL-CONTRIBUTORS-LIST:START -->
 **V.C. Hackett** — Creator & maintainer
-<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 Want to see your name here? Check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -104,4 +114,4 @@ Want to see your name here? Check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Built by **V.C. Hackett** — musician, father of two, lifetime conspiracy enthusiast, and Synesthete. I visualise sound as geometry and colour. Naadara is my attempt to share that experience with everyone.
 
-[naadara.org](https://naadara.org) · [Instagram](https://instagram.com/VCHackett) · [YouTube](https://youtube.com/@VCHackett) · [Twitch](https://twitch.tv/VCHackett)
+[naadara.org](https://naadara.org) · [Discord](https://discord.gg/XUAyvZCUdj) · [TikTok](https://www.tiktok.com/@naadara.org) · [Instagram](https://instagram.com/VCHackett) · [YouTube](https://youtube.com/@VCHackett)
