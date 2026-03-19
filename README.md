@@ -1,5 +1,5 @@
 # NAADARA v1.0
-### The world's first open cymatics laboratory
+### The world's first open source cymatics laboratory
 
 **[▶ Launch Naadara](https://naadara.org)** · [Wiki](https://github.com/VCHackett/naadara/wiki) · [Discord](https://discord.gg/XUAyvZCUdj) · Free · No signup · No download · Runs in your browser
 
