@@ -1,9 +1,8 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta charset="utf-8">
+<!DOCTYPE html><html><head><meta charset="utf-8">
 <link rel="canonical" href="https://naadara.org/">
-<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAIAEBAAAAAAIABzAgAAJgAAACAgAAAAACAAJgIAAJkCAACJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAI6SURBVHicfZFdSxRxFMZ/5z+zO9NmaiqlayURBhZUsAUqCRlSVAj2jca7PoSfoL0xi7wKBUl8ybwJWujCq1ZRErN9mZ2d+Z8udGV3ezl3B87zO+c8j9BWS0vq+5eZUYcVY3khkNWIOePzsFxkfnJSwuZ5aW5UVQBZ/8qUhQGbcEWERAy7AsXRET4AKiLa0Jg2MZsFhlUYSersd/iMZTxyVjkwwshmgeHm2RYAQD6PMcqQY+hV6PbS9HhpsjamSwx9RhnK51s1Z6QGdavIufiY54kldh0eqRIirKnipDpZzGWpAjTecM9IIgoqqoRbh2yr4aa17FpLbITIcSnksoQiAH/x4BSjgP5I2Bu7LYu/Khz+LDGwF7FaTlNsmuEfgJN6ek/K79a1P4o4ihPmUiGPJ69LmM+3ptbiQbMXbz7S4bvcrxsONKZXHHzfYW0qx3Hz/39coKpGRNR1uBUlmFqZOIHOKOZ7rc5LEdH/phAEyJ0n9HkOV32Pzp4OXolQPaoSHJXAVSrT47Jxusi2XyCzs2J9w12bUI5C6mGN91HMaqlMkrLsIEy8/qLpoP2CBvHtmk64lnIEx65D906FwqDhIoZLrssxQj+KMz0myw2NAQgCWFjQDJZrz8blcy3NQeJQunGeQc/jQsql4qfYnx6VFVWyC580EwSNUJu2Y5kxLhtqUBNjEyUSpYJDj7WIgKA8wDB/AlPjNsyoVtnOZPgWQcqpIo6LQam7UK0pXZ5DXAVSynKlQuk0Tvsbos0SqURR9q0AAAAASUVORK5CYIKJUE5HDQoaCgAAAA1JSERSAAAAIAAAACAIBgAAAHN6evQAAAHtSURBVHic3ZexSxxBFMZ/IyHtNQcpJH/AFlZaTCNB8Lol5L+wl9TRszZprKz8Bywk2S6BIwjhFVdpMY1diBDYZi3TPAtnYDPc5mb2VpR8zdybmX3ft+99zOzBihCnv1Z53uQS2cKsR8SnwF48H+LBIU53228tTj8EYnG6m5svuQKBxBZm3RMd+OmvwASY2sJ8C3tSc67lkvvwAJgCv308DYK8wJV80SnAj5d+PL+51bubW70Tp+fRWrKApS0IPV6E8Yj3AHXDcdceW5ijVDHLhDxKBV7kCrGF2fZE07oB4Ar4IU4vbWG2c/MlmzAyVzDdKx8HU8ZmHR5Pdg6I03cAtjAXgRCgbng7HvG5dRL+te9RUYnOK9HNSnTeN0eyB54dwltXopvtOBdPXoGsywigEt2Ipl4Cf0JQWnOdk69PBc5Ka6490cTPTXx8lpts0BaU1mzleiFLQCU6L63Z8r/3S2s+5Ty/CFkeCI4HGI84Bn768HXdPNyMHqdB6GBol1aczsTprHUbzsTprGv/v5DUgnbpAeqGL348qRtOAGxhdirR/ZR8bSS1oBJ907U2HnFYNxx2LH9cuRVxKeO3bPtiwVrvOyKJPBbQR0T2F9ECEd/79D6FKKl8cQVycz3PyyjTPHs8/D9cisEPp/8C987EQq5MPcQJAAAAAElFTkSuQmCC">
-<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB7UlEQVR4nN2XsUscQRTGfyMh7TUHKSR/wBZWWkwjQfC6JeS/sJfU0bM2aays/AcsJNkugSMI4RVXaTGNXYgQ2GYt0zwLZ2Az3OZm9laUfM3cm5l937fvfczswYoQp79Wed7kEtnCrEfEp8BePB/iwSFOd9tvLU4/BGJxupubL7kCgcQWZt0THfjpr8AEmNrCfAt7UnOu5ZL78ACYAr99PA2CvMCVfNEpwI+Xfjy/udW7m1u9E6fn0VqygKUtCD1ehPGI9wB1w3HXHluYo1Qxy4Q8SgVe5Aqxhdn2RNO6AeAK+CFOL21htnPzJZswMlcw3SsfB1PGZh0eT3YOiNN3ALYwF4EQoG54Ox7xuXUS/rXvUVGJzivRzUp03jdHsgeeHcJbV6Kb7TgXT16BrMsIoBLdiKZeAn9CUFpznZOvTwXOSmuuPdHEz018fJabbNAWlNZs5XohS0AlOi+t2fK/90trPuU8vwhZHgiOBxiPOAZ++vB13TzcjB6nQehgaJdWnM7E6ax1G87E6axr/7+Q1IJ26QHqhi9+PKkbTgBsYXYq0f2UfG0ktaASfdO1Nh5xWDccdix/XLkVcSnjt2z7YsFa7zsiiTwW0EdE9hfRAhHf+/Q+hSipfHEFcnM9z8so0zx7PPw/XIrBD6f/AvfOxEKuTD3ECQAAAABJRU5ErkJggg==">
-<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAIAEBAAAAAAIAC6AgAAJgAAACAgAAAAACAAXgEAAOACAACJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAKBSURBVHicbZJNaJxVGIWf995vvmmSMWmTtlApkQjiDw1qkbaJVDItFSkpgjDZuRFd6EJxLRKyULC46tJdtl9BsGpsCdJYqJP0B1x0ELpr/ak/SZqYpvM58917XOhIOulZ3fflnPOe995rdOH72+pxm7yOMR9avGYJz5nxoYNXQh+z48PW3Mp3W4vpabnxYWua+BXxaU8fL6UpBxCnQ8Ev48PWnJ7WAxrrHCQZYPUbjPkSJ4sCDQ3yQQhofYOPvcNCm7mxA9QBmZm2JWg0SFyJ42YckzFStMkJ5FGMOKPqShxvNEi2av4vzEyS2sBHSzdY9J5JPCsSOxJjOQRmDz/Nt0DsTN+WAKBeJ1XCqMHK+hrnllf50Yw/ZIzW66Td/G2Q5L/7QSMA31zRmfPXFQAWb2q/pKSbb92NDr5e0gsSb3nHZhH57dQRO51l8lNTFrbyHlhBkkmyc9e0O0beNGNfFG+beHbukvY0aui/13q4wdmzODNTUjCRpFzOW1yKkY1ozMYS78+YxYUF/EMNJFljD3bhsvbmbfr6K7z8zON8MvIofb1l3igCy+ev6lC1akWWyW8z+Ow6yUzVipbjnd1DDK6u4u+3WNvY5G4zx8plknbBTPcKBtC5nLkrOtUO5OWUJyV23V1jsdJDtbSDtdjib8FPGGHyiH3R0TiAWg1lF1VptXjq1TGb38xZ2DnIzYFHGDXHYzt3cSsvWJgcs89jmyeyi6rUavz7lbNM3sxiOWWiv5/nv1rSu6nj6O936JVwBu0/79BbTnjxy7reqwxwsJwyYWYxy+QNZGDK5jWwf5jKXyv0BI9TxAuKwpOXAhVzBB+I/UM0f77NvakTtg6yfwCG/CYML2g+RQAAAABJRU5ErkJggolQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAASVJREFUeJzdVjsOhCAQZTbb23gJb8AhPK6H4AY2W29l4wlmCzORED7zAKPZlxARcd6bTwaMaYRbmVv+J5TITkQx4nBd3rvDrcw+uczDdS0glW5lthNRiki+Id6/UPLSvpzAJgExIeNwjBpiQdGjnFEh3/b0/92K0S82eX6+x4h909p9o0L8UPueo8UnUNeANse1QtS4rQ+kOuG2H8VY2wmbQrW40+PZ1oUd7gOPgXgfPlHcHgE4byVP0VqoisBsiUKiRxThbInQWoAELI5ZPPXnLYAM+N7JSSgIT8Qe4pLk0nb90zBsw9pUqFIQhlu83fZzbic8/8YoU5AzPA75C0lzKkLy3Htpb3dyVGAM8I1II6ILtEY1+3J7nnkYXRJSc0Fz+gv8AOi7IcfsrluZAAAAAElFTkSuQmCC">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABJUlEQVR4nN1WOw6EIBBlNtvbeAlvwCE8rofgBjZbb2XjCWYLM5EQPvMAo9mXEBFx3ptPBoxphFuZW/4nlMhORDHicF3eu8OtzD65zMN1LSCVbmW2E1GKSL4h3r9Q8tK+nMAmATEh43CMGmJB0aOcUSHf9vT/3YrRLzZ5fr7HiH3T2n2jQvxQ+56jxSdQ14A2x7VC1LitD6Q64bYfxVjbCZtCtbjT49nWhR3uA4+BeB8+UdweAThvJU/RWqiKwGyJQqJHFOFsidBagAQsjlk89ectgAz43slJKAhPxB7ikuTSdv3TMGzD2lSoUhCGW7zd9nNuJzz/xihTkDM8DvkLSXMqQvLce2lvd3JUYAzwjUgjogu0RjX7cnueeRhdElJzQXP6C/wA6Lshx+yuW5kAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAI20lEQVR4nO2dPXLkNhBGMa7NlShSrGRvoEPscX0I3UDJxhsp0QnGgQwLhkAQPw2wgX6vyuUdCSQxxJtvGiBn5BwM5/Xtfn99u9+v7ocF/rq6AwCSIDRsBULDVpgSmjoWtsFPzCxJbem5em5Xd2Am4QC//LwNe+6lIs3qw8jjaMPME/WMGGipJBzRH0syO2dQaOdkBjwncWqfr2/3e/zz2n3U9suazM4ZFdq59oFPSViyfUpoqX2ntrcos3OGhXauToBYtlphSoTuOR4yf2Jq2S4mHPjc238sywxh4uPU9G903zRjWmjnzqW+Whbt/dOG+RPgiUsCaVFqS46jfYR9QubvmE9oz0iZpYj76B9r6uPVIHSEVpk9R1LDJ5yMgN6VjNy+YiT3jdRf/Li6AxrxgvQstaUuokiUNeF+LN6rAYUc3bh0Jk3pTU9ny26t+7B2wxUUcCbF0e9qRCpt23IspP7C/KSwRIR4icxvN6J27TkWUlND/8eZMDPXfWuPlXoRWMV0QnsJauWcdem7pb11sU0L3cKsNGSNGaqonUil6tra4804lvUJIgldQCotS5I6Xo4rXZprORYYpzTJpNaGw8c9a94l/UV+Y9QMeo30uf2eiS/x4krt1xos2wngS4KelQkmgDJQQ2eouaDRWufWbEstfQ5CC1IrHMkM3Yyqn49+9vvP/R7+V7pdT598O4tpTkIf0JOePqlDgT2//3yK1rvvlm0tgNAd5MR8fDje7uh3yNoPQg8glcwtbaCepZftatOMCdj+LD3ALULPeEvPlRsh7x9j++Fc23Ne+YW/dEL3nPiSr9ZqbVNaTpR+qWNrm5I+7MbSQmvl+el2O5P6+WleCq6cuLUwKewg93aeKyeOfseFln4Q+oCeetuLmUrh56fPL2Hs3XfLtrApUreOptrV3m3Xc6xcG6s1NAktSG16ciEFRJC+n6OkXcv3fvS0s/pCIaEFCG8Bbfn8H0kN3fARLNgKibKj5kOy8QdmpY8VH7OkLWxES3mQe1y7/ahjIbRhWqVu/ahVS3tkroNJYSWzLmwwUWzDtNCt3wc3Q7TWPnEV0TitkzVNNXTpcwAjnMnQu/JQ07blWMgM3+hZG+5ZjuvdBzLDIbEcLWVF6QujtUwouUBjGSYQAbEc/Fm39eBERISySIoiudw3qo87YHrZLsXZH4u/GmTOg9ABqbVcTVKnZNbUP1BEbrlMYvLVs/1ZH5D6CxLa5evbq9O6pMTgMvkX5oUumazFUs+69F1TLyP1J6YnFS0rDylpar4UfcS+a4+zM2afeO/A59Kw9BuRavdR0zerUpt80tIDLvVWr3XdeyXMPeEZAx0L/v7x+QWO/v+eGf2wJrWpJ3vFAP/9+j29f73M64M1qU2tclgaWI+152xK6Nmk0jn3c+gHoWErEHoQZylMSo8BoQdQKitSy4PQE/CrGqV/ewXaQWhh4tSNl+jix6S0LAgtSKucSC0HQg/k6ALKzAsr1kBoIc5KjRhKjzEgNGwFQgtQm85H7UjpfhC6kxoJS+6rQOo+EFqY2gkfE0RZELqD1lIjhtJDDoRuBOl0gtBC9JYOpLQMCN2AVKlRexw4B6EVwQSxH4SupCWd/TYliUvp0QdCV4Bc+kHoDkrT2bf79XK7kdJjQehCZk0ES48PaRC6gJ77nFM3+LekNJSB0A3Mko3Sox6EPuHqUiMGqfMg9CBS5YantOzwbWV7tjecrAya0xDR0/y4ugNa6fmSxVQ6l/6spj/wHUqOQq5ORCaIZSB0Am0TwSOQ+jsIHdErSU0ZUTM59O3be2YDhD5Bm0SUHnkQOqC31KhJ5/AYSCkHQi8IKX0MQv/LFekcHkuidu/ZfhcQ2q0pg7baXgsInWAVWSg9vmNeaIk1555yIzwuQvZjWugdBCKl/49poWOuSufw+BJCWpbarNCrXN4uYeW+S2NWaAkk09nTmtKUHp+YFHqndM5hUWpzQu88yLu+MGswdwJ2FvoIS6Kb+sSKZKlRUj+/vqVfPKXf5N/aP4svWo+ZV65zckLnZAslDsUNtzlqU3Ockj6Gj62ktJmEnjHAr2/3e0n6hm1Kt+llxIqMRkxMCkfL/Pp2vx+J6X/3+JAuQV5+3m6+Tfy7ngstFuRNYUJoSeKk8yLHMoeSv/y83d4/juX1bY5q7lYsrk1vL/TIdM6lckpy5/LyjpDaGlsLLZ1I8cQuJ3P4OFVylErde3+HtZTeWugYqXQuncj5do8Pzj0+lCfw6KTeWepthZYuNXw6165K/P7z1Y/w32eEUkun9M5sK/QoatPz+elLpvDfZ0gv51kpPbYUevQyXW3p8P7h3PtHfaki09tjdpR6O6FHDFLqokTppC5etvM/L51UeiRu/rdQemwndMzIQTyTOvW7s4swo5N599Jjq1fsiFKj5iakI0nDx7k2o29aCvcRPt4pubdJ6CuT5uxiSark8OQuwoxi55Te9uakWekckqqfU+1K77ZL4Wtp6VTd5ealLYTW9BYaT/zC39WUFqPZ9XtAtik5NOJLibDk0CCzZ8fSY3mhR6Wz5rfgXdNVApUDVgqDOgatL+QSlu24c2uls+Z99vzFL20sW3Jomgiuzk7nbkmhR5YammvnGMlaepcJ4pJCx6wiIIxnOaEpNcaxQ0ovJ/RIVio3PKOX8FaTeimhSefxrH5OlxF6dFKsmM4e6ZReufRYRuiYVeVblVWkXkJoSo35rHqO1Qs9IxlWLjc8IyaHK5Ye6oWOWV08GItqoWeUGjuks4eUVi406ESz1GqFJp3bmJHSmlHZ0Vm3M2pOml5mnC+Noi/xmcJRJ27mgOz4bqARdSXHCilglRUmiKqE1niCII+2MVMldAzprA/tY6JGaEqNddBceqgRGkACFUKTzuuhNaUvF1rLiYB+NIzl5ULHkM7roHGsLhWaUmN9tJUelwl99ROHcVw5tmpKDtJ5XTSN3SVCU2rsh5bSQ01CA0gwPRmpnW0x+913ekJTXtjhirGm5AAAAAAAAAAAAAAAAAAAAAAAAAAAMMU/XvA1Es1GbZAAAAAASUVORK5CYII=">
 <meta property="og:url" content="https://naadara.org/">
 <meta name="twitter:url" content="https://naadara.org/">
 
@@ -79,7 +78,7 @@ input:focus,select:focus{border-color:rgba(255,255,255,.3)}
 .vol-row{display:flex;align-items:center;gap:9px;min-width:140px;margin-left:auto}
 .vol-row label{font-size:11px;color:var(--tx3);white-space:nowrap;font-weight:500}
 .vol-row input{flex:1}.vol-val{font-size:12px;font-weight:600;color:var(--tx2);min-width:32px;text-align:right;font-variant-numeric:tabular-nums}
-.pill{display:flex;align-items:center;gap:6px;padding:6px 13px;border-radius:99px;border:1px solid var(--bd2);background:var(--s2);color:var(--tx2);font-size:11px;font-weight:500;cursor:pointer;white-space:nowrap;transition:all .18s;font-family:var(--f)touch-action:manipulation;}
+.pill{display:flex;align-items:center;gap:6px;padding:6px 13px;border-radius:99px;border:1px solid var(--bd2);background:var(--s2);color:var(--tx2);font-size:11px;font-weight:500;cursor:pointer;white-space:nowrap;transition:all .18s;font-family:var(--f)}
 .pill:hover{color:var(--tx)}.pill.on{background:var(--acc);border-color:var(--acc);color:var(--bg)}
 .pill-dot{width:5px;height:5px;border-radius:50%;background:var(--tx4)}.pill.on .pill-dot{background:var(--grn)}
 /* chladni */
@@ -555,48 +554,39 @@ body.disc-open{overflow:hidden;}
 .os-tag{display:inline-flex;align-items:center;padding:3px 10px;border-radius:99px;border:1px solid rgba(196,208,255,.12);background:rgba(196,208,255,.04);color:rgba(196,208,255,.45);font-size:10px;letter-spacing:.3px;text-decoration:none;transition:all .15s;}
 .os-tag:hover{border-color:rgba(196,208,255,.3);color:rgba(196,208,255,.7);}
 
+.ios-fs-note{display:none;}
+@supports(-webkit-touch-callout:none){
+  .ios-fs-note{display:block;background:rgba(255,180,60,.12);border:1px solid rgba(255,180,60,.35);border-radius:8px;padding:6px 12px;font-size:10px;color:rgba(255,200,100,.9);text-align:center;margin:6px 12px 2px;line-height:1.5;}
+}
+
 @media(max-width:600px){
   .disp-bar{gap:4px;padding:6px 8px;}
-  .pill{padding:5px 10px;font-size:10px;min-height:32px;}
-  .disp-mode-btn{padding:5px 10px;font-size:10px;min-height:32px;touch-action:manipulation;}
+  .pill{padding:5px 10px;font-size:10px;min-height:32px;touch-action:manipulation;}
   .cym-outer{aspect-ratio:1;max-height:100vw;}
 }
 
-.ios-fs-note{display:none;}
-@supports(-webkit-touch-callout:none){
-  .ios-fs-note{
-    display:block;
-    background:rgba(255,180,60,.12);
-    border:1px solid rgba(255,180,60,.35);
-    border-radius:8px;
-    padding:6px 12px;
-    font-size:10px;
-    color:rgba(255,200,100,.9);
-    text-align:center;
-    margin:6px 12px 2px;
-    line-height:1.5;
-  }
-}
-</style><title>Naadara — The World's First Open Cymatics Laboratory</title>
+.os-badge{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:99px;border:1px solid rgba(196,208,255,.2);background:rgba(196,208,255,.06);color:rgba(196,208,255,.7);font-size:10px;font-weight:600;text-decoration:none;letter-spacing:.3px;transition:all .15s;}
+.os-badge:hover{border-color:rgba(196,208,255,.45);color:rgba(196,208,255,.95);}
+</style><title>Naadara — The World's First Open Source Cymatics Laboratory</title>
 <meta name="description" content="Real-time Chladni resonance fields, binaural entrainment, HRTF 3D spatial audio, and a 23-category frequency library. Works on desktop and mobile. Free forever. Open source. No download required. 🐬">
 <meta name="keywords" content="cymatics, frequency, Chladni, binaural beats, brainwave entrainment, solfeggio, resonance, HRTF, spatial audio, 432hz, open source, free">
 <meta name="author" content="V.C. Hackett">
 <meta name="theme-color" content="#07080a">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://naadara.org/">
-<meta property="og:title" content="Naadara — The World's First Open Cymatics Laboratory">
+<meta property="og:title" content="Naadara — The World's First Open Source Cymatics Laboratory">
 <meta property="og:description" content="Real-time Chladni resonance fields, binaural entrainment, HRTF 3D spatial audio, and a 23-category frequency library. Works on desktop and mobile. Free forever. Open source. No download required. 🐬">
 <meta property="og:image" content="https://naadara.org/og-image.png">
 <meta property="og:site_name" content="Naadara">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Naadara — The World's First Open Cymatics Laboratory">
+<meta name="twitter:title" content="Naadara — The World's First Open Source Cymatics Laboratory">
 <meta name="twitter:description" content="Real-time Chladni resonance fields, binaural entrainment, HRTF 3D spatial audio, and a 23-category frequency library. Works on desktop and mobile. Free forever. Open source. No download required. 🐬">
 <meta name="twitter:image" content="https://naadara.org/og-image.png">
 <meta name="twitter:creator" content="@VCHackett">
 <link rel="canonical" href="https://naadara.org/">
-<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAIAEBAAAAAAIABzAgAAJgAAACAgAAAAACAAJgIAAJkCAACJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAI6SURBVHicfZFdSxRxFMZ/5z+zO9NmaiqlayURBhZUsAUqCRlSVAj2jca7PoSfoL0xi7wKBUl8ybwJWujCq1ZRErN9mZ2d+Z8udGV3ezl3B87zO+c8j9BWS0vq+5eZUYcVY3khkNWIOePzsFxkfnJSwuZ5aW5UVQBZ/8qUhQGbcEWERAy7AsXRET4AKiLa0Jg2MZsFhlUYSersd/iMZTxyVjkwwshmgeHm2RYAQD6PMcqQY+hV6PbS9HhpsjamSwx9RhnK51s1Z6QGdavIufiY54kldh0eqRIirKnipDpZzGWpAjTecM9IIgoqqoRbh2yr4aa17FpLbITIcSnksoQiAH/x4BSjgP5I2Bu7LYu/Khz+LDGwF7FaTlNsmuEfgJN6ek/K79a1P4o4ihPmUiGPJ69LmM+3ptbiQbMXbz7S4bvcrxsONKZXHHzfYW0qx3Hz/39coKpGRNR1uBUlmFqZOIHOKOZ7rc5LEdH/phAEyJ0n9HkOV32Pzp4OXolQPaoSHJXAVSrT47Jxusi2XyCzs2J9w12bUI5C6mGN91HMaqlMkrLsIEy8/qLpoP2CBvHtmk64lnIEx65D906FwqDhIoZLrssxQj+KMz0myw2NAQgCWFjQDJZrz8blcy3NQeJQunGeQc/jQsql4qfYnx6VFVWyC580EwSNUJu2Y5kxLhtqUBNjEyUSpYJDj7WIgKA8wDB/AlPjNsyoVtnOZPgWQcqpIo6LQam7UK0pXZ5DXAVSynKlQuk0Tvsbos0SqURR9q0AAAAASUVORK5CYIKJUE5HDQoaCgAAAA1JSERSAAAAIAAAACAIBgAAAHN6evQAAAHtSURBVHic3ZexSxxBFMZ/IyHtNQcpJH/AFlZaTCNB8Lol5L+wl9TRszZprKz8Bywk2S6BIwjhFVdpMY1diBDYZi3TPAtnYDPc5mb2VpR8zdybmX3ft+99zOzBihCnv1Z53uQS2cKsR8SnwF48H+LBIU53228tTj8EYnG6m5svuQKBxBZm3RMd+OmvwASY2sJ8C3tSc67lkvvwAJgCv308DYK8wJV80SnAj5d+PL+51bubW70Tp+fRWrKApS0IPV6E8Yj3AHXDcdceW5ijVDHLhDxKBV7kCrGF2fZE07oB4Ar4IU4vbWG2c/MlmzAyVzDdKx8HU8ZmHR5Pdg6I03cAtjAXgRCgbng7HvG5dRL+te9RUYnOK9HNSnTeN0eyB54dwltXopvtOBdPXoGsywigEt2Ipl4Cf0JQWnOdk69PBc5Ka6490cTPTXx8lpts0BaU1mzleiFLQCU6L63Z8r/3S2s+5Ty/CFkeCI4HGI84Bn768HXdPNyMHqdB6GBol1aczsTprHUbzsTprGv/v5DUgnbpAeqGL348qRtOAGxhdirR/ZR8bSS1oBJ907U2HnFYNxx2LH9cuRVxKeO3bPtiwVrvOyKJPBbQR0T2F9ECEd/79D6FKKl8cQVycz3PyyjTPHs8/D9cisEPp/8C987EQq5MPcQJAAAAAElFTkSuQmCC">
-<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB7UlEQVR4nN2XsUscQRTGfyMh7TUHKSR/wBZWWkwjQfC6JeS/sJfU0bM2aays/AcsJNkugSMI4RVXaTGNXYgQ2GYt0zwLZ2Az3OZm9laUfM3cm5l937fvfczswYoQp79Wed7kEtnCrEfEp8BePB/iwSFOd9tvLU4/BGJxupubL7kCgcQWZt0THfjpr8AEmNrCfAt7UnOu5ZL78ACYAr99PA2CvMCVfNEpwI+Xfjy/udW7m1u9E6fn0VqygKUtCD1ehPGI9wB1w3HXHluYo1Qxy4Q8SgVe5Aqxhdn2RNO6AeAK+CFOL21htnPzJZswMlcw3SsfB1PGZh0eT3YOiNN3ALYwF4EQoG54Ox7xuXUS/rXvUVGJzivRzUp03jdHsgeeHcJbV6Kb7TgXT16BrMsIoBLdiKZeAn9CUFpznZOvTwXOSmuuPdHEz018fJabbNAWlNZs5XohS0AlOi+t2fK/90trPuU8vwhZHgiOBxiPOAZ++vB13TzcjB6nQehgaJdWnM7E6ax1G87E6axr/7+Q1IJ26QHqhi9+PKkbTgBsYXYq0f2UfG0ktaASfdO1Nh5xWDccdix/XLkVcSnjt2z7YsFa7zsiiTwW0EdE9hfRAhHf+/Q+hSipfHEFcnM9z8so0zx7PPw/XIrBD6f/AvfOxEKuTD3ECQAAAABJRU5ErkJggg==">
-<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAIAEBAAAAAAIAC6AgAAJgAAACAgAAAAACAAXgEAAOACAACJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAKBSURBVHicbZJNaJxVGIWf995vvmmSMWmTtlApkQjiDw1qkbaJVDItFSkpgjDZuRFd6EJxLRKyULC46tJdtl9BsGpsCdJYqJP0B1x0ELpr/ak/SZqYpvM58917XOhIOulZ3fflnPOe995rdOH72+pxm7yOMR9avGYJz5nxoYNXQh+z48PW3Mp3W4vpabnxYWua+BXxaU8fL6UpBxCnQ8Ev48PWnJ7WAxrrHCQZYPUbjPkSJ4sCDQ3yQQhofYOPvcNCm7mxA9QBmZm2JWg0SFyJ42YckzFStMkJ5FGMOKPqShxvNEi2av4vzEyS2sBHSzdY9J5JPCsSOxJjOQRmDz/Nt0DsTN+WAKBeJ1XCqMHK+hrnllf50Yw/ZIzW66Td/G2Q5L/7QSMA31zRmfPXFQAWb2q/pKSbb92NDr5e0gsSb3nHZhH57dQRO51l8lNTFrbyHlhBkkmyc9e0O0beNGNfFG+beHbukvY0aui/13q4wdmzODNTUjCRpFzOW1yKkY1ozMYS78+YxYUF/EMNJFljD3bhsvbmbfr6K7z8zON8MvIofb1l3igCy+ev6lC1akWWyW8z+Ow6yUzVipbjnd1DDK6u4u+3WNvY5G4zx8plknbBTPcKBtC5nLkrOtUO5OWUJyV23V1jsdJDtbSDtdjib8FPGGHyiH3R0TiAWg1lF1VptXjq1TGb38xZ2DnIzYFHGDXHYzt3cSsvWJgcs89jmyeyi6rUavz7lbNM3sxiOWWiv5/nv1rSu6nj6O936JVwBu0/79BbTnjxy7reqwxwsJwyYWYxy+QNZGDK5jWwf5jKXyv0BI9TxAuKwpOXAhVzBB+I/UM0f77NvakTtg6yfwCG/CYML2g+RQAAAABJRU5ErkJggolQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAASVJREFUeJzdVjsOhCAQZTbb23gJb8AhPK6H4AY2W29l4wlmCzORED7zAKPZlxARcd6bTwaMaYRbmVv+J5TITkQx4nBd3rvDrcw+uczDdS0glW5lthNRiki+Id6/UPLSvpzAJgExIeNwjBpiQdGjnFEh3/b0/92K0S82eX6+x4h909p9o0L8UPueo8UnUNeANse1QtS4rQ+kOuG2H8VY2wmbQrW40+PZ1oUd7gOPgXgfPlHcHgE4byVP0VqoisBsiUKiRxThbInQWoAELI5ZPPXnLYAM+N7JSSgIT8Qe4pLk0nb90zBsw9pUqFIQhlu83fZzbic8/8YoU5AzPA75C0lzKkLy3Htpb3dyVGAM8I1II6ILtEY1+3J7nnkYXRJSc0Fz+gv8AOi7IcfsrluZAAAAAElFTkSuQmCC">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABJUlEQVR4nN1WOw6EIBBlNtvbeAlvwCE8rofgBjZbb2XjCWYLM5EQPvMAo9mXEBFx3ptPBoxphFuZW/4nlMhORDHicF3eu8OtzD65zMN1LSCVbmW2E1GKSL4h3r9Q8tK+nMAmATEh43CMGmJB0aOcUSHf9vT/3YrRLzZ5fr7HiH3T2n2jQvxQ+56jxSdQ14A2x7VC1LitD6Q64bYfxVjbCZtCtbjT49nWhR3uA4+BeB8+UdweAThvJU/RWqiKwGyJQqJHFOFsidBagAQsjlk89ectgAz43slJKAhPxB7ikuTSdv3TMGzD2lSoUhCGW7zd9nNuJzz/xihTkDM8DvkLSXMqQvLce2lvd3JUYAzwjUgjogu0RjX7cnueeRhdElJzQXP6C/wA6Lshx+yuW5kAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
 </head><body>
 <div class="app"><div class="card">
   <div class="brand-bar">
@@ -654,8 +644,9 @@ body.disc-open{overflow:hidden;}
       <div style="text-align:center">
         <div class="brand-name">NAADARA <span style="font-size:11px;font-weight:400;color:rgba(196,208,255,.45);letter-spacing:.5px;vertical-align:middle;">v1.0</span></div>
         <div class="brand-etymology">naa·da·ra — from <em>naad</em> (Sanskrit: primordial cosmic sound, the first vibration of creation) + <em>ara</em> (Latin: sacred space, altar)</div>
-        <div class="brand-desc">The world's first open cymatics laboratory — visualising the primordial sound. Chladni resonance fields, binaural &amp; frequency entrainment, and real-time signal analysis.</div>
+        <div class="brand-desc">The world's first open source cymatics laboratory — visualising the primordial sound. Chladni resonance fields, binaural &amp; frequency entrainment, and real-time signal analysis.</div>
         <div class="brand-free">Completely free, for everyone.</div>
+        
         <div style="margin-top:6px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;"><a href="https://github.com/VCHackett/naadara" target="_blank" rel="noopener" class="os-badge"><svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>Open Source</a><a href="https://github.com/VCHackett/naadara/blob/main/LICENSE" target="_blank" rel="noopener" class="os-badge"><svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>MIT Licence</a><a href="https://github.com/VCHackett/naadara/wiki" target="_blank" rel="noopener" class="os-badge"><svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>Wiki</a></div>
         <a class="donate-btn" href="https://www.paypal.com/donate/?business=KVCA2EH3UJ3YU&no_recurring=0&currency_code=USD" target="_blank" rel="noopener" data-tip="My kids have been asking about Disneyland. ♡">♡ Donate ♡</a>
       </div>
@@ -689,10 +680,10 @@ body.disc-open{overflow:hidden;}
         <div class="vol-mini"><label>Vol</label><input type="range" id="fileVol" min="0" max="100" value="80"><span class="vol-mini-val" id="fileVolV">80%</span></div>
         <button class="exp-btn" id="tuneDownBtn" onclick="tuneDown8()" disabled data-tip="Pitch-shift the loaded file down 8 Hz (440→432 Hz tuning).">♭ 432 Tune</button>
         <button class="exp-btn" id="exportBtn" onclick="exportMix()" disabled data-tip="Offline render to WAV file.">⬇ WAV</button>
-        <button class="exp-btn" id="recAudioBtn" onclick="startRec('audio')" data-tip="Record live audio mix in real time.&#10;⚠ Not supported on iOS Safari.">⏺ Audio</button>
+        <button class="exp-btn" id="recAudioBtn" onclick="startRec('audio')" data-tip="Record live audio mix in real time.">⏺ Audio</button>
         <button class="exp-btn" id="recVideoBtn" onclick="startRec('video')" data-tip="Record Chladni field video only — no audio.">⏺ Video</button>
-        <button class="exp-btn" id="recAvBtn" onclick="startRec('av')" data-tip="Record audio and video combined.&#10;⚠ Not supported on iOS Safari.">⏺ A+V</button>
-        <button class="exp-btn" id="vizExportBtn" onclick="openVizExport()" data-tip="Render audio file to HD video with visualizer.&#10;⚠ Not supported on iOS Safari." disabled data-tip="Render an MP3 or audio file to video.">⬇ Visualizer</button>
+        <button class="exp-btn" id="recAvBtn" onclick="startRec('av')" data-tip="Record audio and video together.">⏺ A+V</button>
+        <button class="exp-btn" id="vizExportBtn" onclick="openVizExport()" disabled data-tip="Render an MP3 or audio file to video.">⬇ Visualizer</button>
       </div>
       <div class="bypass-row">
         <label><input type="checkbox" id="afBypassChk" onchange="afBypassFX=this.checked;reconnectAF()"> Bypass master FX for this file</label>
@@ -713,7 +704,7 @@ body.disc-open{overflow:hidden;}
     </div>
     <div id="mcModBody" class="mcb open">
       <div class="mc">
-        <button class="mc-pwr" id="masterBtn" data-tip="Stop all oscillator tracks.&#10;Press Space to stop all."><span class="mc-pwr-dot"></span>Stop All</button>
+        <button class="mc-pwr" id="masterBtn" data-tip="Stop all oscillator tracks.&#10;Press Space to stop all."><span class="mc-pwr-dot"></span>Play</button>
         
         <button class="pill" id="inputFieldBtn" onclick="toggleInputField()" data-tip="Input Field — routes microphone audio directly into the Chladni field."><span class="pill-dot" id="inputFieldDot"></span>Input Field</button>
         <button class="pill" id="mfxBtn" data-tip="Toggle the master effects chain on/off."><span class="pill-dot"></span>Master FX</button>
@@ -796,8 +787,8 @@ body.disc-open{overflow:hidden;}
         <div class="vc-k"><span class="vc-kl">Sensitivity</span><input type="range" id="vc_s" title="Audio sensitivity for the Chladni field.&#10;Raise if the field seems slow to react to audio.&#10;Lower if the pattern looks chaotic or unstable." min="0.3" max="3" step="0.05" value="1.0"><span class="vc-kv" id="vcv_s">1.0×</span></div>
       </div>
       </div>
-      <div class="ios-fs-note">⚠ <strong>iPhone / iPad:</strong> Fullscreen and all recording features (Audio, Video, A+V, Visualizer Export) are not supported on iOS Safari — Apple browser restriction, not a bug. WAV Export and all other features work normally. For full functionality use Chrome on Android or a desktop browser.</div>
       <!-- Unified display bar — all modes + toggles in one centred row -->
+      <div class="ios-fs-note">⚠ <strong>iPhone / iPad:</strong> Fullscreen and all recording features are not supported on iOS Safari — Apple browser restriction, not a bug. WAV Export and all other features work normally. For full functionality use Chrome on Android or a desktop browser.</div>
       <div class="disp-bar" id="dispBar">
         <button class="disp-mode on" id="dmChladni" onclick="setDispMode('chladni')" data-tip="Chladni field mode — spring-physics standing wave simulation.">Chladni</button>
         <button class="disp-mode" id="dmLissajous" onclick="setDispMode('lissajous')" data-tip="Lissajous figure — plots left channel vs right channel amplitude.">Lissajous</button>
@@ -892,229 +883,7 @@ body.disc-open{overflow:hidden;}
       <span class="mod-name">Instructions</span><span class="mod-status">v1.0</span>
       <button class="mod-arrow" id="instrArr" style="pointer-events:none;">&#9660;</button>
     </div>
-    <div <div <div id="instrBody" style="display:none;border-top:1px solid var(--bd);">
-<div style="max-height:520px;overflow-y:auto;padding:0;scrollbar-width:thin;scrollbar-color:var(--bd2) transparent;">
-
-  <!-- Intro banner -->
-  <div style="padding:14px 18px 12px;background:linear-gradient(135deg,rgba(196,208,255,.05),rgba(136,150,204,.03));border-bottom:1px solid var(--bd);">
-    <div style="font-size:12px;font-weight:600;color:var(--tx2);margin-bottom:4px;">Welcome to Naadara</div>
-    <div style="font-size:11px;color:var(--tx3);line-height:1.7;">Press <span style="color:#c4d0ff;font-weight:600;">▶</span> on any oscillator track to activate it — the audio engine starts automatically. Add tracks in Oscillators, pick any frequency from the Library, and watch the Chladni field respond. Press <span style="color:#c4d0ff;font-weight:600;">Space</span> to start all tracks at once, or stop everything. Headphones strongly recommended for binaural beats and HRTF spatial audio.</div>
-  </div>
-
-  <!-- Two-column quick reference -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--bd);">
-
-    <!-- Col 1 -->
-    <div style="padding:12px 16px;border-right:1px solid var(--bd);">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Display Modes</div>
-      <div style="font-size:11px;color:var(--tx3);line-height:2;">
-        <span style="color:var(--tx2);font-weight:600;">Chladni</span> Spring-mesh resonance field<br>
-        <span style="color:var(--tx2);font-weight:600;">Lissajous</span> L vs R phase plot<br>
-        <span style="color:var(--tx2);font-weight:600;">Spectrum</span> Real-time FFT analyser<br>
-        <span style="color:var(--tx2);font-weight:600;">Waveform</span> Zero-crossing oscilloscope<br>
-        <span style="color:rgba(196,208,255,.35);font-size:10px;">Grid &amp; Labels are buttons, not shortcuts</span>
-      </div>
-    </div>
-
-    <!-- Col 2 -->
-    <div style="padding:12px 16px;">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Top Bar</div>
-      <div style="font-size:11px;color:var(--tx3);line-height:2;">
-        <span style="color:var(--tx2);font-weight:600;">Stop All</span> Stops all tracks (hidden when idle)<br>
-        <span style="color:var(--tx2);font-weight:600;">Input Field</span> Mic → Chladni field<br>
-        <span style="color:var(--tx2);font-weight:600;">Master FX</span> Global effects chain<br>
-        <span style="color:var(--tx2);font-weight:600;">Visuals</span> Show / hide display<br>
-        <span style="color:var(--tx2);font-weight:600;">Volume</span> Master output level
-      </div>
-    </div>
-  </div>
-
-  <!-- Oscillators -->
-  <div style="border-bottom:1px solid var(--bd);">
-    <div style="padding:10px 16px 0;display:flex;align-items:center;gap:8px;">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;">Oscillators</div>
-      <div style="flex:1;height:1px;background:var(--bd);"></div>
-    </div>
-    <div style="padding:8px 16px 12px;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;font-size:11px;color:var(--tx3);line-height:1.7;">
-      <div><span style="color:var(--tx2);font-weight:600;">Hz</span> 0–20,000 Hz via input or slider</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Waveforms</span> Bell · Fork · Organ · Saw · Sine · Square · Triangle</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Binaural</span> L/R offset + Sweep mode (2–120 s)</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Volume</span> Per-track level</div>
-      <div><span style="color:var(--tx2);font-weight:600;">▶ Start / ◼ Stop</span> Click to activate — boots audio automatically</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Stereo Split ⇄</span> Mirror pan for widening</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Thumbnail ⛶</span> Live Chladni per track, fullscreenable</div>
-      <div><span style="color:var(--tx2);font-weight:600;">+ Add Track</span> Up to 13 tracks total</div>
-    </div>
-  </div>
-
-  <!-- Synth Engine + Track FX side by side -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--bd);">
-    <div style="padding:10px 16px 12px;border-right:1px solid var(--bd);">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Synth Engine <span style="color:var(--tx4);font-weight:400;text-transform:none;font-size:9px;">(click Synth)</span></div>
-      <div style="font-size:11px;color:var(--tx3);line-height:2.0;">
-        <span style="color:var(--tx2);font-weight:600;">Detune</span> ±100¢ fine-tune<br>
-        <span style="color:var(--tx2);font-weight:600;">Envelope</span> Attack · Decay · Sustain · Release<br>
-        <span style="color:var(--tx2);font-weight:600;">Filter</span> LP · HP · BP · Notch + Cutoff + Q<br>
-        <span style="color:var(--tx2);font-weight:600;">LFO</span> 0.01–20 Hz → Amp · Filter · Pitch<br>
-        <span style="color:var(--tx2);font-weight:600;">Portamento</span> Glide between frequency changes
-      </div>
-    </div>
-    <div style="padding:10px 16px 12px;">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Track FX <span style="color:var(--tx4);font-weight:400;text-transform:none;font-size:9px;">(click FX)</span></div>
-      <div style="font-size:11px;color:var(--tx3);line-height:2.0;">
-        <span style="color:var(--tx2);font-weight:600;">Compress</span> Ratio 1:1–12:1<br>
-        <span style="color:var(--tx2);font-weight:600;">Delay</span> Mix + Time (50–800 ms)<br>
-        <span style="color:var(--tx2);font-weight:600;">Dynamics</span> None · Pulse · Swell · Tremolo<br>
-        <span style="color:var(--tx2);font-weight:600;">LP Cutoff</span> 100 Hz–20 kHz<br>
-        <span style="color:var(--tx2);font-weight:600;">Reverb</span> Mix + Tail (1–8 s)
-      </div>
-    </div>
-  </div>
-
-  <!-- Visual Controls -->
-  <div style="border-bottom:1px solid var(--bd);">
-    <div style="padding:10px 16px 0;display:flex;align-items:center;gap:8px;">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;">Visual Controls <span style="color:var(--tx4);font-weight:400;text-transform:none;font-size:9px;">(Chladni mode only)</span></div>
-      <div style="flex:1;height:1px;background:var(--bd);"></div>
-    </div>
-    <div style="padding:8px 16px 12px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px 16px;font-size:11px;color:var(--tx3);line-height:1.6;">
-      <div><span style="color:var(--tx2);font-weight:600;">Bloom</span> Glow + radius</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Breathe</span> Speed &amp; depth pulse</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Brightness</span> Luminance</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Freq Tint</span> Palette hue shift</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Nodal Width</span> Line thickness</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Palette</span> 10 + Rainbow + Custom</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Persistence</span> Trail length</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Quality</span> Draft · Std · High</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Sensitivity</span> Field response</div>
-    </div>
-  </div>
-
-  <!-- Spatial Audio + Master FX side by side -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--bd);">
-    <div style="padding:10px 16px 12px;border-right:1px solid var(--bd);">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Spatial Audio — HRTF 3D</div>
-      <div style="font-size:11px;color:var(--tx3);line-height:2.0;">
-        <span style="color:var(--tx2);font-weight:600;">Pad</span> X = left/right · Z = front/back<br>
-        <span style="color:var(--tx2);font-weight:600;">Elevation</span> Vertical Y axis slider<br>
-        <span style="color:var(--tx2);font-weight:600;">Center</span> Resets all axes to origin<br>
-        <span style="color:rgba(196,208,255,.4);font-size:10px;">Full 3D positioning requires headphones</span>
-      </div>
-    </div>
-    <div style="padding:10px 16px 12px;">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Master FX <span style="color:var(--tx4);font-weight:400;text-transform:none;font-size:9px;">(top bar toggle)</span></div>
-      <div style="font-size:11px;color:var(--tx3);line-height:2.0;">
-        Compress · Delay Mix &amp; Time<br>
-        LP Cutoff · Reverb Mix &amp; Tail<br>
-        Toggle on/off without losing settings
-      </div>
-    </div>
-  </div>
-
-  <!-- Audio File -->
-  <div style="border-bottom:1px solid var(--bd);">
-    <div style="padding:10px 16px 0;display:flex;align-items:center;gap:8px;">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;">Audio File</div>
-      <div style="flex:1;height:1px;background:var(--bd);"></div>
-    </div>
-    <div style="padding:8px 16px 12px;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;font-size:11px;color:var(--tx3);line-height:1.7;">
-      <div><span style="color:var(--tx2);font-weight:600;">Formats</span> MP3 · WAV · OGG · FLAC · AAC. Drag-and-drop or click.</div>
-      <div><span style="color:var(--tx2);font-weight:600;">432 Tune</span> Offline pitch-shift 440→432 Hz</div>
-      <div><span style="color:var(--tx2);font-weight:600;">⬇ WAV</span> Offline mix render — works on all platforms</div>
-      <div><span style="color:var(--tx2);font-weight:600;">⬇ Visualizer</span> Audio → HD/FHD WebM video</div>
-      <div><span style="color:var(--tx2);font-weight:600;">⏺ Audio · Video · A+V</span> Live recording to WebM</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Bypass FX</span> Route file direct, skip master chain</div>
-    </div>
-  </div>
-
-  <!-- Input Field + Output Calibration -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--bd);">
-    <div style="padding:10px 16px 12px;border-right:1px solid var(--bd);">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Input Field</div>
-      <div style="font-size:11px;color:var(--tx3);line-height:1.85;">
-        Live mic → Chladni field.<br>
-        Chain: HPF → Drive → LPF → Reverb<br>
-        Noise gate: Threshold · Attack<br>
-        Hold · Release · Sensitivity
-      </div>
-    </div>
-    <div style="padding:10px 16px 12px;">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Output Calibration <span style="color:var(--tx4);font-weight:400;text-transform:none;font-size:9px;">[Experimental]</span></div>
-      <div style="font-size:11px;color:var(--tx3);line-height:1.85;">
-        Mic pitch detection vs oscillator.<br>
-        Delta display in cents.<br>
-        <span style="color:var(--tx2);font-weight:600;">Auto-tune</span> corrects toward detected output.<br>
-        Noise gate: Hold · Smoothing · Threshold
-      </div>
-    </div>
-  </div>
-
-  <!-- Frequency Library -->
-  <div style="border-bottom:1px solid var(--bd);">
-    <div style="padding:10px 16px 0;display:flex;align-items:center;gap:8px;">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;">Frequency Library — 23 Categories</div>
-      <div style="flex:1;height:1px;background:var(--bd);"></div>
-    </div>
-    <div style="padding:8px 16px 12px;font-size:11px;color:var(--tx3);line-height:1.8;">
-      Alchemical · Bioacoustic · Brainwave &amp; Entrainment · Buddhist · Chakras · Chinese Elements · Cymatics Nodes · DNA · Gregorian · Healing · Kabbalah · Musical Harmonics · Norse · Periodic Table · Planets &amp; Zodiac · Pythagorean · Rife · Sacred Geometry · Schumann · Shamanic · Solfeggio · Sufi · Vedic
-      <div style="margin-top:6px;font-size:10px;color:var(--tx4);">Click any entry to apply to the active track. Periodic Table: f(Z) = 16 Hz × 2<sup>(Z−1)/12</sup> — H=16 Hz → Og=13,777 Hz. Aether (Æ) at 7.83 Hz.</div>
-    </div>
-  </div>
-
-  <!-- Saved Sessions + Theme + Keyboard -->
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-bottom:1px solid var(--bd);">
-    <div style="padding:10px 16px 12px;border-right:1px solid var(--bd);">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Saved Sessions</div>
-      <div style="font-size:11px;color:var(--tx3);line-height:1.8;">Name a session and click <span style="color:var(--tx2);font-weight:600;">Save</span> to store the full setup to localStorage. Click a name to restore. × to delete.</div>
-    </div>
-    <div style="padding:10px 16px 12px;border-right:1px solid var(--bd);">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Theme</div>
-      <div style="font-size:11px;color:var(--tx3);line-height:1.8;">Bamboo · Cave · Dusk · Forest · Glacier · Meadow · Ocean · River · Sand · Stone<div style="font-size:10px;color:var(--tx4);margin-top:3px;">Saved to localStorage</div></div>
-    </div>
-    <div style="padding:10px 16px 12px;">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Keyboard</div>
-      <div style="font-size:11px;color:var(--tx3);line-height:1.8;"><span style="color:var(--tx2);font-weight:600;">Space</span> Start all tracks / Stop all<div style="font-size:10px;color:var(--tx4);margin-top:3px;">Only when no text input is focused</div></div>
-    </div>
-  </div>
-
-  <!-- Install as App -->
-  <div style="border-bottom:1px solid var(--bd);">
-    <div style="padding:10px 16px 0;display:flex;align-items:center;gap:8px;">
-      <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;">Install as App</div>
-      <div style="flex:1;height:1px;background:var(--bd);"></div>
-    </div>
-    <div style="padding:8px 16px 12px;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;font-size:11px;color:var(--tx3);line-height:1.75;">
-      <div>
-        <div style="color:var(--tx2);font-weight:600;margin-bottom:3px;">iPhone / iPad <span style="color:var(--tx4);font-weight:400;">(Safari only)</span></div>
-        Tap <strong style="color:var(--tx2);">Share ↑</strong> → <strong style="color:var(--tx2);">Add to Home Screen</strong> → Add. Opens without the browser bar.
-      </div>
-      <div>
-        <div style="color:var(--tx2);font-weight:600;margin-bottom:3px;">Android <span style="color:var(--tx4);font-weight:400;">(Chrome)</span></div>
-        Tap <strong style="color:var(--tx2);">⋮ menu</strong> → <strong style="color:var(--tx2);">Add to Home screen</strong> → Add. Installs as a full PWA with true fullscreen support.
-      </div>
-    </div>
-  </div>
-
-  <!-- iOS Limitations -->
-  <div style="padding:10px 16px 12px;background:rgba(255,160,50,.04);border-bottom:1px solid rgba(255,160,50,.15);">
-    <div style="font-size:9px;font-weight:700;color:#ffb060;text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">⚠ iOS Limitations — Apple Browser Policy</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;font-size:11px;">
-      <div>
-        <div style="color:rgba(255,160,80,.8);font-weight:600;font-size:10px;margin-bottom:4px;">Not available on iPhone / iPad</div>
-        <div style="color:var(--tx3);line-height:1.9;">Fullscreen mode<br>⏺ Audio · Video · A+V recording<br>⬇ Visualizer Export</div>
-      </div>
-      <div>
-        <div style="color:rgba(100,220,140,.8);font-weight:600;font-size:10px;margin-bottom:4px;">Works on iOS</div>
-        <div style="color:var(--tx3);line-height:1.9;">All oscillators · Chladni field<br>Binaural · HRTF · Mic features<br>⬇ WAV Export · 432 Tune · Library</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <div style="padding:10px 16px;text-align:center;font-size:9px;color:var(--tx4);">Naadara v1.0 — Educational, artistic, and research use only.</div>
-
-</div>
-</div></div>
+    <div id="instrBody" style="display:none;border-top:1px solid var(--bd);"><div style="max-height:480px;overflow-y:auto;padding:16px;scrollbar-width:thin;scrollbar-color:var(--bd2) transparent;font-size:11px;color:var(--tx3);line-height:1.75;"><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Getting Started</div><p style="margin:0 0 10px;">Click <strong style="color:var(--tx2);">Play</strong> to start the engine. A 7.83 Hz Schumann track loads by default. Add tracks in Oscillators, pick any frequency from the Library, watch the Chladni field respond. Headphones required for binaural and HRTF effects.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Display Interface Bar</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Play/Pause</strong> Starts/stops all oscillator tracks. <strong style="color:var(--tx2);">Fullscreen</strong> Expands the Chladni field — Escape to exit. <strong style="color:var(--tx2);">Input Field</strong> Routes live mic into the field. <strong style="color:var(--tx2);">Master FX</strong> Global effects chain. <strong style="color:var(--tx2);">Visuals</strong> Show/hide the display. <strong style="color:var(--tx2);">Volume</strong> Master output level.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Display Modes</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Chladni</strong> Real-time spring-mesh resonance (Ernst Chladni, 1787). Visual Controls apply here only.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Lissajous</strong> L vs R channel phase plot. <strong style="color:var(--tx2);">Shape Presets</strong> bar appears when active — click a preset to auto-configure two tracks at a frequency ratio (Circle 1:1, Figure 8 1:2, Trefoil 2:3, etc.).</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Spectrum</strong> Real-time FFT, mirrored at centre — bass in the middle, treble at edges.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Waveform</strong> Zero-crossing locked oscilloscope. Flat line when silent.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Grid</strong> and <strong style="color:var(--tx2);">Labels</strong> are buttons in the display bar — not keyboard shortcuts.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Visual Controls (Chladni only)</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Palette</strong> 10 built-in + Rainbow + Custom colour picker.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Quality</strong> Draft (1-tap) · Standard (5-tap) · High (9-tap GPU shader sampling).</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Bloom</strong> Glow around nodal lines + Bloom Radius. <strong style="color:var(--tx2);">Breathe</strong> Speed &amp; Depth — pulsing brightness animation.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Brightness</strong> <strong style="color:var(--tx2);">Nodal Width</strong> <strong style="color:var(--tx2);">Frequency Tint</strong> <strong style="color:var(--tx2);">Persistence</strong> Trail length (0=off). <strong style="color:var(--tx2);">Sensitivity</strong> How strongly the field responds to audio.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Oscillators</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Hz</strong> Type or use the slider. Range 0–20,000 Hz.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Waveforms</strong> Sine · Triangle · Square · Sawtooth · Bell · Fork · Organ.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Binaural</strong> Splits to L/R with configurable Hz offset for brainwave entrainment. <strong style="color:var(--tx2);">Sweep</strong> oscillates the offset over 2–120 s.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Volume</strong> Per-track level. <strong style="color:var(--tx2);">Toggle ◼/▶</strong> Enable/disable without removing. <strong style="color:var(--tx2);">Stereo Split ⇄</strong> Mirrors pan.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Thumbnail</strong> Live mini Chladni per track. ● show/hide, ⛶ fullscreen. Up to 13 tracks total.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Synth Engine (per track — click Synth button)</div><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">Detune</strong> ±100¢ fine tune. <strong style="color:var(--tx2);">Envelope</strong> ADSR. <strong style="color:var(--tx2);">Filter</strong> LP/HP/BP/Notch with Cutoff and Resonance.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">LFO</strong> 0.01–20 Hz modulating Amplitude, Filter, or Pitch. <strong style="color:var(--tx2);">Portamento</strong> Glide time between frequency changes. All update live.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Track FX (click FX button on track)</div><p style="margin:0 0 10px;">Compress · Delay Time &amp; Mix · LP Cutoff · Reverb Tail &amp; Mix. <strong style="color:var(--tx2);">Dynamics</strong> None/Pulse/Swell/Tremolo with Rate and Depth.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Spatial Audio — HRTF 3D</div><p style="margin:0 0 10px;">Drag pad: X=left/right, Z=front/back. <strong style="color:var(--tx2);">Elev</strong> slider = vertical Y axis. Web Audio HRTF PannerNode — full 3D with headphones. <strong style="color:var(--tx2);">Center</strong> resets to origin.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Master FX</div><p style="margin:0 0 10px;">Global chain across the full mix: Compress · Delay Time &amp; Mix · LP Cutoff · Reverb Tail &amp; Mix. Toggle on/off without resetting knob values.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Audio File</div><p style="margin:0 0 4px;">MP3, WAV, OGG, FLAC, AAC. Drag-and-drop or click to load.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">♭ 432 Tune</strong> Offline pitch shift 440→432 Hz. Click again to restore.</p><p style="margin:0 0 4px;"><strong style="color:var(--tx2);">⬇ WAV</strong> Offline render of mix to WAV. <strong style="color:var(--tx2);">⏺ Audio</strong> Live WebM/Opus. <strong style="color:var(--tx2);">⏺ Video</strong> Live 60fps WebM. <strong style="color:var(--tx2);">⏺ A+V</strong> Combined 8 Mbps WebM.</p><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">⬇ Visualizer</strong> Renders the loaded audio file to HD or FHD WebM video with chosen display mode and current palette synced to audio.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Input Field — Mic to Chladni</div><p style="margin:0 0 10px;">Routes live mic into the Chladni field. Chain: HPF → Drive → LPF → Reverb. Noise gate (Threshold, Attack, Hold, Release, Sensitivity) blocks background noise.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Frequency Library — 23 Categories</div><p style="margin:0 0 4px;">Alchemical · Bioacoustic · Brainwave &amp; Entrainment · Buddhist · Chakras · Chinese Elements · Cymatics Nodes · DNA · Gregorian · Healing · Kabbalah · Musical Harmonics · Norse · Periodic Table · Planets &amp; Zodiac · Pythagorean · Rife · Sacred Geometry · Schumann · Shamanic · Solfeggio · Sufi · Vedic.</p><p style="margin:0 0 10px;">Click any entry to apply to the active track (creates one if needed). <strong style="color:var(--tx2);">Periodic Table</strong> uses f(Z)=16 Hz×2<sup>(Z−1)/12</sup>. Aether (Æ) at 7.83 Hz.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Output Calibration [Experimental]</div><p style="margin:0 0 10px;">Mic pitch detection vs active oscillator. Delta display in cents. <strong style="color:var(--tx2);">Auto-tune</strong> corrects oscillator or synth detune toward detected output. Noise gate: Hold, Smoothing, Threshold.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Saved Sessions</div><p style="margin:0 0 10px;">Name a session and click <strong style="color:var(--tx2);">Save</strong> to store all tracks, FX, synth, and visual settings to localStorage. Click a name to restore, × to delete.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Theme</div><p style="margin:0 0 10px;">10 UI themes: Bamboo · Cave (default) · Dusk · Forest · Glacier · Meadow · Ocean · River · Sand · Stone. Saved to localStorage.</p><div style="font-size:10px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px;">Keyboard Shortcuts</div><p style="margin:0 0 10px;"><strong style="color:var(--tx2);">Space</strong> Play/Pause oscillators (only when no text input is focused).</p><div style="font-size:9px;color:var(--tx4);border-top:1px solid var(--bd);padding-top:8px;text-align:center;">Naadara v1.0 — Educational, artistic, and research use only.</div></div></div>
 
   <!-- Os: Oscillators -->
   <div class="mod osc-mod" style="border-left:none;border-top:1px solid var(--bd)">
@@ -1257,13 +1026,14 @@ body.disc-open{overflow:hidden;}
     <p id="aboutPS" style="display:none;margin:8px 0 0;font-size:10px;color:rgba(200,215,255,.45);font-style:italic;line-height:1.75;border-top:1px solid rgba(196,208,255,.08);padding-top:8px;">P.S. Hopefully one day we get to explore the <span style="color:rgba(200,215,255,.6);">whole world</span> &mdash; <span style="color:rgba(200,215,255,.6);">(yes, Antarctica too&hellip;)</span> &mdash; and reconnect with the <span style="color:#ff9eb5;">dolphins</span> the way we were always meant to. It's not that we can't live alongside them &mdash; we're just not allowed to.<br><br><em>Free energy nerds &mdash; where you at? &#128064;</em></p>
   </div>
   <div class="creator-social-row">
-    <!-- Alphabetical: Discord · Facebook · GitHub · Instagram · Twitch · YouTube -->
+    <!-- Alphabetical: Discord · Facebook · GitHub · Instagram · TikTok · Twitch · YouTube -->
+    
     <a class="social-btn" href="https://discord.gg/XUAyvZCUdj" target="_blank" rel="noopener" title="Naadara Discord">
       <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M20.3 4.4a19.8 19.8 0 0 0-4.9-1.5.07.07 0 0 0-.08.04c-.21.37-.44.86-.61 1.25a18.3 18.3 0 0 0-5.49 0 12.6 12.6 0 0 0-.62-1.25.08.08 0 0 0-.08-.04A19.7 19.7 0 0 0 3.7 4.4a.07.07 0 0 0-.03.03C.53 9.05-.32 13.58.1 18.06a.08.08 0 0 0 .03.06 19.9 19.9 0 0 0 6 3 .08.08 0 0 0 .08-.03c.46-.63.87-1.3 1.23-2a.08.08 0 0 0-.04-.1 13.1 13.1 0 0 1-1.87-.9.08.08 0 0 1-.01-.13l.37-.29a.07.07 0 0 1 .08-.01c3.93 1.79 8.18 1.79 12.06 0a.07.07 0 0 1 .08.01l.37.29a.08.08 0 0 1-.01.13 12.3 12.3 0 0 1-1.87.89.08.08 0 0 0-.04.11c.36.7.77 1.36 1.22 1.99a.08.08 0 0 0 .08.03 19.8 19.8 0 0 0 6-3 .08.08 0 0 0 .03-.05c.5-5.18-.84-9.67-3.55-13.66a.06.06 0 0 0-.03-.03zM8 15.3c-1.18 0-2.16-1.08-2.16-2.42s.96-2.42 2.16-2.42 2.18 1.1 2.16 2.42S9.2 15.3 8 15.3zm8 0c-1.18 0-2.16-1.08-2.16-2.42s.95-2.42 2.16-2.42 2.17 1.1 2.16 2.42S17.2 15.3 16 15.3z"/></svg>
       <span>Discord</span>
     </a>
-    <a class="social-btn" href="https://github.com/VCHackett/naadara" target="_blank" rel="noopener" title="GitHub — open source">
-      <svg viewBox="0 0 24 24" viewBox="0 0 24 24" fill="currentColor" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+    <a class="social-btn" href="https://github.com/VCHackett/naadara" target="_blank" rel="noopener" title="GitHub">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
       <span>GitHub</span>
     </a>
     <a class="social-btn" href="https://www.facebook.com/VCHackett" target="_blank" rel="noopener" title="Facebook @VCHackett">
@@ -1277,6 +1047,10 @@ body.disc-open{overflow:hidden;}
     <a class="social-btn" href="https://www.twitch.tv/VCHackett" target="_blank" rel="noopener" title="Twitch @VCHackett">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
       <span>Twitch</span>
+    </a>
+    <a class="social-btn" href="https://www.tiktok.com/@naadara.org" target="_blank" rel="noopener" title="TikTok @naadara.org">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M9 12a3 3 0 1 0 3 3V2h3a5 5 0 0 0 5 5v3a8 8 0 0 1-5-2V15a6 6 0 1 1-6-6z"/></svg>
+      <span>TikTok</span>
     </a>
     <a class="social-btn" href="https://www.youtube.com/@VCHackett" target="_blank" rel="noopener" title="YouTube @VCHackett">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--bg,#07080a)"/></svg>
@@ -1934,7 +1708,7 @@ function toggleDispLabels(){
 }
 
 function setOscMode(){['oscW','oscS','oscL'].forEach(id=>{document.getElementById(id).classList.toggle('on',(id==='oscW'&&oscMode==='wave')||(id==='oscS'&&oscMode==='spectrum')||(id==='oscL'&&oscMode==='lissajous'));});}
-function resizeOsc(){var wrap=document.getElementById('oscWrap');if(!wrap||wrap.style.display==='none')return;var isFs=document.fullscreenElement===wrap||document.webkitFullscreenElement===wrap;var outer=document.querySelector('.cym-outer');var W=isFs?window.innerWidth:(outer?outer.clientWidth:window.innerWidth)||400;var H=isFs?window.innerHeight:(outer?outer.clientHeight:Math.min(window.innerHeight*0.6,outer?outer.clientWidth:400))||400;wrap.style.width=W+'px';wrap.style.height=H+'px';['oscGr','oscM','oscG'].forEach(function(id){var cv=document.getElementById(id);if(!cv)return;cv.width=W;cv.height=H;cv.style.width=W+'px';cv.style.height=H+'px';});drawOscGrid();}
+function resizeOsc(){var wrap=document.getElementById('oscWrap');if(!wrap||wrap.style.display==='none')return;var isFs=document.fullscreenElement===wrap||document.webkitFullscreenElement===wrap;var W=isFs?window.innerWidth:((document.querySelector('.cym-outer')||wrap).clientWidth)||400;var H=isFs?window.innerHeight:((document.querySelector('.cym-outer')||wrap).clientHeight)||400;wrap.style.width=W+'px';wrap.style.height=H+'px';['oscGr','oscM','oscG'].forEach(function(id){var cv=document.getElementById(id);if(!cv)return;cv.width=W;cv.height=H;cv.style.width=W+'px';cv.style.height=H+'px';});drawOscGrid();}
 window.addEventListener('resize',resizeOsc);
 function drawOscGrid(){const c=document.getElementById('oscGr');if(!c.width)return;const ctx=c.getContext('2d'),W=c.width,H=c.height;ctx.clearRect(0,0,W,H);if(!oscGridOn||oscMode==='lissajous')return;ctx.strokeStyle='rgba(255,255,255,.04)';ctx.lineWidth=1;[.25,.5,.75].forEach(y=>{ctx.beginPath();ctx.moveTo(0,y*H);ctx.lineTo(W,y*H);ctx.stroke();});for(let x=0;x<=W;x+=W/8){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}ctx.fillStyle='rgba(255,255,255,.12)';ctx.font='9px Inter,system-ui';ctx.textAlign='left';ctx.fillText('+1.0',3,10);ctx.fillText(' 0.0',3,H/2+4);ctx.fillText('-1.0',3,H-3);}
 function drawOsc(){
@@ -2625,20 +2399,10 @@ function _veDrawFrame(ctx,W,H,mode,fD,tD,progress,pal){
 
 function setPlayUI(){
   const mb=document.getElementById('masterBtn');
-  if(mb){
-    mb.innerHTML='<span class="mc-pwr-dot"></span>'+(playing?'Stop All':'Play');
-    mb.classList.toggle('on',playing);
-  }
+  if(mb){mb.innerHTML='<span class="mc-pwr-dot"></span>'+(playing?'Stop All':'Play');mb.classList.toggle('on',playing);}
   const hs=document.getElementById('hdrSt');
   if(hs){hs.textContent=playing?'Live':'Ready';hs.className='hdr-st'+(playing?' live':'');}
-  // Sync per-track toggle buttons
-  tracks.forEach(function(t){
-    var tog=document.getElementById('tog_'+t.id);
-    if(!tog)return;
-    var on=playing&&t.active;
-    tog.classList.toggle('on',on);
-    tog.textContent=on?'◼':'▶';
-  });
+  tracks.forEach(function(t){var tog=document.getElementById('tog_'+t.id);if(!tog)return;var on=playing&&t.active;tog.classList.toggle('on',on);tog.textContent=on?'◼':'▶';});
 }
 function toggleVis(){visOn=!visOn;
   const btn=document.getElementById('visBtn');
@@ -3051,13 +2815,7 @@ function buildDOM(t){
   card.appendChild(hdr);card.appendChild(body);card.appendChild(viz);card.appendChild(fxp);card.appendChild(synthp);
   document.getElementById('trackList').appendChild(card);
   const g=id=>document.getElementById(id);
-  tog.addEventListener('click',()=>{
-    t.active=!t.active;
-    tog.classList.toggle('on',t.active);
-    tog.textContent=t.active?'◼':'▶';
-    spDirty=true;
-    if(playing){t.active?startT(t):stopT(t);}
-  });
+  tog.addEventListener('click',()=>{t.active=!t.active;tog.classList.toggle('on',t.active);tog.textContent=t.active?'◼':'▶';spDirty=true;if(playing){t.active?startT(t):stopT(t);}});
   rem.addEventListener('click',()=>{const idx=tracks.indexOf(t);if(idx<0)return;stopT(t);tracks.splice(idx,1);card.remove();renumber();updAddBtn();spDirty=true;});
   wsel.addEventListener('change',e=>{t.wave=e.target.value;markDirty(t);restartT(t);});
   synthb.addEventListener('click',()=>{
@@ -3669,7 +3427,7 @@ document.addEventListener('DOMContentLoaded',function(){
   try{
     if(localStorage.getItem('naadara_disclaimer_v1')){
       var m=document.getElementById('disclaimerModal');
-      if(m){m.style.display='none';document.body.classList.remove('disc-open');}
+      if(m){m.style.cssText='display:none!important;visibility:hidden!important;';document.body.classList.remove('disc-open');}
     }else{
       document.body.classList.add('disc-open');
     }
