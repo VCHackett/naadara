@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0052)file:///C:/Users/VChac/Downloads/naadara_v99_13.html -->
+<!-- saved from url=(0052)file:///C:/Users/VChac/Downloads/naadara_v99_14.html -->
 <html style="--bg: #07080a; --s1: #0f1114; --s2: #16191e; --s3: #1e2228; --acc: #a8b8c8; --acc2: #607080; --tx: #dce8f0; --tx2: #6878a0; --tx3: #404858; --tx4: #282e38; --bd: rgba(160,184,200,.06); --bd2: rgba(160,184,200,.13); --grn: #60c890; --blu: #80b8d8;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="canonical" href="https://naadara.org/">
 <meta property="og:url" content="https://naadara.org/">
@@ -82,7 +82,7 @@ input:focus,select:focus{border-color:rgba(255,255,255,.3)}
 .pill-dot{width:5px;height:5px;border-radius:50%;background:var(--tx4)}.pill.on .pill-dot{background:var(--grn)}
 /* chladni */
 .cym-outer{position:relative;width:100%;aspect-ratio:1;max-height:860px;background:#000;overflow:hidden}
-.cym-outer:fullscreen,.cym-outer:-webkit-full-screen{max-height:100vh;width:100vw;height:100vh;aspect-ratio:unset}
+.cym-outer:fullscreen,.cym-outer:-webkit-full-screen{position:fixed!important;top:0!important;left:0!important;width:100vw!important;height:100vh!important;max-height:100vh!important;margin:0!important;padding:0!important;aspect-ratio:unset!important;border-radius:0!important;z-index:99999!important;background:#000!important;}
 .cym-outer canvas{display:block;position:absolute;top:0;left:0;width:100%;height:100%;image-rendering:var(--field-render,auto)}
 .cb{z-index:1}.cbt{z-index:2;filter:blur(2px);opacity:.88;mix-blend-mode:screen;pointer-events:none}
 .cbw{z-index:3;filter:blur(22px);opacity:.48;mix-blend-mode:screen;pointer-events:none}
@@ -552,51 +552,8 @@ body.disc-open{overflow:hidden;}
 .os-badge:hover{border-color:rgba(196,208,255,.45);color:rgba(196,208,255,.95);}
 .os-tag{display:inline-flex;align-items:center;padding:3px 10px;border-radius:99px;border:1px solid rgba(196,208,255,.12);background:rgba(196,208,255,.04);color:rgba(196,208,255,.45);font-size:10px;letter-spacing:.3px;text-decoration:none;transition:all .15s;}
 .os-tag:hover{border-color:rgba(196,208,255,.3);color:rgba(196,208,255,.7);}
-
-body.cym-fs{overflow:hidden!important;}
-body.cym-fs .cym-outer{
-  position:fixed!important;
-  top:0!important;left:0!important;
-  width:100vw!important;height:100vh!important;
-  max-height:none!important;max-width:none!important;
-  aspect-ratio:unset!important;
-  border-radius:0!important;
-  z-index:99999!important;
-  background:#000!important;
-  margin:0!important;padding:0!important;
-}
-body.cym-fs .cym-outer canvas{
-  position:absolute!important;
-  top:0!important;left:0!important;
-  width:100%!important;height:100%!important;
-}
-body.cym-fs .card,
-body.cym-fs .creator-bar,
-body.cym-fs .status,
-body.cym-fs .about-section{
-  visibility:hidden!important;
-  pointer-events:none!important;
-}
-#cymFsExit{display:none;}
-body.cym-fs #cymFsExit{
-  display:block!important;
-  position:fixed!important;
-  top:14px!important;right:14px!important;
-  z-index:999999!important;
-  background:rgba(0,0,0,.5)!important;
-  color:rgba(196,208,255,.8)!important;
-  border:1px solid rgba(196,208,255,.25)!important;
-  border-radius:99px!important;
-  padding:6px 14px!important;
-  font-size:11px!important;
-  font-weight:600!important;
-  cursor:pointer!important;
-  font-family:inherit!important;
-  letter-spacing:.3px!important;
-  backdrop-filter:blur(4px)!important;
-}
 </style><title>NAADARA v1.0 — Cymatics · Frequency Lab · Resonance Fields</title>
-</head><body class="">
+</head><body>
 <div class="app"><div class="card">
   <div class="brand-bar">
     <div style="display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;width:100%;">
@@ -713,19 +670,19 @@ body.cym-fs #cymFsExit{
         <button class="mc-pwr" id="masterBtn" data-tip="Start or stop all active oscillator tracks.
 Keyboard shortcut: Spacebar."><span class="mc-pwr-dot"></span>Play</button>
         
-        <button class="pill" id="inputFieldBtn" onclick="toggleInputField()" data-tip="Input Field — routes microphone audio directly into the Chladni field."><span class="pill-dot" id="inputFieldDot"></span>Input Field</button>
+        <button class="pill" id="inputFieldBtn" onclick="toggleInputField()" data-tip="Input Field — routes microphone audio directly into the Chladni field."><span class="pill-dot" id="inputFieldDot" style=""></span>Input Field</button>
         <button class="pill" id="mfxBtn" data-tip="Toggle the master effects chain on/off."><span class="pill-dot"></span>Master FX</button>
         <button class="pill" id="visBtn" onclick="toggleVis()" data-tip="Show or hide the Chladni field display."><span class="pill-dot" id="visDot"></span>Visuals</button>
         <span class="hdr-st" id="hdrSt">Ready</span>
         <div class="vol-row" data-tip="Master output volume."><label>Volume</label><input type="range" id="masterVol" min="0" max="100" value="75"><span class="vol-val" id="masterVolV">75%</span></div>
       </div>
       <!-- CHLADNI field lives inside master collapse -->
-      <div class="cym-outer">
-        <canvas id="mCym" width="200" height="200" class="cb"></canvas>
-        <canvas id="mBlmT" width="200" height="200" class="cbt"></canvas>
-        <canvas id="mBlmW" width="200" height="200" class="cbw"></canvas>
+      <div class="cym-outer" style="max-height: 860px;">
+        <canvas id="mCym" width="320" height="320" class="cb"></canvas>
+        <canvas id="mBlmT" width="320" height="320" class="cbt"></canvas>
+        <canvas id="mBlmW" width="320" height="320" class="cbw"></canvas>
         <div class="cym-over">
-          <span class="co" id="idleLabel" style="transition: opacity 0.5s; display: none; opacity: 1;">174 Hz · Adhar</span>
+          <span class="co" id="idleLabel" style="transition: opacity 0.5s; display: none; opacity: 1;">528 · 396 · 285 Hz · Sangam</span>
           <span class="co tr bright" id="cHz" style="display:none">—</span>
           <span class="co bl" id="coWsLabel" style="display:none">WAVE SUPERPOSITION</span>
           <span class="co br" id="cMode" style="display:none">—</span>
@@ -817,7 +774,7 @@ Lower if the pattern looks chaotic or unstable." min="0.3" max="3" step="0.05" v
         <div class="disp-bar-sep"></div>
         <button class="disp-opt" id="dispGrid" onclick="toggleDispGrid()" data-tip="Show or hide reference grid lines">Grid</button>
         <button class="disp-opt" id="dispLabels" onclick="toggleDispLabels()" data-tip="Show or hide the corner text overlays on the Chladni field.">Labels</button>
-        <span class="disp-stats-wrap"><span class="disp-stat" id="oscPeak"></span><span class="disp-stat" id="oscRms"></span></span>
+        <span class="disp-stats-wrap"><span class="disp-stat" id="oscPeak">Peak 0.0%</span><span class="disp-stat" id="oscRms">RMS 0.0%</span></span>
         <button class="disp-fs" id="oscFsBtn" onclick="toggleOscFs()" data-tip="Fullscreen the analyser display.">⛶</button>
       </div>
       <p class="analyser-note" style="padding:5px 14px 7px;margin:0;text-align:center;">Lissajous, Spectrum, and Waveform modes replace the Chladni field. Visual controls apply to Chladni mode only.</p>
@@ -840,7 +797,7 @@ Bar height = signal level. Vertical line = LP filter cutoff.
 Wider bars = lower frequency resolution at that range."><div class="sec-lbl">Frequency Spectrum</div><canvas id="masterFbar" height="54" class="fbar" width="800"></canvas></div>
       <div class="fx-sec">
         <div class="fx-top"><span class="fx-ttl" data-tip="Master effects chain — applied after all oscillators are mixed.">Master FX</span><div class="fx-tags" id="mfxTags"><span class="fx-tag">Comp 2:1</span><span class="fx-tag">LP 12.0kHz</span><span class="fx-tag">Rev 40%</span><span class="fx-tag">Dly 280ms</span></div></div>
-        <div class="fx-knobs" id="mfxKnobs" style="opacity:.28">
+        <div class="fx-knobs" id="mfxKnobs" style="opacity: 0.28;">
           <div class="knob"><span class="knob-lbl">Compress</span><input type="range" id="mfx_cmp" title="Dynamic range compression ratio.
 2:1 = gentle cohesion. 8:1+ = heavy brick-wall limiting.
 Threshold is fixed at -24dBFS." min="1" max="12" value="2" step="0.5"><span class="knob-val" id="mfxv_cmp">2:1</span></div>
@@ -862,7 +819,7 @@ Uses a convolution impulse — CPU cost scales with tail length." min="0" max="1
         </div>
       </div>
       <!-- Input Field parameters — shown when Input Field is active -->
-      <div class="fx-sec" id="ifSec" style="opacity:0.3;transition:opacity .2s;">
+      <div class="fx-sec" id="ifSec" style="opacity: 0.3; transition: opacity 0.2s;">
         <div class="fx-top"><span class="fx-ttl" data-tip="Input Field parameters.">Input Field</span></div>
         <div class="fx-knobs" style="display:flex;justify-content:center;gap:0;flex-wrap:wrap;">
           <div class="knob"><span class="knob-lbl">Attack</span><input type="range" id="if_atk" title="Noise gate attack speed.
@@ -956,7 +913,7 @@ Lower if your signal is quiet." min="0.02" max="0.5" step="0.01" value="0.12"><s
       <div id="oscPanel">
         <div id="trackList"><div class="card track-card" id="tc_1"><div class="th"><div class="th-l"><div class="t-num" style="border-color: rgba(126, 184, 255, 0.333); color: rgb(126, 184, 255);">1</div><button class="tog on" id="tog_1">◼</button><select class="wsel" id="wave_1"><option value="bell">Bell</option><option value="fork">Fork</option><option value="organ">Organ</option><option value="sawtooth">Sawtooth</option><option value="sine">Sine</option><option value="square">Square</option><option value="triangle">Triangle</option></select><span class="bin-badge" id="bb_1" style="display: none;">Binaural</span></div><div class="th-r"><button class="t-fxbtn" id="tfxb_1">FX</button><button class="t-fxbtn" id="tsynthb_1">Synth</button><button class="split-btn" title="Stereo split — duplicates track with mirrored pan">⇄</button><button class="rembtn">×</button></div></div><div class="tc-body"><div class="tc"><div class="cr"><span class="rl">Hz</span><input class="fi" type="number" min="0" max="20000" step="0.1" id="freq_1"><input class="fsl" type="range" min="0" max="2000" step="0.1" id="fsl_1"></div><div class="cr" style="margin-bottom: 0px;"><label class="bchk"><input type="checkbox" id="bi_1"> Binaural</label><div id="ofw_1" style="display: none; align-items: center; gap: 4px; margin-left: 5px;"><input class="oi" type="number" min="0" max="40" step=".1" id="off_1"><span style="font-size: 11px; color: var(--tx3);">Hz</span></div><div id="bsw_1" style="display: none; align-items: center; gap: 4px; margin-left: 10px;"><button class="sw-wrap" id="bswt_1" title="Toggle sweep mode on/off." style="font-size: 10px; padding: 2px 7px; cursor: pointer; white-space: nowrap;"><div class="sw" id="bswd_1"></div>Sweep</button><input class="oi" type="number" min="2" max="120" step="1" id="bsw_inp_1" title="Sweep period in seconds.
 2s = fast cycling.
-120s = very slow drift." style="opacity: 0.3; pointer-events: none;"><span style="font-size: 11px; color: var(--tx3); opacity: 0.3;">s</span></div></div></div><div class="sp-col"><div class="sp-lbl">Spatial (HRTF 3D)</div><div class="sp-pad"><div class="sp-ring" style="width: 52px; height: 52px; left: 14px; top: 14px;"></div><div class="sp-ring" style="width: 30px; height: 30px; left: 25px; top: 25px;"></div><div class="sp-ring" style="width: 12px; height: 12px; left: 34px; top: 34px;"></div><span class="sp-c fl">FL</span><span class="sp-c fr">FR</span><span class="sp-c bl">BL</span><span class="sp-c br">BR</span><div class="sp-dot" style="background: rgb(126, 184, 255); color: rgb(126, 184, 255); left: 40px; top: 40px;"></div></div><div class="sp-read">→0  ↑0</div><button class="sp-rst">Center</button><div style="display: flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 10px; color: var(--tx3); width: 80px;"><span style="min-width: 28px; color: var(--tx3); font-size: 10px;">Elev</span><input type="range" min="-1" max="1" step="0.02" id="ely_1" style="flex: 1 1 0%;"><span id="elvv_1" style="min-width: 24px; text-align: right; color: var(--acc2); font-weight: 600;">0</span></div></div><div class="tc"><div class="cr" style="margin-bottom: 0px;"><div class="vwrap"><label>Vol</label><input type="range" min="0" max="100" step="1" id="vol_1"><span class="vv" id="vv_1">85%</span></div></div></div></div><div class="viz"><div class="cymbox" id="cymbox_1"><canvas class="tb" id="cym_1" width="96" height="96"></canvas><canvas class="tbt" id="blt_1" width="96" height="96"></canvas><canvas class="tbw" id="blw_1" width="96" height="96"></canvas><span class="cymbadge" id="cbdg_1" style="color: rgb(126, 184, 255);">7.83 Hz</span><span class="cymmode" id="cmde_1" style="color: rgb(126, 184, 255);">m4n3</span><div class="cymbox-ctrl"><button class="cym-ic" id="cvtog_1" title="Toggle visual">●</button><button class="cym-ic" title="Fullscreen visual">⛶</button></div></div><div class="viz-r"><div class="tuner-strip"><span class="t-pre">Output</span><span class="t-hz" id="thz_1" style="color: rgb(126, 184, 255);">7.83</span><span class="t-hzl">Hz</span><span class="t-note" id="tnote_1"></span><span class="t-cts" id="tcts_1" style="color: var(--tx3);">±0¢</span><div class="tdet"><span class="ddot" id="ddot_1" style="background: rgba(255, 255, 255, 0.08);"></span><span id="ddet_1">Standby</span></div></div><div class="nw-outer"><div class="n-outer"><div class="n-fill" style="background: linear-gradient(90deg, rgba(126, 184, 255, 0.094), rgba(126, 184, 255, 0.267));"></div><div class="n-ctr"></div><div class="needle" id="needle_1" style="left: 27.0752%; background: rgb(126, 184, 255); color: rgb(126, 184, 255);"></div></div><div class="nscale"><span>0</span><span>50</span><span>200</span><span>630</span><span>2k</span></div></div><div class="fb-mini"><div class="fb-mini-lbl">Frequency map</div><canvas class="fbar" id="tfbar_1" height="36" width="682"></canvas></div></div></div><div class="t-fxp" id="tfxp_1" style="display: none;"><div class="t-fxp-top"><span class="t-fxp-ttl">Track FX</span><div class="t-fxtags" id="tfxtags_1"></div></div><div class="t-fx-knobs"><div class="t-knob"><span class="t-knob-lbl">Compress</span><input type="range" min="1" max="12" step="0.5" id="tfx_cmp_1"><span class="t-knob-val" id="tfxv_cmp_1">5:1</span></div><div class="t-knob"><span class="t-knob-lbl">Delay Mix</span><input type="range" min="0" max="100" step="1" id="tfx_dly_1"><span class="t-knob-val" id="tfxv_dly_1">30%</span></div><div class="t-knob"><span class="t-knob-lbl">Delay Time</span><input type="range" min="50" max="800" step="10" id="tfx_dmt_1"><span class="t-knob-val" id="tfxv_dmt_1">280ms</span></div><div class="t-knob"><span class="t-knob-lbl">LP Cutoff</span><input type="range" min="100" max="20000" step="50" id="tfx_lp_1"><span class="t-knob-val" id="tfxv_lp_1">900Hz</span></div><div class="t-knob"><span class="t-knob-lbl">Reverb Tail</span><input type="range" min="1" max="8" step="0.5" id="tfx_rvs_1"><span class="t-knob-val" id="tfxv_rvs_1">4s</span></div><div class="t-knob"><span class="t-knob-lbl">Reverb</span><input type="range" min="0" max="100" step="1" id="tfx_rvb_1"><span class="t-knob-val" id="tfxv_rvb_1">55%</span></div></div><div class="dyn-row"><span class="dyn-lbl">Dynamics</span><div class="dyn-btns"><button class="dyn-btn on" data-m="none">None</button><button class="dyn-btn" data-m="pulse">Pulse</button><button class="dyn-btn" data-m="swell">Swell</button><button class="dyn-btn" data-m="tremolo">Tremolo</button></div><div class="dyn-params"><div class="dyn-param"><label>Rate</label><input type="range" min="0.05" max="10" step="0.05" id="dr_1"><span class="dyn-param-val" id="drv_1">1Hz</span></div><div class="dyn-param"><label>Depth</label><input type="range" min="0" max="1" step="0.01" id="dd_1"><span class="dyn-param-val" id="ddv_1">50%</span></div></div></div></div><div class="t-fxp" id="tsynthp_1" style="display: none;"><div class="t-fxp-top"><span class="t-fxp-ttl">Synth Engine</span><span style="font-size: 9px; color: var(--tx4); margin-left: 6px; letter-spacing: 0.3px;">Detune  ·  Envelope  ·  Filter  ·  LFO  ·  Portamento</span></div><div class="syn-outer"><div class="syn-grid" style="grid-template-columns: repeat(1, 1fr);"><div class="syn-sec">Detune</div><div class="syn-k"><span class="syn-kl">Fine Tune (¢)</span><input type="range" min="-100" max="100" step="1" id="syn_detune_1"><span class="syn-kv" id="synv_detune_1">+0¢</span></div></div><div class="syn-grid" style="grid-template-columns: repeat(4, 1fr);"><div class="syn-sec">Envelope</div><div class="syn-k"><span class="syn-kl">Attack</span><input type="range" min="0.001" max="2" step="0.001" id="syn_atk_1"><span class="syn-kv" id="synv_atk_1">10ms</span></div><div class="syn-k"><span class="syn-kl">Decay</span><input type="range" min="0.01" max="2" step="0.01" id="syn_dec_1"><span class="syn-kv" id="synv_dec_1">100ms</span></div><div class="syn-k"><span class="syn-kl">Sustain</span><input type="range" min="0" max="1" step="0.01" id="syn_sus_1"><span class="syn-kv" id="synv_sus_1">85%</span></div><div class="syn-k"><span class="syn-kl">Release</span><input type="range" min="0.01" max="4" step="0.01" id="syn_rel_1"><span class="syn-kv" id="synv_rel_1">400ms</span></div></div><div class="syn-grid" style="grid-template-columns: repeat(3, 1fr);"><div class="syn-sec">Filter</div><div class="syn-k"><span class="syn-kl">Cutoff</span><input type="range" min="20" max="20000" step="10" id="syn_cut_1"><span class="syn-kv" id="synv_cut_1">8.0k</span></div><div class="syn-k"><span class="syn-kl">Resonance</span><input type="range" min="0.1" max="20" step="0.1" id="syn_res_1"><span class="syn-kv" id="synv_res_1">1.0</span></div><div class="syn-k"><span class="syn-kl">Filter Type</span><select class="wsel" id="syn_ftype_1" style="text-align: center;"><option value="lowpass">Lowpass</option><option value="bandpass">Bandpass</option><option value="highpass">Highpass</option><option value="notch">Notch</option></select></div></div><div class="syn-grid" style="grid-template-columns: repeat(3, 1fr);"><div class="syn-sec">LFO</div><div class="syn-k"><span class="syn-kl">Rate</span><input type="range" min="0.01" max="20" step="0.01" id="syn_lfoRate_1"><span class="syn-kv" id="synv_lfoRate_1">2.00Hz</span></div><div class="syn-k"><span class="syn-kl">Depth</span><input type="range" min="0" max="1" step="0.01" id="syn_lfoDepth_1"><span class="syn-kv" id="synv_lfoDepth_1">30%</span></div><div class="syn-k"><span class="syn-kl">LFO Destination</span><select class="wsel" id="syn_lfodest_1" style="text-align: center;"><option value="amp">Amplitude</option><option value="filter">Filter</option><option value="pitch">Pitch</option></select></div></div><div class="syn-grid" style="grid-template-columns: repeat(1, 1fr);"><div class="syn-sec">Portamento</div><div class="syn-k"><span class="syn-kl">Glide Time</span><input type="range" min="0" max="0.5" step="0.005" id="syn_porta_1"><span class="syn-kv" id="synv_porta_1">Off</span></div></div></div></div></div></div>
+120s = very slow drift." style="opacity: 0.3; pointer-events: none;"><span style="font-size: 11px; color: var(--tx3); opacity: 0.3;">s</span></div></div></div><div class="sp-col"><div class="sp-lbl">Spatial (HRTF 3D)</div><div class="sp-pad"><div class="sp-ring" style="width: 52px; height: 52px; left: 14px; top: 14px;"></div><div class="sp-ring" style="width: 30px; height: 30px; left: 25px; top: 25px;"></div><div class="sp-ring" style="width: 12px; height: 12px; left: 34px; top: 34px;"></div><span class="sp-c fl">FL</span><span class="sp-c fr">FR</span><span class="sp-c bl">BL</span><span class="sp-c br">BR</span><div class="sp-dot" style="background: rgb(126, 184, 255); color: rgb(126, 184, 255); left: 80px; top: 55.5px;"></div></div><div class="sp-read">→100  ↓39</div><button class="sp-rst">Center</button><div style="display: flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 10px; color: var(--tx3); width: 80px;"><span style="min-width: 28px; color: var(--tx3); font-size: 10px;">Elev</span><input type="range" min="-1" max="1" step="0.02" id="ely_1" style="flex: 1 1 0%;"><span id="elvv_1" style="min-width: 24px; text-align: right; color: var(--acc2); font-weight: 600;">0</span></div></div><div class="tc"><div class="cr" style="margin-bottom: 0px;"><div class="vwrap"><label>Vol</label><input type="range" min="0" max="100" step="1" id="vol_1"><span class="vv" id="vv_1">85%</span></div></div></div></div><div class="viz"><div class="cymbox" id="cymbox_1"><canvas class="tb" id="cym_1" width="96" height="96"></canvas><canvas class="tbt" id="blt_1" width="96" height="96"></canvas><canvas class="tbw" id="blw_1" width="96" height="96"></canvas><span class="cymbadge" id="cbdg_1" style="color: rgb(126, 184, 255);">483 Hz</span><span class="cymmode" id="cmde_1" style="color: rgb(126, 184, 255);">m10n8</span><div class="cymbox-ctrl"><button class="cym-ic" id="cvtog_1" title="Toggle visual">●</button><button class="cym-ic" title="Fullscreen visual">⛶</button></div></div><div class="viz-r"><div class="tuner-strip"><span class="t-pre">Output</span><span class="t-hz" id="thz_1" style="color: rgb(126, 184, 255);">483</span><span class="t-hzl">Hz</span><span class="t-note" id="tnote_1">B4</span><span class="t-cts" id="tcts_1" style="color: var(--tx3);">±0¢</span><div class="tdet"><span class="ddot" id="ddot_1" style="background: rgba(255, 255, 255, 0.08);"></span><span id="ddet_1">Standby</span></div></div><div class="nw-outer"><div class="n-outer"><div class="n-fill" style="background: linear-gradient(90deg, rgba(126, 184, 255, 0.094), rgba(126, 184, 255, 0.267));"></div><div class="n-ctr"></div><div class="needle" id="needle_1" style="left: 81.3064%; background: rgb(126, 184, 255); color: rgb(126, 184, 255);"></div></div><div class="nscale"><span>0</span><span>50</span><span>200</span><span>630</span><span>2k</span></div></div><div class="fb-mini"><div class="fb-mini-lbl">Frequency map</div><canvas class="fbar" id="tfbar_1" height="36" width="682"></canvas></div></div></div><div class="t-fxp" id="tfxp_1" style="display: none;"><div class="t-fxp-top"><span class="t-fxp-ttl">Track FX</span><div class="t-fxtags" id="tfxtags_1"></div></div><div class="t-fx-knobs"><div class="t-knob"><span class="t-knob-lbl">Compress</span><input type="range" min="1" max="12" step="0.5" id="tfx_cmp_1"><span class="t-knob-val" id="tfxv_cmp_1">5:1</span></div><div class="t-knob"><span class="t-knob-lbl">Delay Mix</span><input type="range" min="0" max="100" step="1" id="tfx_dly_1"><span class="t-knob-val" id="tfxv_dly_1">30%</span></div><div class="t-knob"><span class="t-knob-lbl">Delay Time</span><input type="range" min="50" max="800" step="10" id="tfx_dmt_1"><span class="t-knob-val" id="tfxv_dmt_1">280ms</span></div><div class="t-knob"><span class="t-knob-lbl">LP Cutoff</span><input type="range" min="100" max="20000" step="50" id="tfx_lp_1"><span class="t-knob-val" id="tfxv_lp_1">900Hz</span></div><div class="t-knob"><span class="t-knob-lbl">Reverb Tail</span><input type="range" min="1" max="8" step="0.5" id="tfx_rvs_1"><span class="t-knob-val" id="tfxv_rvs_1">4s</span></div><div class="t-knob"><span class="t-knob-lbl">Reverb</span><input type="range" min="0" max="100" step="1" id="tfx_rvb_1"><span class="t-knob-val" id="tfxv_rvb_1">55%</span></div></div><div class="dyn-row"><span class="dyn-lbl">Dynamics</span><div class="dyn-btns"><button class="dyn-btn on" data-m="none">None</button><button class="dyn-btn" data-m="pulse">Pulse</button><button class="dyn-btn" data-m="swell">Swell</button><button class="dyn-btn" data-m="tremolo">Tremolo</button></div><div class="dyn-params"><div class="dyn-param"><label>Rate</label><input type="range" min="0.05" max="10" step="0.05" id="dr_1"><span class="dyn-param-val" id="drv_1">1Hz</span></div><div class="dyn-param"><label>Depth</label><input type="range" min="0" max="1" step="0.01" id="dd_1"><span class="dyn-param-val" id="ddv_1">50%</span></div></div></div></div><div class="t-fxp" id="tsynthp_1" style="display: none;"><div class="t-fxp-top"><span class="t-fxp-ttl">Synth Engine</span><span style="font-size: 9px; color: var(--tx4); margin-left: 6px; letter-spacing: 0.3px;">Detune  ·  Envelope  ·  Filter  ·  LFO  ·  Portamento</span></div><div class="syn-outer"><div class="syn-grid" style="grid-template-columns: repeat(1, 1fr);"><div class="syn-sec">Detune</div><div class="syn-k"><span class="syn-kl">Fine Tune (¢)</span><input type="range" min="-100" max="100" step="1" id="syn_detune_1"><span class="syn-kv" id="synv_detune_1">+0¢</span></div></div><div class="syn-grid" style="grid-template-columns: repeat(4, 1fr);"><div class="syn-sec">Envelope</div><div class="syn-k"><span class="syn-kl">Attack</span><input type="range" min="0.001" max="2" step="0.001" id="syn_atk_1"><span class="syn-kv" id="synv_atk_1">10ms</span></div><div class="syn-k"><span class="syn-kl">Decay</span><input type="range" min="0.01" max="2" step="0.01" id="syn_dec_1"><span class="syn-kv" id="synv_dec_1">100ms</span></div><div class="syn-k"><span class="syn-kl">Sustain</span><input type="range" min="0" max="1" step="0.01" id="syn_sus_1"><span class="syn-kv" id="synv_sus_1">85%</span></div><div class="syn-k"><span class="syn-kl">Release</span><input type="range" min="0.01" max="4" step="0.01" id="syn_rel_1"><span class="syn-kv" id="synv_rel_1">400ms</span></div></div><div class="syn-grid" style="grid-template-columns: repeat(3, 1fr);"><div class="syn-sec">Filter</div><div class="syn-k"><span class="syn-kl">Cutoff</span><input type="range" min="20" max="20000" step="10" id="syn_cut_1"><span class="syn-kv" id="synv_cut_1">8.0k</span></div><div class="syn-k"><span class="syn-kl">Resonance</span><input type="range" min="0.1" max="20" step="0.1" id="syn_res_1"><span class="syn-kv" id="synv_res_1">1.0</span></div><div class="syn-k"><span class="syn-kl">Filter Type</span><select class="wsel" id="syn_ftype_1" style="text-align: center;"><option value="lowpass">Lowpass</option><option value="bandpass">Bandpass</option><option value="highpass">Highpass</option><option value="notch">Notch</option></select></div></div><div class="syn-grid" style="grid-template-columns: repeat(3, 1fr);"><div class="syn-sec">LFO</div><div class="syn-k"><span class="syn-kl">Rate</span><input type="range" min="0.01" max="20" step="0.01" id="syn_lfoRate_1"><span class="syn-kv" id="synv_lfoRate_1">2.00Hz</span></div><div class="syn-k"><span class="syn-kl">Depth</span><input type="range" min="0" max="1" step="0.01" id="syn_lfoDepth_1"><span class="syn-kv" id="synv_lfoDepth_1">30%</span></div><div class="syn-k"><span class="syn-kl">LFO Destination</span><select class="wsel" id="syn_lfodest_1" style="text-align: center;"><option value="amp">Amplitude</option><option value="filter">Filter</option><option value="pitch">Pitch</option></select></div></div><div class="syn-grid" style="grid-template-columns: repeat(1, 1fr);"><div class="syn-sec">Portamento</div><div class="syn-k"><span class="syn-kl">Glide Time</span><input type="range" min="0" max="0.5" step="0.005" id="syn_porta_1"><span class="syn-kv" id="synv_porta_1">Off</span></div></div></div></div></div></div>
         <button class="add-btn" id="addBtn">+ Add track</button>
       </div>
     </div>
@@ -2527,24 +2484,12 @@ function stereoSplit(t){
 }
 
 function toggleFullscreen(){
-  if(document.fullscreenElement){
+  const el=document.querySelector('.cym-outer');
+  if(!document.fullscreenElement){
+    el.requestFullscreen().catch(e=>console.warn(e));
+  }else{
     document.exitFullscreen();
-    return;
   }
-  var el=document.querySelector('.cym-outer');
-  el.requestFullscreen().then(function(){
-    document.body.classList.add('cym-fs');
-    setTimeout(function(){
-      var w=window.innerWidth,h=window.innerHeight;
-      var mc=document.getElementById('mCym');
-      var bt=document.getElementById('mBlmT');
-      var bw=document.getElementById('mBlmW');
-      if(mc){mc.width=w;mc.height=h;}
-      if(bt){bt.width=w;bt.height=h;}
-      if(bw){bw.width=w;bw.height=h;}
-      if(_wgl)_wgl.viewport(0,0,w,h);
-    },80);
-  }).catch(function(e){console.warn(e);});
 }
 
 // ── Frame loop ───────────────────────────────────────────────
@@ -3354,7 +3299,12 @@ function toggleOscBody(){} // replaced by setDispMode
 
 function toggleOscFs(){
   if(dispMode==='chladni'){
-    toggleFullscreen();
+    var co=document.querySelector('.cym-outer');
+    if(!document.fullscreenElement){
+      co.requestFullscreen().catch(function(e){console.warn(e);});
+    }else{
+      document.exitFullscreen();
+    }
     return;
   }
   const el=document.getElementById('oscWrap');
@@ -3362,22 +3312,15 @@ function toggleOscFs(){
   else document.exitFullscreen();
 }
 function _handleFsChange(){
-  var isMaster=document.fullscreenElement===document.querySelector('.cym-outer');
-  var isOsc=document.fullscreenElement===document.getElementById('oscWrap');
-  var exiting=!document.fullscreenElement;
-  var ofb=document.getElementById('oscFsBtn');
-  if(ofb)ofb.textContent=(isOsc)?'✕':'⛶';
+  const isMaster=document.fullscreenElement===document.querySelector('.cym-outer');
+  const isOsc=document.fullscreenElement===document.getElementById('oscWrap');
+  const fsb=document.getElementById('fsBtn');
+  if(fsb)fsb.textContent=isMaster?'Exit Fullscreen':'Fullscreen';
+  const cym=document.querySelector('.cym-outer');
+  if(cym)cym.style.maxHeight=isMaster?'100vh':'860px';
+  const ofb=document.getElementById('oscFsBtn');
+  if(ofb)ofb.textContent=isOsc?'✕':'⛶';
   if(isOsc){setTimeout(function(){resizeOsc();requestAnimationFrame(function(){resizeOsc();drawOscGrid();drawOsc();});},120);}
-  if(exiting&&document.body.classList.contains('cym-fs')){
-    document.body.classList.remove('cym-fs');
-    var mc2=document.getElementById('mCym');
-    var bt2=document.getElementById('mBlmT');
-    var bw2=document.getElementById('mBlmW');
-    if(mc2){mc2.width=SIM_RES;mc2.height=SIM_RES;}
-    if(bt2){bt2.width=SIM_RES;bt2.height=SIM_RES;}
-    if(bw2){bw2.width=SIM_RES;bw2.height=SIM_RES;}
-    if(_wgl)_wgl.viewport(0,0,SIM_RES,SIM_RES);
-  }
 }
 document.addEventListener('fullscreenchange',_handleFsChange);
 document.addEventListener('webkitfullscreenchange',_handleFsChange);
@@ -3536,6 +3479,5 @@ document.addEventListener('DOMContentLoaded',function(){
   </div>
 </div>
 
-<button id="cymFsExit" onclick="toggleFullscreen()">✕ Exit Fullscreen</button>
 
-</div><div id="_tip" style="display: none; top: 364px; left: 979.578px;">Toggle the master effects chain on/off.</div></body></html>
+</div><div id="_tip" style="display: none; top: 64px; left: 977.875px;">Toggle the master effects chain on/off.</div></body></html>
