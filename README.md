@@ -5,8 +5,6 @@
 
 ---
 
-![Naadara — Open Cymatics Laboratory](https://naadara.org/og-image.png)
-
 Naadara is a real-time cymatics and frequency laboratory built entirely in the browser. Watch sound become geometry. Explore 23 categories of frequencies from the Solfeggio scale to the full Periodic Table of Elements. Generate binaural beats, design tones with a full synth engine, position audio in 3D space with HRTF, route your microphone into a live resonance field, and record everything.
 
 Built by a musician with Synesthesia — Naadara gives everyone a window into what it feels like to see sound.
