@@ -691,7 +691,7 @@ body.disc-open{overflow:hidden;}
     </div>
     <div id="mcModBody" class="mcb open">
       <div class="mc">
-        <button class="mc-pwr" id="masterBtn" data-tip="Start or stop all active oscillator tracks.&#10;Keyboard shortcut: Spacebar."><span class="mc-pwr-dot"></span>Play</button>
+        <button class="mc-pwr" id="masterBtn" data-tip="Stop all oscillator tracks.&#10;Press Space to stop all."><span class="mc-pwr-dot"></span>Stop All</button>
         
         <button class="pill" id="inputFieldBtn" onclick="toggleInputField()" data-tip="Input Field — routes microphone audio directly into the Chladni field."><span class="pill-dot" id="inputFieldDot"></span>Input Field</button>
         <button class="pill" id="mfxBtn" data-tip="Toggle the master effects chain on/off."><span class="pill-dot"></span>Master FX</button>
@@ -876,7 +876,7 @@ body.disc-open{overflow:hidden;}
   <!-- Intro banner -->
   <div style="padding:14px 18px 12px;background:linear-gradient(135deg,rgba(196,208,255,.05),rgba(136,150,204,.03));border-bottom:1px solid var(--bd);">
     <div style="font-size:12px;font-weight:600;color:var(--tx2);margin-bottom:4px;">Welcome to Naadara</div>
-    <div style="font-size:11px;color:var(--tx3);line-height:1.7;">Click <span style="color:#c4d0ff;font-weight:600;">Play</span> to start the audio engine. A 7.83 Hz Schumann resonance track loads by default. Add tracks in Oscillators, pick any frequency from the Library, and watch the Chladni field respond in real time. Headphones strongly recommended for binaural beats and HRTF spatial audio.</div>
+    <div style="font-size:11px;color:var(--tx3);line-height:1.7;">Press <span style="color:#c4d0ff;font-weight:600;">▶</span> on any oscillator track to activate it — the audio engine starts automatically. Add tracks in Oscillators, pick any frequency from the Library, and watch the Chladni field respond. Press <span style="color:#c4d0ff;font-weight:600;">Space</span> to start all tracks at once, or stop everything. Headphones strongly recommended for binaural beats and HRTF spatial audio.</div>
   </div>
 
   <!-- Two-column quick reference -->
@@ -898,7 +898,7 @@ body.disc-open{overflow:hidden;}
     <div style="padding:12px 16px;">
       <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Top Bar</div>
       <div style="font-size:11px;color:var(--tx3);line-height:2;">
-        <span style="color:var(--tx2);font-weight:600;">Play / Pause</span> All oscillator tracks<br>
+        <span style="color:var(--tx2);font-weight:600;">Stop All</span> Stops all tracks (hidden when idle)<br>
         <span style="color:var(--tx2);font-weight:600;">Input Field</span> Mic → Chladni field<br>
         <span style="color:var(--tx2);font-weight:600;">Master FX</span> Global effects chain<br>
         <span style="color:var(--tx2);font-weight:600;">Visuals</span> Show / hide display<br>
@@ -918,7 +918,7 @@ body.disc-open{overflow:hidden;}
       <div><span style="color:var(--tx2);font-weight:600;">Waveforms</span> Bell · Fork · Organ · Saw · Sine · Square · Triangle</div>
       <div><span style="color:var(--tx2);font-weight:600;">Binaural</span> L/R offset + Sweep mode (2–120 s)</div>
       <div><span style="color:var(--tx2);font-weight:600;">Volume</span> Per-track level</div>
-      <div><span style="color:var(--tx2);font-weight:600;">Toggle ◼/▶</span> Enable/disable without removing</div>
+      <div><span style="color:var(--tx2);font-weight:600;">▶ Start / ◼ Stop</span> Click to activate — boots audio automatically</div>
       <div><span style="color:var(--tx2);font-weight:600;">Stereo Split ⇄</span> Mirror pan for widening</div>
       <div><span style="color:var(--tx2);font-weight:600;">Thumbnail ⛶</span> Live Chladni per track, fullscreenable</div>
       <div><span style="color:var(--tx2);font-weight:600;">+ Add Track</span> Up to 13 tracks total</div>
@@ -1051,7 +1051,7 @@ body.disc-open{overflow:hidden;}
     </div>
     <div style="padding:10px 16px 12px;">
       <div style="font-size:9px;font-weight:700;color:var(--acc2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;">Keyboard</div>
-      <div style="font-size:11px;color:var(--tx3);line-height:1.8;"><span style="color:var(--tx2);font-weight:600;">Space</span> Play / Pause<div style="font-size:10px;color:var(--tx4);margin-top:3px;">Only when no text input is focused</div></div>
+      <div style="font-size:11px;color:var(--tx3);line-height:1.8;"><span style="color:var(--tx2);font-weight:600;">Space</span> Start all tracks / Stop all<div style="font-size:10px;color:var(--tx4);margin-top:3px;">Only when no text input is focused</div></div>
     </div>
   </div>
 
@@ -2601,7 +2601,23 @@ function _veDrawFrame(ctx,W,H,mode,fD,tD,progress,pal){
   ctx.fillText('NAADARA',W-16,H-10);
 }
 
-function setPlayUI(){const mb=document.getElementById('masterBtn');if(mb){mb.innerHTML='<span class="mc-pwr-dot"></span>'+(playing?'Pause':'Play');mb.classList.toggle('on',playing);}const hs=document.getElementById('hdrSt');if(hs){hs.textContent=playing?'Live':'Ready';hs.className='hdr-st'+(playing?' live':'');}}
+function setPlayUI(){
+  const mb=document.getElementById('masterBtn');
+  if(mb){
+    mb.innerHTML='<span class="mc-pwr-dot"></span>'+(playing?'Stop All':'Play');
+    mb.classList.toggle('on',playing);
+  }
+  const hs=document.getElementById('hdrSt');
+  if(hs){hs.textContent=playing?'Live':'Ready';hs.className='hdr-st'+(playing?' live':'');}
+  // Sync per-track toggle buttons
+  tracks.forEach(function(t){
+    var tog=document.getElementById('tog_'+t.id);
+    if(!tog)return;
+    var on=playing&&t.active;
+    tog.classList.toggle('on',on);
+    tog.textContent=on?'◼':'▶';
+  });
+}
 function toggleVis(){visOn=!visOn;
   const btn=document.getElementById('visBtn');
   const dot=document.getElementById('visDot');
@@ -2804,7 +2820,7 @@ document.getElementById('mfxBtn').addEventListener('click',()=>{boot();mfxOn=!mf
 [['rvb','%',v=>{mfxV.rvb=v;if(mfxN)mfxN.rW.gain.setTargetAtTime(v/100,actx.currentTime,.05);}],['dly','%',v=>{mfxV.dly=v;if(mfxN)mfxN.dW.gain.setTargetAtTime(v/100,actx.currentTime,.05);}],['dmt','ms',v=>{mfxV.dmt=v;if(mfxN)mfxN.dly.delayTime.setTargetAtTime(v/1000,actx.currentTime,.05);}],['lp','Hz',v=>{mfxV.lp=v;if(mfxN)mfxN.lp.frequency.setTargetAtTime(v,actx.currentTime,.05);}],['cmp',':1',v=>{mfxV.cmp=v;if(mfxN)mfxN.cmp.ratio.setTargetAtTime(v,actx.currentTime,.05);}],['rvs','s',v=>{mfxV.rvs=v;if(mfxN)mfxN.rev.buffer=mkImp(v,3.5);}]].forEach(([key,unit,apply])=>{const el=document.getElementById('mfx_'+key);if(!el)return;el.addEventListener('input',e=>{const v=parseFloat(e.target.value);const d=key==='lp'&&v>999?(v/1000).toFixed(1)+'kHz':v+(key==='cmp'?':1':unit);document.getElementById('mfxv_'+key).textContent=d;apply(v);});});
 document.getElementById('masterBtn').addEventListener('click',()=>playing?pauseAll():playAll());
 document.getElementById('masterVol').addEventListener('input',e=>{document.getElementById('masterVolV').textContent=e.target.value+'%';if(mGain)mGain.gain.setTargetAtTime(+e.target.value/100,actx?.currentTime??0,.01);});
-document.getElementById('addBtn').addEventListener('click',()=>addTrack());
+document.getElementById('addBtn').addEventListener('click',()=>{addTrack();document.getElementById('addBtn').blur();});
 
 // ── Spatial pad ──────────────────────────────────────────────
 function mkSP(t,ac){const S=80;const w=document.createElement('div');w.className='sp-col';const lbl=document.createElement('div');lbl.className='sp-lbl';lbl.textContent='Spatial (HRTF 3D)';const pad=document.createElement('div');pad.className='sp-pad';[52,30,12].forEach(d=>{const r=document.createElement('div');r.className='sp-ring';r.style.cssText=`width:${d}px;height:${d}px;left:${(S-d)/2}px;top:${(S-d)/2}px`;pad.appendChild(r);});[['fl','FL'],['fr','FR'],['bl','BL'],['br','BR']].forEach(([c,tx])=>{const s=document.createElement('span');s.className='sp-c '+c;s.textContent=tx;pad.appendChild(s);});const dot=document.createElement('div');dot.className='sp-dot';dot.style.background=ac;dot.style.color=ac;pad.appendChild(dot);const read=document.createElement('div');read.className='sp-read';const rst=document.createElement('button');rst.className='sp-rst';rst.textContent='Center';function upd(){dot.style.left=((t.panX+1)/2*S)+'px';dot.style.top=((t.panZ+1)/2*S)+'px';read.textContent=(t.panX>=0?'→':'←')+Math.round(Math.abs(t.panX)*100)+'  '+(t.panZ<=0?'↑':'↓')+Math.round(Math.abs(t.panZ)*100);}upd();let drag=false;function mv(e){const r=pad.getBoundingClientRect();t.panX=Math.max(-1,Math.min(1,(e.clientX-r.left)/S*2-1));t.panZ=Math.max(-1,Math.min(1,(e.clientY-r.top)/S*2-1));upd();markDirty(t);if(actx)updPan(t);}pad.addEventListener('pointerdown',e=>{drag=true;pad.setPointerCapture(e.pointerId);mv(e);});pad.addEventListener('pointermove',e=>{if(drag)mv(e);});pad.addEventListener('pointerup',()=>drag=false);pad.addEventListener('pointercancel',()=>drag=false);rst.addEventListener('click',()=>{t.panX=0;t.panZ=0;t.panY=0;upd();markDirty(t);if(actx)updPan(t);
@@ -3013,7 +3029,13 @@ function buildDOM(t){
   card.appendChild(hdr);card.appendChild(body);card.appendChild(viz);card.appendChild(fxp);card.appendChild(synthp);
   document.getElementById('trackList').appendChild(card);
   const g=id=>document.getElementById(id);
-  tog.addEventListener('click',()=>{t.active=!t.active;tog.classList.toggle('on',t.active);tog.textContent=t.active?'◼':'▶';spDirty=true;if(playing){t.active?startT(t):stopT(t);}});
+  tog.addEventListener('click',()=>{
+    t.active=!t.active;
+    tog.classList.toggle('on',t.active);
+    tog.textContent=t.active?'◼':'▶';
+    spDirty=true;
+    if(playing){t.active?startT(t):stopT(t);}
+  });
   rem.addEventListener('click',()=>{const idx=tracks.indexOf(t);if(idx<0)return;stopT(t);tracks.splice(idx,1);card.remove();renumber();updAddBtn();spDirty=true;});
   wsel.addEventListener('change',e=>{t.wave=e.target.value;markDirty(t);restartT(t);});
   synthb.addEventListener('click',()=>{
@@ -3510,7 +3532,7 @@ document.addEventListener('fullscreenchange',_handleFsChange);
 document.addEventListener('webkitfullscreenchange',_handleFsChange);
 
 document.addEventListener('keydown',e=>{
-  if(e.code==='Space'&&e.target===document.body){e.preventDefault();playing?pauseAll():playAll();}
+  if(e.code==='Space'&&(e.target===document.body||e.target.tagName!=='INPUT'&&e.target.tagName!=='TEXTAREA'&&e.target.tagName!=='SELECT')){if(e.target!==document.body)e.target.blur();e.preventDefault();playing?pauseAll():playAll();}
 });
 
 // ── Theme system ─────────────────────────────────────────────
