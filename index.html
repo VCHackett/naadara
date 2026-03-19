@@ -1,4 +1,5 @@
-<!DOCTYPE html><html><head><meta charset="utf-8">
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta charset="utf-8">
 <link rel="canonical" href="https://naadara.org/">
 <meta property="og:url" content="https://naadara.org/">
 <meta name="twitter:url" content="https://naadara.org/">
@@ -75,7 +76,7 @@ input:focus,select:focus{border-color:rgba(255,255,255,.3)}
 .vol-row{display:flex;align-items:center;gap:9px;min-width:140px;margin-left:auto}
 .vol-row label{font-size:11px;color:var(--tx3);white-space:nowrap;font-weight:500}
 .vol-row input{flex:1}.vol-val{font-size:12px;font-weight:600;color:var(--tx2);min-width:32px;text-align:right;font-variant-numeric:tabular-nums}
-.pill{display:flex;align-items:center;gap:6px;padding:6px 13px;border-radius:99px;border:1px solid var(--bd2);background:var(--s2);color:var(--tx2);font-size:11px;font-weight:500;cursor:pointer;white-space:nowrap;transition:all .18s;font-family:var(--f)}
+.pill{display:flex;align-items:center;gap:6px;padding:6px 13px;border-radius:99px;border:1px solid var(--bd2);background:var(--s2);color:var(--tx2);font-size:11px;font-weight:500;cursor:pointer;white-space:nowrap;transition:all .18s;font-family:var(--f)touch-action:manipulation;}
 .pill:hover{color:var(--tx)}.pill.on{background:var(--acc);border-color:var(--acc);color:var(--bg)}
 .pill-dot{width:5px;height:5px;border-radius:50%;background:var(--tx4)}.pill.on .pill-dot{background:var(--grn)}
 /* chladni */
@@ -550,6 +551,13 @@ body.disc-open{overflow:hidden;}
 .os-badge:hover{border-color:rgba(196,208,255,.45);color:rgba(196,208,255,.95);}
 .os-tag{display:inline-flex;align-items:center;padding:3px 10px;border-radius:99px;border:1px solid rgba(196,208,255,.12);background:rgba(196,208,255,.04);color:rgba(196,208,255,.45);font-size:10px;letter-spacing:.3px;text-decoration:none;transition:all .15s;}
 .os-tag:hover{border-color:rgba(196,208,255,.3);color:rgba(196,208,255,.7);}
+
+@media(max-width:600px){
+  .disp-bar{gap:4px;padding:6px 8px;}
+  .pill{padding:5px 10px;font-size:10px;min-height:32px;}
+  .disp-mode-btn{padding:5px 10px;font-size:10px;min-height:32px;touch-action:manipulation;}
+  .cym-outer{aspect-ratio:1;max-height:100vw;}
+}
 </style><title>NAADARA v1.0 — Cymatics · Frequency Lab · Resonance Fields</title>
 </head><body>
 <div class="app"><div class="card">
@@ -1665,7 +1673,7 @@ function toggleDispLabels(){
 }
 
 function setOscMode(){['oscW','oscS','oscL'].forEach(id=>{document.getElementById(id).classList.toggle('on',(id==='oscW'&&oscMode==='wave')||(id==='oscS'&&oscMode==='spectrum')||(id==='oscL'&&oscMode==='lissajous'));});}
-function resizeOsc(){var wrap=document.getElementById('oscWrap');if(!wrap||wrap.style.display==='none')return;var isFs=document.fullscreenElement===wrap||document.webkitFullscreenElement===wrap;var W=isFs?window.innerWidth:((document.querySelector('.cym-outer')||wrap).clientWidth)||400;var H=isFs?window.innerHeight:((document.querySelector('.cym-outer')||wrap).clientHeight)||400;wrap.style.width=W+'px';wrap.style.height=H+'px';['oscGr','oscM','oscG'].forEach(function(id){var cv=document.getElementById(id);if(!cv)return;cv.width=W;cv.height=H;cv.style.width=W+'px';cv.style.height=H+'px';});drawOscGrid();}
+function resizeOsc(){var wrap=document.getElementById('oscWrap');if(!wrap||wrap.style.display==='none')return;var isFs=document.fullscreenElement===wrap||document.webkitFullscreenElement===wrap;var outer=document.querySelector('.cym-outer');var W=isFs?window.innerWidth:(outer?outer.clientWidth:window.innerWidth)||400;var H=isFs?window.innerHeight:(outer?outer.clientHeight:Math.min(window.innerHeight*0.6,outer?outer.clientWidth:400))||400;wrap.style.width=W+'px';wrap.style.height=H+'px';['oscGr','oscM','oscG'].forEach(function(id){var cv=document.getElementById(id);if(!cv)return;cv.width=W;cv.height=H;cv.style.width=W+'px';cv.style.height=H+'px';});drawOscGrid();}
 window.addEventListener('resize',resizeOsc);
 function drawOscGrid(){const c=document.getElementById('oscGr');if(!c.width)return;const ctx=c.getContext('2d'),W=c.width,H=c.height;ctx.clearRect(0,0,W,H);if(!oscGridOn||oscMode==='lissajous')return;ctx.strokeStyle='rgba(255,255,255,.04)';ctx.lineWidth=1;[.25,.5,.75].forEach(y=>{ctx.beginPath();ctx.moveTo(0,y*H);ctx.lineTo(W,y*H);ctx.stroke();});for(let x=0;x<=W;x+=W/8){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}ctx.fillStyle='rgba(255,255,255,.12)';ctx.font='9px Inter,system-ui';ctx.textAlign='left';ctx.fillText('+1.0',3,10);ctx.fillText(' 0.0',3,H/2+4);ctx.fillText('-1.0',3,H-3);}
 function drawOsc(){
