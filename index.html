@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)file:///C:/Users/VChac/Downloads/naadara_v98.html -->
+<!-- saved from url=(0049)file:///C:/Users/VChac/Downloads/naadara_v99.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="canonical" href="https://naadara.org/">
 <meta property="og:url" content="https://naadara.org/">
@@ -545,7 +545,8 @@ select.wsel{font-size:12px;font-weight:500;background:var(--s2);border-color:var
 .liss-btn:hover{border-color:var(--acc2);color:var(--tx);background:var(--s3);}
 .liss-btn strong{display:block;font-size:11px;color:var(--acc2);margin-bottom:2px;}
 
-:fullscreen #disclaimerModal,:-webkit-full-screen #disclaimerModal{position:fixed!important;inset:0!important;z-index:2147483647!important;}
+:fullscreen #disclaimerModal:not(.disc-hidden),:-webkit-full-screen #disclaimerModal:not(.disc-hidden){position:fixed!important;inset:0!important;z-index:2147483647!important;}
+#disclaimerModal.disc-hidden{display:none!important;visibility:hidden!important;pointer-events:none!important;}
 body.disc-open{overflow:hidden;}
 
 .os-badge{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:99px;border:1px solid rgba(196,208,255,.2);background:rgba(196,208,255,.06);color:rgba(196,208,255,.7);font-size:10px;font-weight:600;text-decoration:none;letter-spacing:.3px;transition:all .15s;}
@@ -3424,13 +3425,15 @@ function setQuality(preset){
 // ── Disclaimer ───────────────────────────────────────────────
 function acceptDisclaimer(){
   try{localStorage.setItem('naadara_disclaimer_v1','1');}catch(e){}
-  document.getElementById('disclaimerModal').style.display='none';
+  var m=document.getElementById('disclaimerModal');
+  if(m){m.style.display='none';m.style.visibility='hidden';m.classList.add('disc-hidden');}
+  document.body.classList.remove('disc-open');
 }
 document.addEventListener('DOMContentLoaded',function(){
   try{
     if(localStorage.getItem('naadara_disclaimer_v1')){
       var m=document.getElementById('disclaimerModal');
-      if(m){m.style.display='none';document.body.classList.remove('disc-open');}
+      if(m){m.style.display='none';m.style.visibility='hidden';m.classList.add('disc-hidden');document.body.classList.remove('disc-open');}
     }else{
       document.body.classList.add('disc-open');
     }
